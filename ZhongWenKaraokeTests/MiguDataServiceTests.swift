@@ -1,6 +1,6 @@
 //
-//  ZhongWenKaraokeTests.swift
-//  ZhongWenKaraokeTests
+//  MiguDataServiceTests.swift
+//  ZhongWenKaraoke
 //
 //  Created by Yannick Chiasson on 7/19/17.
 //  Copyright © 2017 Yannick Chiasson. All rights reserved.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import ZhongWenKaraoke
 
-class ZhongWenKaraokeTests: XCTestCase {
+class MiguDataServiceTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,16 +21,9 @@ class ZhongWenKaraokeTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testInit_InitsWithoutParams() {
+        let miguDS = MiguDataService()
+        XCTAssertNotNil(miguDS)
     }
     
 }

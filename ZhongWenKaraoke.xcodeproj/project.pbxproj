@@ -15,8 +15,9 @@
 		CD3EF47F1F1F74BA009036F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EF47D1F1F74BA009036F2 /* Main.storyboard */; };
 		CD3EF4811F1F74BA009036F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3EF4801F1F74BA009036F2 /* Assets.xcassets */; };
 		CD3EF4841F1F74BA009036F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EF4821F1F74BA009036F2 /* LaunchScreen.storyboard */; };
-		CD3EF48F1F1F74BA009036F2 /* ZhongWenKaraokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EF48E1F1F74BA009036F2 /* ZhongWenKaraokeTests.swift */; };
 		CD3EF49A1F1F74BA009036F2 /* ZhongWenKaraokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EF4991F1F74BA009036F2 /* ZhongWenKaraokeUITests.swift */; };
+		CD4AA6ED1F1F8E290040627E /* MiguDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AA6EC1F1F8E290040627E /* MiguDataServiceTests.swift */; };
+		CD4AA6F01F1F8E880040627E /* MiguDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AA6EF1F1F8E880040627E /* MiguDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +54,12 @@
 		CD3EF4831F1F74BA009036F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD3EF4851F1F74BA009036F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD3EF48A1F1F74BA009036F2 /* ZhongWenKaraokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhongWenKaraokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD3EF48E1F1F74BA009036F2 /* ZhongWenKaraokeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhongWenKaraokeTests.swift; sourceTree = "<group>"; };
 		CD3EF4901F1F74BA009036F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD3EF4951F1F74BA009036F2 /* ZhongWenKaraokeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhongWenKaraokeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EF4991F1F74BA009036F2 /* ZhongWenKaraokeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhongWenKaraokeUITests.swift; sourceTree = "<group>"; };
 		CD3EF49B1F1F74BA009036F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD4AA6EC1F1F8E290040627E /* MiguDataServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguDataServiceTests.swift; sourceTree = "<group>"; };
+		CD4AA6EF1F1F8E880040627E /* MiguDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguDataService.swift; sourceTree = "<group>"; };
 		CDAAD0AE129EA2B21D3992D6 /* Pods-ZhongWenKaraoke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraoke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 		CD3EF4781F1F74BA009036F2 /* ZhongWenKaraoke */ = {
 			isa = PBXGroup;
 			children = (
+				CD4AA6EE1F1F8E5C0040627E /* Services */,
 				CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */,
 				CD3EF47B1F1F74BA009036F2 /* ViewController.swift */,
 				CD3EF47D1F1F74BA009036F2 /* Main.storyboard */,
@@ -137,8 +140,8 @@
 		CD3EF48D1F1F74BA009036F2 /* ZhongWenKaraokeTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD3EF48E1F1F74BA009036F2 /* ZhongWenKaraokeTests.swift */,
 				CD3EF4901F1F74BA009036F2 /* Info.plist */,
+				CD4AA6EC1F1F8E290040627E /* MiguDataServiceTests.swift */,
 			);
 			path = ZhongWenKaraokeTests;
 			sourceTree = "<group>";
@@ -150,6 +153,14 @@
 				CD3EF49B1F1F74BA009036F2 /* Info.plist */,
 			);
 			path = ZhongWenKaraokeUITests;
+			sourceTree = "<group>";
+		};
+		CD4AA6EE1F1F8E5C0040627E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CD4AA6EF1F1F8E880040627E /* MiguDataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		F154AAC7ADC026773F57692F /* Pods */ = {
@@ -449,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4AA6F01F1F8E880040627E /* MiguDataService.swift in Sources */,
 				CD3EF47C1F1F74BA009036F2 /* ViewController.swift in Sources */,
 				CD3EF47A1F1F74BA009036F2 /* AppDelegate.swift in Sources */,
 			);
@@ -458,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD3EF48F1F1F74BA009036F2 /* ZhongWenKaraokeTests.swift in Sources */,
+				CD4AA6ED1F1F8E290040627E /* MiguDataServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +721,7 @@
 				CD3EF4A01F1F74BA009036F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD3EF4A11F1F74BA009036F2 /* Build configuration list for PBXNativeTarget "ZhongWenKaraokeTests" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +730,7 @@
 				CD3EF4A31F1F74BA009036F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD3EF4A41F1F74BA009036F2 /* Build configuration list for PBXNativeTarget "ZhongWenKaraokeUITests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +739,7 @@
 				CD3EF4A61F1F74BA009036F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
