@@ -20,6 +20,20 @@
                ReferencedContainer = "container:ZhongWenKaraoke.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CD3EF4941F1F74BA009036F2"
+               BuildableName = "ZhongWenKaraokeUITests.xctest"
+               BlueprintName = "ZhongWenKaraokeUITests"
+               ReferencedContainer = "container:ZhongWenKaraoke.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -35,16 +49,6 @@
                BlueprintIdentifier = "CD3EF4891F1F74BA009036F2"
                BuildableName = "ZhongWenKaraokeTests.xctest"
                BlueprintName = "ZhongWenKaraokeTests"
-               ReferencedContainer = "container:ZhongWenKaraoke.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD3EF4941F1F74BA009036F2"
-               BuildableName = "ZhongWenKaraokeUITests.xctest"
-               BlueprintName = "ZhongWenKaraokeUITests"
                ReferencedContainer = "container:ZhongWenKaraoke.xcodeproj">
             </BuildableReference>
          </TestableReference>
