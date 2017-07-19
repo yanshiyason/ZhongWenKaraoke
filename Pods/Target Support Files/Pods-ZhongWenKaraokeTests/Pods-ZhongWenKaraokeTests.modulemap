@@ -1,0 +1,6 @@
+framework module Pods_ZhongWenKaraokeTests {
+  umbrella header "Pods-ZhongWenKaraokeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

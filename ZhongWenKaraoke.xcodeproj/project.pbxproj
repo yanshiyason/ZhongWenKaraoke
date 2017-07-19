@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06ABDAC9E3BE01F2BA3C75D8 /* Pods_ZhongWenKaraoke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98152240278FCE4AAEFA8E34 /* Pods_ZhongWenKaraoke.framework */; };
+		339B7EC402F9E0053F1B79D1 /* Pods_ZhongWenKaraokeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88101D6CFFA3A3351B8F644C /* Pods_ZhongWenKaraokeTests.framework */; };
+		9734DF0FA28B0BAEA0B169E7 /* Pods_ZhongWenKaraokeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B90D26F0D16B02C4E951ED /* Pods_ZhongWenKaraokeUITests.framework */; };
 		CD3EF47A1F1F74BA009036F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */; };
 		CD3EF47C1F1F74BA009036F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EF47B1F1F74BA009036F2 /* ViewController.swift */; };
 		CD3EF47F1F1F74BA009036F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EF47D1F1F74BA009036F2 /* Main.storyboard */; };
@@ -34,6 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F6635FD7370624CA34AE853 /* Pods-ZhongWenKaraokeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeTests/Pods-ZhongWenKaraokeTests.release.xcconfig"; sourceTree = "<group>"; };
+		33D0D7D6A048DD6DB3218371 /* Pods-ZhongWenKaraokeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeUITests/Pods-ZhongWenKaraokeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		42B90D26F0D16B02C4E951ED /* Pods_ZhongWenKaraokeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhongWenKaraokeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88101D6CFFA3A3351B8F644C /* Pods_ZhongWenKaraokeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhongWenKaraokeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F290931C3A47698A4F8B4EE /* Pods-ZhongWenKaraoke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraoke.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke.release.xcconfig"; sourceTree = "<group>"; };
+		98152240278FCE4AAEFA8E34 /* Pods_ZhongWenKaraoke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhongWenKaraoke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		984BEE802FF9775CDBA578B0 /* Pods-ZhongWenKaraokeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeUITests/Pods-ZhongWenKaraokeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD2D7E3398CB2456501015DE /* Pods-ZhongWenKaraokeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeTests/Pods-ZhongWenKaraokeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD3EF4761F1F74BA009036F2 /* ZhongWenKaraoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhongWenKaraoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD3EF47B1F1F74BA009036F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +58,7 @@
 		CD3EF4951F1F74BA009036F2 /* ZhongWenKaraokeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhongWenKaraokeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EF4991F1F74BA009036F2 /* ZhongWenKaraokeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhongWenKaraokeUITests.swift; sourceTree = "<group>"; };
 		CD3EF49B1F1F74BA009036F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDAAD0AE129EA2B21D3992D6 /* Pods-ZhongWenKaraoke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraoke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06ABDAC9E3BE01F2BA3C75D8 /* Pods_ZhongWenKaraoke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				339B7EC402F9E0053F1B79D1 /* Pods_ZhongWenKaraokeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9734DF0FA28B0BAEA0B169E7 /* Pods_ZhongWenKaraokeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DA9F2C2C1DECCB48BB10C28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98152240278FCE4AAEFA8E34 /* Pods_ZhongWenKaraoke.framework */,
+				88101D6CFFA3A3351B8F644C /* Pods_ZhongWenKaraokeTests.framework */,
+				42B90D26F0D16B02C4E951ED /* Pods_ZhongWenKaraokeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD3EF46D1F1F74BA009036F2 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,8 @@
 				CD3EF48D1F1F74BA009036F2 /* ZhongWenKaraokeTests */,
 				CD3EF4981F1F74BA009036F2 /* ZhongWenKaraokeUITests */,
 				CD3EF4771F1F74BA009036F2 /* Products */,
+				F154AAC7ADC026773F57692F /* Pods */,
+				0DA9F2C2C1DECCB48BB10C28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +152,19 @@
 			path = ZhongWenKaraokeUITests;
 			sourceTree = "<group>";
 		};
+		F154AAC7ADC026773F57692F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDAAD0AE129EA2B21D3992D6 /* Pods-ZhongWenKaraoke.debug.xcconfig */,
+				8F290931C3A47698A4F8B4EE /* Pods-ZhongWenKaraoke.release.xcconfig */,
+				AD2D7E3398CB2456501015DE /* Pods-ZhongWenKaraokeTests.debug.xcconfig */,
+				2F6635FD7370624CA34AE853 /* Pods-ZhongWenKaraokeTests.release.xcconfig */,
+				984BEE802FF9775CDBA578B0 /* Pods-ZhongWenKaraokeUITests.debug.xcconfig */,
+				33D0D7D6A048DD6DB3218371 /* Pods-ZhongWenKaraokeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD3EF49E1F1F74BA009036F2 /* Build configuration list for PBXNativeTarget "ZhongWenKaraoke" */;
 			buildPhases = (
+				4432C570E6E3481AB13B0FD5 /* [CP] Check Pods Manifest.lock */,
 				CD3EF4721F1F74BA009036F2 /* Sources */,
 				CD3EF4731F1F74BA009036F2 /* Frameworks */,
 				CD3EF4741F1F74BA009036F2 /* Resources */,
+				5EC5C0B541829CF94FAB26AA /* [CP] Embed Pods Frameworks */,
+				BE28FA605E21D7464804C6CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD3EF4A11F1F74BA009036F2 /* Build configuration list for PBXNativeTarget "ZhongWenKaraokeTests" */;
 			buildPhases = (
+				3D06C1777C08C6C85A432704 /* [CP] Check Pods Manifest.lock */,
 				CD3EF4861F1F74BA009036F2 /* Sources */,
 				CD3EF4871F1F74BA009036F2 /* Frameworks */,
 				CD3EF4881F1F74BA009036F2 /* Resources */,
+				4C8166ACD941CF5A4663CDD8 /* [CP] Embed Pods Frameworks */,
+				98E131C0CEADB1D6D8F83A42 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD3EF4A41F1F74BA009036F2 /* Build configuration list for PBXNativeTarget "ZhongWenKaraokeUITests" */;
 			buildPhases = (
+				9C085BABEC878EF7B291E2E2 /* [CP] Check Pods Manifest.lock */,
 				CD3EF4911F1F74BA009036F2 /* Sources */,
 				CD3EF4921F1F74BA009036F2 /* Frameworks */,
 				CD3EF4931F1F74BA009036F2 /* Resources */,
+				4836CFCCA542E4A7FDED3E8A /* [CP] Embed Pods Frameworks */,
+				94E232C3B2532A6B2362FAA1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D06C1777C08C6C85A432704 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4432C570E6E3481AB13B0FD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4836CFCCA542E4A7FDED3E8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraokeUITests/Pods-ZhongWenKaraokeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C8166ACD941CF5A4663CDD8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraokeTests/Pods-ZhongWenKaraokeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EC5C0B541829CF94FAB26AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94E232C3B2532A6B2362FAA1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraokeUITests/Pods-ZhongWenKaraokeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98E131C0CEADB1D6D8F83A42 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraokeTests/Pods-ZhongWenKaraokeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C085BABEC878EF7B291E2E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE28FA605E21D7464804C6CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD3EF4721F1F74BA009036F2 /* Sources */ = {
@@ -415,6 +602,7 @@
 		};
 		CD3EF49F1F1F74BA009036F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDAAD0AE129EA2B21D3992D6 /* Pods-ZhongWenKaraoke.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2SJ5L2D5W6;
@@ -428,6 +616,7 @@
 		};
 		CD3EF4A01F1F74BA009036F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F290931C3A47698A4F8B4EE /* Pods-ZhongWenKaraoke.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2SJ5L2D5W6;
@@ -441,6 +630,7 @@
 		};
 		CD3EF4A21F1F74BA009036F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD2D7E3398CB2456501015DE /* Pods-ZhongWenKaraokeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +646,7 @@
 		};
 		CD3EF4A31F1F74BA009036F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F6635FD7370624CA34AE853 /* Pods-ZhongWenKaraokeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +662,7 @@
 		};
 		CD3EF4A51F1F74BA009036F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 984BEE802FF9775CDBA578B0 /* Pods-ZhongWenKaraokeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 2SJ5L2D5W6;
@@ -485,6 +677,7 @@
 		};
 		CD3EF4A61F1F74BA009036F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33D0D7D6A048DD6DB3218371 /* Pods-ZhongWenKaraokeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 2SJ5L2D5W6;
