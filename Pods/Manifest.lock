@@ -1,15 +1,26 @@
 PODS:
   - Alamofire (4.5.0)
   - Kanna (2.2.1)
+  - Mockingjay (2.0.0):
+    - Mockingjay/Core (= 2.0.0)
+    - Mockingjay/XCTest (= 2.0.0)
+  - Mockingjay/Core (2.0.0):
+    - URITemplate (~> 2.0)
+  - Mockingjay/XCTest (2.0.0):
+    - Mockingjay/Core
+  - URITemplate (2.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - Kanna
+  - Mockingjay
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Kanna: 182789ab065e8f9a6ccc2a74ce6283d3401c0c4a
+  Mockingjay: 7122a3fc0597aa63438e4cd9b71b7bc8aac05b87
+  URITemplate: 720b8a56a281494d7c2d31ee33183986eaed2c67
 
-PODFILE CHECKSUM: 2e111e6b914d66511944cf6056af93f21a32308d
+PODFILE CHECKSUM: 072c737168bc2185a6f4d7e84a4611889e6c4d85
 
 COCOAPODS: 1.2.1

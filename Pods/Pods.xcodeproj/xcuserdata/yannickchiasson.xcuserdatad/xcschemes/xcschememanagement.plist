@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Mockingjay.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ZhongWenKaraoke.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,8 +34,49 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>URITemplate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>0005BECA0B0D2832E986E62BE2343061</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4D10E4FF5A483B852B47CCA0B994E340</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5BAACC736A5215103E10E2DC0A74FDCD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5BAEE407D509A3F67350A21DD9179E25</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6587163224CBEEEAFD0FAB9EFF5339AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0E15BA0655DC640123EA4F0A33FD7BF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
