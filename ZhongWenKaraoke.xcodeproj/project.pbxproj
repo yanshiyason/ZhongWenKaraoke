@@ -20,6 +20,8 @@
 		CD4AA6F01F1F8E880040627E /* MiguDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AA6EF1F1F8E880040627E /* MiguDataService.swift */; };
 		CD4AA6F61F201ABF0040627E /* miguTopPage.html in Resources */ = {isa = PBXBuildFile; fileRef = CD4AA6F51F201ABF0040627E /* miguTopPage.html */; };
 		CD4AA6F91F20EB4B0040627E /* MiguSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AA6F81F20EB4B0040627E /* MiguSong.swift */; };
+		CD4AA6FB1F214BDA0040627E /* songPage.json in Resources */ = {isa = PBXBuildFile; fileRef = CD4AA6FA1F214BDA0040627E /* songPage.json */; };
+		CD4AA6FF1F2155230040627E /* MiguSongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AA6FE1F2155230040627E /* MiguSongTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		CD4AA6EF1F1F8E880040627E /* MiguDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguDataService.swift; sourceTree = "<group>"; };
 		CD4AA6F51F201ABF0040627E /* miguTopPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = miguTopPage.html; sourceTree = "<group>"; };
 		CD4AA6F81F20EB4B0040627E /* MiguSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSong.swift; sourceTree = "<group>"; };
+		CD4AA6FA1F214BDA0040627E /* songPage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songPage.json; sourceTree = "<group>"; };
+		CD4AA6FE1F2155230040627E /* MiguSongTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongTests.swift; sourceTree = "<group>"; };
 		CDAAD0AE129EA2B21D3992D6 /* Pods-ZhongWenKaraoke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraoke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,9 +149,10 @@
 		CD3EF48D1F1F74BA009036F2 /* ZhongWenKaraokeTests */ = {
 			isa = PBXGroup;
 			children = (
+				CD4AA6FD1F2155080040627E /* Models */,
+				CD4AA6FC1F21541B0040627E /* Services */,
 				CD4AA6F41F201A970040627E /* Fixtures */,
 				CD3EF4901F1F74BA009036F2 /* Info.plist */,
-				CD4AA6EC1F1F8E290040627E /* MiguDataServiceTests.swift */,
 			);
 			path = ZhongWenKaraokeTests;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				CD4AA6F51F201ABF0040627E /* miguTopPage.html */,
+				CD4AA6FA1F214BDA0040627E /* songPage.json */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -181,6 +187,22 @@
 			isa = PBXGroup;
 			children = (
 				CD4AA6F81F20EB4B0040627E /* MiguSong.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD4AA6FC1F21541B0040627E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CD4AA6EC1F1F8E290040627E /* MiguDataServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CD4AA6FD1F2155080040627E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD4AA6FE1F2155230040627E /* MiguSongTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4AA6FB1F214BDA0040627E /* songPage.json in Resources */,
 				CD4AA6F61F201ABF0040627E /* miguTopPage.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4AA6FF1F2155230040627E /* MiguSongTests.swift in Sources */,
 				CD4AA6ED1F1F8E290040627E /* MiguDataServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

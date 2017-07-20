@@ -18,9 +18,17 @@ class MiguDataServiceTests: XCTestCase {
         return Bundle(for: type(of: self)).url(forResource: title, withExtension: "html")!
     }
     
+    func JsonFixtureURL(_ title: String) -> URL {
+        return Bundle(for: type(of: self)).url(forResource: title, withExtension: "json")!
+    }
+    
     func HtmlFromFixture(_ title: String) -> String {
         let data = try! Data.init(contentsOf: HtmlFixtureURL(title))
         return String(data: data, encoding: .utf8)!
+    }
+    
+    func JsonFromFixture(_ title: String) -> Data {
+        return try! Data.init(contentsOf: JsonFixtureURL(title))
     }
     
     override func setUp() {
@@ -41,7 +49,17 @@ class MiguDataServiceTests: XCTestCase {
     func test_parseHomePage_ItCanExtractMiguSongs() {
         let html = HtmlFromFixture("miguTopPage")
         let miguSongs = sut.parseHomePage(html)
-        XCTAssertTrue(miguSongs.count == 60)
+        XCTAssertEqual(miguSongs.count, 60)
+    }
+    
+    func test_parseSongJson_ItCanExtractTheLyrics() {
+        let json = JsonFromFixture("songPage")
+        let lyrics = sut.parseLyricsPage(json)
+        XCTAssertEqual(lyrics.characters.count, 1600)
+    }
+    
+    func test_homePageUrl_ItReturnsTheCorrectUrl() {
+        XCTAssertEqual(sut.homePageUrl, "http://music.migu.cn/184_11.html")
     }
     
 }
