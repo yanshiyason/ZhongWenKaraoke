@@ -11,6 +11,16 @@ import Alamofire
 import Kanna
 
 class MiguDataService {
+    
+    
+
+    func lyrics(_ miguSong: MiguSong) -> String {
+        get(miguSong.lyricsUrl)
+    }
+    
+    
+    let homePageUrl = "http://music.migu.cn/184_11.html"
+
     func parseHomePage(_ html: String) -> [MiguSong] {
         let doc = HTML(html: html, encoding: .utf8)!
         return doc.css(".singer_name").map { node in
@@ -19,6 +29,22 @@ class MiguDataService {
             let url = songNode?.at_css(".song_name a")?["href"]!
             let artist = songNode?.at_css(".singer_name")?.text!
             return MiguSong(artist: artist!, song: song!, url: url!)
+        }
+    }
+    
+    func parseLyricsPage(_ json: Data) -> String {
+        return try! JSONSerialization.jsonObject(with: json, options: .allowFragments) as! String
+    }
+    
+    func get(_ url: String, handler: @escaping (String?, Error?) -> ()) {
+        Alamofire.request(url).responseData { response in
+            switch response.result {
+            case .success(let value):
+                let utf8Text = String(data: value, encoding: .utf8)
+                handler(utf8Text, nil)
+            case .failure(let error):
+                handler(nil, error)
+            }
         }
     }
 }
