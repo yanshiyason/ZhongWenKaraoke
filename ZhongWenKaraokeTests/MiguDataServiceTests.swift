@@ -7,13 +7,26 @@
 //
 
 import XCTest
+import Mockingjay
 @testable import ZhongWenKaraoke
 
 class MiguDataServiceTests: XCTestCase {
     
+    var sut: MiguDataService!
+    
+    func HtmlFixtureURL(_ title: String) -> URL {
+        return Bundle(for: type(of: self)).url(forResource: title, withExtension: "html")!
+    }
+    
+    func HtmlFromFixture(_ title: String) -> String {
+        let data = try! Data.init(contentsOf: HtmlFixtureURL(title))
+        return String(data: data, encoding: .utf8)!
+    }
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = MiguDataService()
     }
     
     override func tearDown() {
@@ -22,8 +35,13 @@ class MiguDataServiceTests: XCTestCase {
     }
     
     func testInit_InitsWithoutParams() {
-        let miguDS = MiguDataService()
-        XCTAssertNotNil(miguDS)
+        XCTAssertNoThrow(MiguDataService())
+    }
+    
+    func test_parseHomePage_ItCanExtractMiguSongs() {
+        let html = HtmlFromFixture("miguTopPage")
+        let miguSongs = sut.parseHomePage(html)
+        XCTAssertTrue(miguSongs.count == 60)
     }
     
 }
