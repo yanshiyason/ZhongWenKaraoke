@@ -14,9 +14,13 @@ class MiguDataService {
     
     
 
-    func lyrics(_ miguSong: MiguSong) -> String {
-        get(miguSong.lyricsUrl)
-    }
+//    func lyrics(_ miguSong: MiguSong) -> String {
+//        get(miguSong.lyricsUrl)
+//    }
+    
+    //    func mp3(_ miguSong: MiguSong) -> String {
+    //        get(miguSong.mp3Url)
+    //    }
     
     
     let homePageUrl = "http://music.migu.cn/184_11.html"
@@ -33,6 +37,10 @@ class MiguDataService {
     }
     
     func parseLyricsPage(_ json: Data) -> String {
+        return try! JSONSerialization.jsonObject(with: json, options: .allowFragments) as! String
+    }
+    
+    func parseSongDetailsPage(_ json: Data) -> String {
         return try! JSONSerialization.jsonObject(with: json, options: .allowFragments) as! String
     }
     

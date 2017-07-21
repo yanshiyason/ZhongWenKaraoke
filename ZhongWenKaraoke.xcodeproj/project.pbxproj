@@ -10,6 +10,7 @@
 		06ABDAC9E3BE01F2BA3C75D8 /* Pods_ZhongWenKaraoke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98152240278FCE4AAEFA8E34 /* Pods_ZhongWenKaraoke.framework */; };
 		339B7EC402F9E0053F1B79D1 /* Pods_ZhongWenKaraokeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88101D6CFFA3A3351B8F644C /* Pods_ZhongWenKaraokeTests.framework */; };
 		9734DF0FA28B0BAEA0B169E7 /* Pods_ZhongWenKaraokeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B90D26F0D16B02C4E951ED /* Pods_ZhongWenKaraokeUITests.framework */; };
+		CD23745B1F223D4E00995105 /* XCTestCase+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23745A1F223D4E00995105 /* XCTestCase+extensions.swift */; };
 		CD3EF47A1F1F74BA009036F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */; };
 		CD3EF47C1F1F74BA009036F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EF47B1F1F74BA009036F2 /* ViewController.swift */; };
 		CD3EF47F1F1F74BA009036F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EF47D1F1F74BA009036F2 /* Main.storyboard */; };
@@ -20,8 +21,11 @@
 		CD4AA6F01F1F8E880040627E /* MiguDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AA6EF1F1F8E880040627E /* MiguDataService.swift */; };
 		CD4AA6F61F201ABF0040627E /* miguTopPage.html in Resources */ = {isa = PBXBuildFile; fileRef = CD4AA6F51F201ABF0040627E /* miguTopPage.html */; };
 		CD4AA6F91F20EB4B0040627E /* MiguSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AA6F81F20EB4B0040627E /* MiguSong.swift */; };
-		CD4AA6FB1F214BDA0040627E /* songPage.json in Resources */ = {isa = PBXBuildFile; fileRef = CD4AA6FA1F214BDA0040627E /* songPage.json */; };
+		CD4AA6FB1F214BDA0040627E /* lyrics.json in Resources */ = {isa = PBXBuildFile; fileRef = CD4AA6FA1F214BDA0040627E /* lyrics.json */; };
 		CD4AA6FF1F2155230040627E /* MiguSongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AA6FE1F2155230040627E /* MiguSongTests.swift */; };
+		CD4AA7011F2162600040627E /* songDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = CD4AA7001F2162600040627E /* songDetails.json */; };
+		CD4AA7031F2163320040627E /* MiguSongDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AA7021F2163320040627E /* MiguSongDetails.swift */; };
+		CD4AA7051F2163980040627E /* MiguSongDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AA7041F2163970040627E /* MiguSongDetailsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,7 @@
 		98152240278FCE4AAEFA8E34 /* Pods_ZhongWenKaraoke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhongWenKaraoke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		984BEE802FF9775CDBA578B0 /* Pods-ZhongWenKaraokeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeUITests/Pods-ZhongWenKaraokeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD2D7E3398CB2456501015DE /* Pods-ZhongWenKaraokeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeTests/Pods-ZhongWenKaraokeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD23745A1F223D4E00995105 /* XCTestCase+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+extensions.swift"; sourceTree = "<group>"; };
 		CD3EF4761F1F74BA009036F2 /* ZhongWenKaraoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhongWenKaraoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD3EF47B1F1F74BA009036F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,8 +71,11 @@
 		CD4AA6EF1F1F8E880040627E /* MiguDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguDataService.swift; sourceTree = "<group>"; };
 		CD4AA6F51F201ABF0040627E /* miguTopPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = miguTopPage.html; sourceTree = "<group>"; };
 		CD4AA6F81F20EB4B0040627E /* MiguSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSong.swift; sourceTree = "<group>"; };
-		CD4AA6FA1F214BDA0040627E /* songPage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songPage.json; sourceTree = "<group>"; };
+		CD4AA6FA1F214BDA0040627E /* lyrics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lyrics.json; sourceTree = "<group>"; };
 		CD4AA6FE1F2155230040627E /* MiguSongTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongTests.swift; sourceTree = "<group>"; };
+		CD4AA7001F2162600040627E /* songDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songDetails.json; sourceTree = "<group>"; };
+		CD4AA7021F2163320040627E /* MiguSongDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongDetails.swift; sourceTree = "<group>"; };
+		CD4AA7041F2163970040627E /* MiguSongDetailsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongDetailsTests.swift; sourceTree = "<group>"; };
 		CDAAD0AE129EA2B21D3992D6 /* Pods-ZhongWenKaraoke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraoke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +161,7 @@
 				CD4AA6FC1F21541B0040627E /* Services */,
 				CD4AA6F41F201A970040627E /* Fixtures */,
 				CD3EF4901F1F74BA009036F2 /* Info.plist */,
+				CD23745A1F223D4E00995105 /* XCTestCase+extensions.swift */,
 			);
 			path = ZhongWenKaraokeTests;
 			sourceTree = "<group>";
@@ -178,7 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				CD4AA6F51F201ABF0040627E /* miguTopPage.html */,
-				CD4AA6FA1F214BDA0040627E /* songPage.json */,
+				CD4AA6FA1F214BDA0040627E /* lyrics.json */,
+				CD4AA7001F2162600040627E /* songDetails.json */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -187,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				CD4AA6F81F20EB4B0040627E /* MiguSong.swift */,
+				CD4AA7021F2163320040627E /* MiguSongDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				CD4AA6FE1F2155230040627E /* MiguSongTests.swift */,
+				CD4AA7041F2163970040627E /* MiguSongDetailsTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -349,7 +361,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD4AA6FB1F214BDA0040627E /* songPage.json in Resources */,
+				CD4AA7011F2162600040627E /* songDetails.json in Resources */,
+				CD4AA6FB1F214BDA0040627E /* lyrics.json in Resources */,
 				CD4AA6F61F201ABF0040627E /* miguTopPage.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +523,7 @@
 				CD3EF47C1F1F74BA009036F2 /* ViewController.swift in Sources */,
 				CD4AA6F91F20EB4B0040627E /* MiguSong.swift in Sources */,
 				CD3EF47A1F1F74BA009036F2 /* AppDelegate.swift in Sources */,
+				CD4AA7031F2163320040627E /* MiguSongDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,8 +531,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD23745B1F223D4E00995105 /* XCTestCase+extensions.swift in Sources */,
 				CD4AA6FF1F2155230040627E /* MiguSongTests.swift in Sources */,
 				CD4AA6ED1F1F8E290040627E /* MiguDataServiceTests.swift in Sources */,
+				CD4AA7051F2163980040627E /* MiguSongDetailsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

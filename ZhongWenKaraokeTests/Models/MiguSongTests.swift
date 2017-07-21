@@ -47,7 +47,7 @@ class MiguSongTests: XCTestCase {
         XCTAssertEqual(sut.lyricsUrl, "http://music.migu.cn/webfront/player/lyrics.do?songid=1106678347")
     }
     
-    func test_mp3Url_ItReturnsTheCorrectUrl() {
+    func test_songDetailsUrl_ItReturnsTheCorrectUrl() {
         XCTAssertEqual(
             sut.mp3Url,
             "http://music.migu.cn/webfront/player/findsong.do?itemid=1106678347&type=song&loc=P1Z1Y1L6N2&locno=7"

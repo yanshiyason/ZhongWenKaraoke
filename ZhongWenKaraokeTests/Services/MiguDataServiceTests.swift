@@ -14,23 +14,6 @@ class MiguDataServiceTests: XCTestCase {
     
     var sut: MiguDataService!
     
-    func HtmlFixtureURL(_ title: String) -> URL {
-        return Bundle(for: type(of: self)).url(forResource: title, withExtension: "html")!
-    }
-    
-    func JsonFixtureURL(_ title: String) -> URL {
-        return Bundle(for: type(of: self)).url(forResource: title, withExtension: "json")!
-    }
-    
-    func HtmlFromFixture(_ title: String) -> String {
-        let data = try! Data.init(contentsOf: HtmlFixtureURL(title))
-        return String(data: data, encoding: .utf8)!
-    }
-    
-    func JsonFromFixture(_ title: String) -> Data {
-        return try! Data.init(contentsOf: JsonFixtureURL(title))
-    }
-    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -52,8 +35,14 @@ class MiguDataServiceTests: XCTestCase {
         XCTAssertEqual(miguSongs.count, 60)
     }
     
-    func test_parseSongJson_ItCanExtractTheLyrics() {
-        let json = JsonFromFixture("songPage")
+    func test_parseLyricsPage_ItCanExtractTheLyrics() {
+        let json = JsonFromFixture("lyrics")
+        let lyrics = sut.parseLyricsPage(json)
+        XCTAssertEqual(lyrics.characters.count, 1600)
+    }
+    
+    func test_parseSongDetailsPage_ItCanExtractTheSongDetails() {
+        let json = JsonFromFixture("lyrics")
         let lyrics = sut.parseLyricsPage(json)
         XCTAssertEqual(lyrics.characters.count, 1600)
     }
