@@ -1,5 +1,5 @@
 //
-//  MiguSongManager.swift
+//  MiguSongStore.swift
 //  ZhongWenKaraoke
 //
 //  Created by Yannick Chiasson on 7/21/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MiguSongManager {
+class MiguSongStore {
     var songs: [MiguSong]?
     init() {
         MiguDataService().getHomePageSongs { miguSongs, error in
