@@ -10,15 +10,26 @@ import UIKit
 
 class TopViewController: UIViewController {
 
+    @IBOutlet weak var songsTable: UITableView!
+    var topViewDataService: TopViewDataService!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        topViewDataService = TopViewDataService()
+        self.songsTable.delegate = topViewDataService
+        self.songsTable.dataSource = topViewDataService
+        NotificationCenter.default.addObserver(self, selector: #selector(loadSongs), name: NSNotification.Name(rawValue: "songsArrived"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loadSongs(notification: NSNotification){
+        //load data here
+        self.songsTable.reloadData()
     }
     
 
@@ -34,15 +45,3 @@ class TopViewController: UIViewController {
 
 }
 
-extension TopViewController: UITableViewDelegate {
-}
-
-extension TopViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-}

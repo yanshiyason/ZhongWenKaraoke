@@ -14,6 +14,7 @@ class MiguSongStore {
         MiguDataService().getHomePageSongs { miguSongs, error in
             if error == nil {
                 self.songs = miguSongs!
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "songsArrived"), object: nil)
             } else {
                 print(error!)
                 self.songs = nil
