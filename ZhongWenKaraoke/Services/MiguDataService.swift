@@ -34,7 +34,8 @@ class MiguDataService {
     }
     
     
-    let homePageUrl = "http://music.migu.cn/184_11.html"
+//    let homePageUrl = "http://music.migu.cn/184_11.html"
+    let homePageUrl = "http://music.migu.cn/tag/1000587717/P2Z1Y1L2N1/1/001002A"
 
     func parseHomePage(_ html: String) -> [MiguSong] {
         let doc = HTML(html: html, encoding: .utf8)!

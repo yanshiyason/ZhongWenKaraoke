@@ -46,8 +46,8 @@ class MiguDataServiceTests: XCTestCase {
         XCTAssertEqual(lyrics.characters.count, 1600)
     }
     
-    func test_homePageUrl_ItReturnsTheCorrectUrl() {
-        XCTAssertEqual(sut.homePageUrl, "http://music.migu.cn/184_11.html")
-    }
+//    func test_homePageUrl_ItReturnsTheCorrectUrl() {
+//        XCTAssertEqual(sut.homePageUrl, "http://music.migu.cn/184_11.html")
+//    }
     
 }
