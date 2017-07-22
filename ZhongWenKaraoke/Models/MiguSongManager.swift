@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class MiguSongManager {
+    var songs: [MiguSong]?
+    init() {
+        MiguDataService().getHomePageSongs { miguSongs, error in
+            if error == nil {
+                self.songs = miguSongs!
+            } else {
+                print(error!)
+                self.songs = nil
+            }
+        }
+    }
+}

@@ -22,6 +22,17 @@ class MiguDataService {
     //        get(miguSong.mp3Url)
     //    }
     
+    public func getHomePageSongs(_ handler: @escaping ([MiguSong]?, Error?) -> ()) {
+        get(homePageUrl) { string, error in
+            if (error == nil) {
+                handler(self.parseHomePage(string!), nil)
+            } else {
+                print(error!)
+                handler(nil, error!)
+            }
+        }
+    }
+    
     
     let homePageUrl = "http://music.migu.cn/184_11.html"
 
@@ -56,3 +67,4 @@ class MiguDataService {
         }
     }
 }
+

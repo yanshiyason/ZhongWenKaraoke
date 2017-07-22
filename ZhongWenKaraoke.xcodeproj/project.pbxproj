@@ -11,6 +11,9 @@
 		339B7EC402F9E0053F1B79D1 /* Pods_ZhongWenKaraokeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88101D6CFFA3A3351B8F644C /* Pods_ZhongWenKaraokeTests.framework */; };
 		9734DF0FA28B0BAEA0B169E7 /* Pods_ZhongWenKaraokeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B90D26F0D16B02C4E951ED /* Pods_ZhongWenKaraokeUITests.framework */; };
 		CD23745B1F223D4E00995105 /* XCTestCase+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23745A1F223D4E00995105 /* XCTestCase+extensions.swift */; };
+		CD23745E1F22498400995105 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23745D1F22498400995105 /* TopViewController.swift */; };
+		CD2374601F224AA200995105 /* MiguSongManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23745F1F224AA200995105 /* MiguSongManager.swift */; };
+		CD2374621F224BE900995105 /* MiguSongManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2374611F224BE900995105 /* MiguSongManagerTests.swift */; };
 		CD3EF47A1F1F74BA009036F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */; };
 		CD3EF47C1F1F74BA009036F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EF47B1F1F74BA009036F2 /* ViewController.swift */; };
 		CD3EF47F1F1F74BA009036F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EF47D1F1F74BA009036F2 /* Main.storyboard */; };
@@ -55,6 +58,9 @@
 		984BEE802FF9775CDBA578B0 /* Pods-ZhongWenKaraokeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeUITests/Pods-ZhongWenKaraokeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD2D7E3398CB2456501015DE /* Pods-ZhongWenKaraokeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeTests/Pods-ZhongWenKaraokeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD23745A1F223D4E00995105 /* XCTestCase+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+extensions.swift"; sourceTree = "<group>"; };
+		CD23745D1F22498400995105 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		CD23745F1F224AA200995105 /* MiguSongManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongManager.swift; sourceTree = "<group>"; };
+		CD2374611F224BE900995105 /* MiguSongManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongManagerTests.swift; sourceTree = "<group>"; };
 		CD3EF4761F1F74BA009036F2 /* ZhongWenKaraoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhongWenKaraoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD3EF47B1F1F74BA009036F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +123,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD23745C1F22495800995105 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD23745D1F22498400995105 /* TopViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		CD3EF46D1F1F74BA009036F2 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +156,7 @@
 		CD3EF4781F1F74BA009036F2 /* ZhongWenKaraoke */ = {
 			isa = PBXGroup;
 			children = (
+				CD23745C1F22495800995105 /* Controllers */,
 				CD4AA6F71F20EB2E0040627E /* Models */,
 				CD4AA6EE1F1F8E5C0040627E /* Services */,
 				CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */,
@@ -198,6 +213,7 @@
 			children = (
 				CD4AA6F81F20EB4B0040627E /* MiguSong.swift */,
 				CD4AA7021F2163320040627E /* MiguSongDetails.swift */,
+				CD23745F1F224AA200995105 /* MiguSongManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +231,7 @@
 			children = (
 				CD4AA6FE1F2155230040627E /* MiguSongTests.swift */,
 				CD4AA7041F2163970040627E /* MiguSongDetailsTests.swift */,
+				CD2374611F224BE900995105 /* MiguSongManagerTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -519,7 +536,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD23745E1F22498400995105 /* TopViewController.swift in Sources */,
 				CD4AA6F01F1F8E880040627E /* MiguDataService.swift in Sources */,
+				CD2374601F224AA200995105 /* MiguSongManager.swift in Sources */,
 				CD3EF47C1F1F74BA009036F2 /* ViewController.swift in Sources */,
 				CD4AA6F91F20EB4B0040627E /* MiguSong.swift in Sources */,
 				CD3EF47A1F1F74BA009036F2 /* AppDelegate.swift in Sources */,
@@ -534,6 +553,7 @@
 				CD23745B1F223D4E00995105 /* XCTestCase+extensions.swift in Sources */,
 				CD4AA6FF1F2155230040627E /* MiguSongTests.swift in Sources */,
 				CD4AA6ED1F1F8E290040627E /* MiguDataServiceTests.swift in Sources */,
+				CD2374621F224BE900995105 /* MiguSongManagerTests.swift in Sources */,
 				CD4AA7051F2163980040627E /* MiguSongDetailsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

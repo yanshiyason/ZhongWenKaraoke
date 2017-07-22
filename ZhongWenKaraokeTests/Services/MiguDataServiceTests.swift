@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Mockingjay
 @testable import ZhongWenKaraoke
 
 class MiguDataServiceTests: XCTestCase {

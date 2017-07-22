@@ -33,3 +33,16 @@ class TopViewController: UIViewController {
     */
 
 }
+
+extension TopViewController: UITableViewDelegate {
+}
+
+extension TopViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+}

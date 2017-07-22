@@ -9,7 +9,6 @@
 import Foundation
 
 import XCTest
-import Mockingjay
 @testable import ZhongWenKaraoke
 
 class MiguSongTests: XCTestCase {
