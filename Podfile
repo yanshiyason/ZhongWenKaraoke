@@ -8,12 +8,12 @@ target 'ZhongWenKaraoke' do
   # Pods for ZhongWenKaraoke
   pod 'Alamofire'
   pod 'Kanna'
-  pod 'Mockingjay'
 
 
   target 'ZhongWenKaraokeTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'OHHTTPStubs/Swift'
   end
 
   target 'ZhongWenKaraokeUITests' do

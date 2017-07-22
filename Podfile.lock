@@ -1,26 +1,30 @@
 PODS:
   - Alamofire (4.5.0)
   - Kanna (2.2.1)
-  - Mockingjay (2.0.0):
-    - Mockingjay/Core (= 2.0.0)
-    - Mockingjay/XCTest (= 2.0.0)
-  - Mockingjay/Core (2.0.0):
-    - URITemplate (~> 2.0)
-  - Mockingjay/XCTest (2.0.0):
-    - Mockingjay/Core
-  - URITemplate (2.0.1)
+  - OHHTTPStubs/Core (6.0.0)
+  - OHHTTPStubs/Default (6.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (6.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (6.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (6.0.0)
+  - OHHTTPStubs/Swift (6.0.0):
+    - OHHTTPStubs/Default
 
 DEPENDENCIES:
   - Alamofire
   - Kanna
-  - Mockingjay
+  - OHHTTPStubs/Swift
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Kanna: 182789ab065e8f9a6ccc2a74ce6283d3401c0c4a
-  Mockingjay: 7122a3fc0597aa63438e4cd9b71b7bc8aac05b87
-  URITemplate: 720b8a56a281494d7c2d31ee33183986eaed2c67
+  OHHTTPStubs: 752f9b11fd810a15162d50f11c06ff94f8e012eb
 
-PODFILE CHECKSUM: 072c737168bc2185a6f4d7e84a4611889e6c4d85
+PODFILE CHECKSUM: fd2d75ac7244bf4c231e61a0a2a9caab56953237
 
 COCOAPODS: 1.2.1
