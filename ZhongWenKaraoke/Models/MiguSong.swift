@@ -50,3 +50,14 @@ struct MiguSong {
         }
     }
 }
+
+extension MiguSong: Equatable {
+    static func == (lhs: MiguSong, rhs: MiguSong) -> Bool {
+        return (
+            lhs.artist == rhs.artist &&
+                lhs.url == rhs.url &&
+                lhs.song == rhs.song
+        )
+    }
+
+}

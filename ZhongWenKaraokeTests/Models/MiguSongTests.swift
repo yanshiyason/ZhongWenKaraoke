@@ -30,6 +30,20 @@ class MiguSongTests: XCTestCase {
         super.tearDown()
     }
     
+    func testEquals_ItIsEquatable() {
+        let song1 = MiguSong(
+            artist: "Pockets",
+            song: "Show me the money",
+            url: "http://music.migu.cn/#/song/1106678347/P1Z1Y1L6N2/7/001002A"
+        )
+        let song2 = MiguSong(
+            artist: "Pockets",
+            song: "Show me the money",
+            url: "http://music.migu.cn/#/song/1106678347/P1Z1Y1L6N2/7/001002A"
+        )
+        XCTAssertEqual(song1, song2)
+    }
+    
     func test_init_itSetsTheItemIdFromTheUrl() {
         XCTAssertEqual(sut.itemId, "1106678347")
     }
