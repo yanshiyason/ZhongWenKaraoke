@@ -21,6 +21,7 @@
 		CD2374781F23399B00995105 /* TopViewDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2374771F23399B00995105 /* TopViewDataServiceTests.swift */; };
 		CD23747A1F234B7200995105 /* genre_index_70s.html in Resources */ = {isa = PBXBuildFile; fileRef = CD2374791F234B7200995105 /* genre_index_70s.html */; };
 		CD23747C1F235A5800995105 /* MiguSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23747B1F235A5800995105 /* MiguSongViewController.swift */; };
+		CD23747E1F23A9A800995105 /* UIImageView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23747D1F23A9A800995105 /* UIImageView+extensions.swift */; };
 		CD3EF47A1F1F74BA009036F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */; };
 		CD3EF47F1F1F74BA009036F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EF47D1F1F74BA009036F2 /* Main.storyboard */; };
 		CD3EF4811F1F74BA009036F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3EF4801F1F74BA009036F2 /* Assets.xcassets */; };
@@ -35,6 +36,9 @@
 		CD4AA7011F2162600040627E /* songDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = CD4AA7001F2162600040627E /* songDetails.json */; };
 		CD4AA7031F2163320040627E /* MiguSongDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AA7021F2163320040627E /* MiguSongDetails.swift */; };
 		CD4AA7051F2163980040627E /* MiguSongDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AA7041F2163970040627E /* MiguSongDetailsTests.swift */; };
+		CD6332621F23B8BB00CE78F2 /* MiguSongLyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6332611F23B8BB00CE78F2 /* MiguSongLyrics.swift */; };
+		CD6332641F23BE6200CE78F2 /* MiguSongLyricsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6332631F23BE6200CE78F2 /* MiguSongLyricsTest.swift */; };
+		CD6332661F23C4D700CE78F2 /* LyricLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6332651F23C4D700CE78F2 /* LyricLineCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +78,7 @@
 		CD2374771F23399B00995105 /* TopViewDataServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewDataServiceTests.swift; sourceTree = "<group>"; };
 		CD2374791F234B7200995105 /* genre_index_70s.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = genre_index_70s.html; sourceTree = "<group>"; };
 		CD23747B1F235A5800995105 /* MiguSongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongViewController.swift; sourceTree = "<group>"; };
+		CD23747D1F23A9A800995105 /* UIImageView+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+extensions.swift"; sourceTree = "<group>"; };
 		CD3EF4761F1F74BA009036F2 /* ZhongWenKaraoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhongWenKaraoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD3EF47E1F1F74BA009036F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +99,9 @@
 		CD4AA7001F2162600040627E /* songDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songDetails.json; sourceTree = "<group>"; };
 		CD4AA7021F2163320040627E /* MiguSongDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongDetails.swift; sourceTree = "<group>"; };
 		CD4AA7041F2163970040627E /* MiguSongDetailsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongDetailsTests.swift; sourceTree = "<group>"; };
+		CD6332611F23B8BB00CE78F2 /* MiguSongLyrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongLyrics.swift; sourceTree = "<group>"; };
+		CD6332631F23BE6200CE78F2 /* MiguSongLyricsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongLyricsTest.swift; sourceTree = "<group>"; };
+		CD6332651F23C4D700CE78F2 /* LyricLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricLineCell.swift; sourceTree = "<group>"; };
 		CDAAD0AE129EA2B21D3992D6 /* Pods-ZhongWenKaraoke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraoke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				CD23746F1F2312C200995105 /* MiguSongCell.swift */,
+				CD6332651F23C4D700CE78F2 /* LyricLineCell.swift */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -235,6 +244,7 @@
 				CD3EF4801F1F74BA009036F2 /* Assets.xcassets */,
 				CD3EF4821F1F74BA009036F2 /* LaunchScreen.storyboard */,
 				CD3EF4851F1F74BA009036F2 /* Info.plist */,
+				CD23747D1F23A9A800995105 /* UIImageView+extensions.swift */,
 			);
 			path = ZhongWenKaraoke;
 			sourceTree = "<group>";
@@ -288,6 +298,7 @@
 			children = (
 				CD4AA6F81F20EB4B0040627E /* MiguSong.swift */,
 				CD4AA7021F2163320040627E /* MiguSongDetails.swift */,
+				CD6332611F23B8BB00CE78F2 /* MiguSongLyrics.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,6 +317,7 @@
 			children = (
 				CD4AA6FE1F2155230040627E /* MiguSongTests.swift */,
 				CD4AA7041F2163970040627E /* MiguSongDetailsTests.swift */,
+				CD6332631F23BE6200CE78F2 /* MiguSongLyricsTest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -615,9 +627,12 @@
 				CD4AA6F01F1F8E880040627E /* MiguDataService.swift in Sources */,
 				CD2374701F2312C200995105 /* MiguSongCell.swift in Sources */,
 				CD2374681F22EB1600995105 /* MiguSongStore.swift in Sources */,
+				CD6332621F23B8BB00CE78F2 /* MiguSongLyrics.swift in Sources */,
+				CD23747E1F23A9A800995105 /* UIImageView+extensions.swift in Sources */,
 				CD4AA6F91F20EB4B0040627E /* MiguSong.swift in Sources */,
 				CD2374761F232E3900995105 /* TopViewDataService.swift in Sources */,
 				CD3EF47A1F1F74BA009036F2 /* AppDelegate.swift in Sources */,
+				CD6332661F23C4D700CE78F2 /* LyricLineCell.swift in Sources */,
 				CD4AA7031F2163320040627E /* MiguSongDetails.swift in Sources */,
 				CD23747C1F235A5800995105 /* MiguSongViewController.swift in Sources */,
 			);
@@ -627,6 +642,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6332641F23BE6200CE78F2 /* MiguSongLyricsTest.swift in Sources */,
 				CD23746B1F22EE9300995105 /* TopViewControllerTests.swift in Sources */,
 				CD23745B1F223D4E00995105 /* XCTestCase+extensions.swift in Sources */,
 				CD4AA6FF1F2155230040627E /* MiguSongTests.swift in Sources */,
