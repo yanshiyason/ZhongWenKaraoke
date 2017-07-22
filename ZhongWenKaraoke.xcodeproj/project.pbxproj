@@ -20,6 +20,7 @@
 		CD2374761F232E3900995105 /* TopViewDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2374751F232E3900995105 /* TopViewDataService.swift */; };
 		CD2374781F23399B00995105 /* TopViewDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2374771F23399B00995105 /* TopViewDataServiceTests.swift */; };
 		CD23747A1F234B7200995105 /* genre_index_70s.html in Resources */ = {isa = PBXBuildFile; fileRef = CD2374791F234B7200995105 /* genre_index_70s.html */; };
+		CD23747C1F235A5800995105 /* MiguSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23747B1F235A5800995105 /* MiguSongViewController.swift */; };
 		CD3EF47A1F1F74BA009036F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */; };
 		CD3EF47F1F1F74BA009036F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EF47D1F1F74BA009036F2 /* Main.storyboard */; };
 		CD3EF4811F1F74BA009036F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3EF4801F1F74BA009036F2 /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		CD2374751F232E3900995105 /* TopViewDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewDataService.swift; sourceTree = "<group>"; };
 		CD2374771F23399B00995105 /* TopViewDataServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewDataServiceTests.swift; sourceTree = "<group>"; };
 		CD2374791F234B7200995105 /* genre_index_70s.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = genre_index_70s.html; sourceTree = "<group>"; };
+		CD23747B1F235A5800995105 /* MiguSongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongViewController.swift; sourceTree = "<group>"; };
 		CD3EF4761F1F74BA009036F2 /* ZhongWenKaraoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhongWenKaraoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD3EF47E1F1F74BA009036F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				CD23745D1F22498400995105 /* TopViewController.swift */,
+				CD23747B1F235A5800995105 /* MiguSongViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				CD2374761F232E3900995105 /* TopViewDataService.swift in Sources */,
 				CD3EF47A1F1F74BA009036F2 /* AppDelegate.swift in Sources */,
 				CD4AA7031F2163320040627E /* MiguSongDetails.swift in Sources */,
+				CD23747C1F235A5800995105 /* MiguSongViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
