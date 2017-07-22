@@ -18,7 +18,7 @@ extension TopViewDataService: UITableViewDelegate {
 
 extension TopViewDataService: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MiguSongCell", for: indexPath) as! MiguSongTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MiguSongCell", for: indexPath) as! MiguSongCell
         
         if let song = miguSongStore.songs?[indexPath.row] {
             cell.config(withSong: song)

@@ -36,18 +36,35 @@ extension XCTestCase {
                 headers: [:]
             ).responseTime(responseTime)
         }.name = "Home Page Stub"
-        
+    }
+    
+    func stub70sGenreIndex(responseTime: Double) {
+        stub(condition: isHost("music.migu.cn") && isPath("/tag/1000587717/P2Z1Y1L2N1/1/001002A")) { request in
+            return OHHTTPStubsResponse(
+                fileAtPath: OHPathForFile("genre_index_70s.html", type(of: self))!,
+                statusCode: 200,
+                headers: [:]
+                ).responseTime(responseTime)
+            }.name = "70s index Stub"
     }
     
     override open func setUp() {
-        super.setUp()
+        stubHomePage(responseTime: 0.1)
+        stub70sGenreIndex(responseTime: 0.1)
         OHHTTPStubs.onStubActivation() {request, descriptor, response in
-            print("\(String(describing: request.url)) stubbed by \(String(describing: descriptor.name)).")
+            print("\n\n\n")
+            print(String(repeatElement("#", count: 50)))
+            print("\(request.url!) stubbed by \(descriptor.name!).")
+            print(String(repeatElement("#", count: 50)))
+            print("\n\n\n")
         }
+        
+        super.setUp()
     }
     
     override open func tearDown() {
-        super.tearDown()
         OHHTTPStubs.removeAllStubs()
+
+        super.tearDown()
     }
 }
