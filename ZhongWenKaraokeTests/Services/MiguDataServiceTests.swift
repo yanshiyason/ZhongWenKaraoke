@@ -41,9 +41,11 @@ class MiguDataServiceTests: XCTestCase {
     }
     
     func test_parseSongDetailsPage_ItCanExtractTheSongDetails() {
-        let json = JsonFromFixture("lyrics")
-        let lyrics = sut.parseLyricsPage(json)
-        XCTAssertEqual(lyrics.characters.count, 1600)
+        let json = JsonFromFixture("songDetails")
+        let songDetails = sut.parseSongDetailsPage(json)
+        
+        XCTAssertNotNil(songDetails)
+        XCTAssertTrue((songDetails as Any) is MiguSongDetails)
     }
     
 //    func test_homePageUrl_ItReturnsTheCorrectUrl() {

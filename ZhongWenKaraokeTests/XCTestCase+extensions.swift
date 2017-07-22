@@ -48,9 +48,22 @@ extension XCTestCase {
             }.name = "70s index Stub"
     }
     
+    func stubSongDetailsPage(responseTime: Double) {
+        // "/webfront/player/findsong.do?itemid=\(itemId)&type=song&loc=\(loc)&locno=\(locno)"
+        stub(condition: isHost("music.migu.cn") && isPath("/webfront/player/findsong.do")) { request in
+            return OHHTTPStubsResponse(
+                fileAtPath: OHPathForFile("songDetails.json", type(of: self))!,
+                statusCode: 200,
+                headers: [:]
+                ).responseTime(responseTime)
+            }.name = "Song details page Stub"
+    }
+    
     override open func setUp() {
         stubHomePage(responseTime: 0.1)
         stub70sGenreIndex(responseTime: 0.1)
+        stubSongDetailsPage(responseTime: 0.1)
+
         OHHTTPStubs.onStubActivation() {request, descriptor, response in
             print("\n\n\n")
             print(String(repeatElement("#", count: 50)))

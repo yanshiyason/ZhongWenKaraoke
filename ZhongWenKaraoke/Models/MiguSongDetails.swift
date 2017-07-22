@@ -9,16 +9,17 @@
 import Foundation
 
 struct MiguSongDetails {
-    let albumId: Int
-    let albumName, cmp3, copyright_id, hdmp3, mp3, mp4,
+    let albumId: Int?
+    let albumName: String?
+    let cmp3, copyright_id, hdmp3, mp3, mp4,
         poster, singerId, singerName, songId, songName: String
     
     init?(fromJson json: Data) {
         let object = try! JSONSerialization.jsonObject(with: json, options: .allowFragments) as! [String: Any]
         if let msg = object["msg"] as! [[String: Any]?]?,
             let jsonObject = msg[0] {
-            self.albumId = jsonObject["albumId"] as! Int
-            self.albumName = jsonObject["albumName"] as! String
+            self.albumId = jsonObject["albumId"] as! Int?
+            self.albumName = jsonObject["albumName"] as! String?
             self.cmp3 = jsonObject["cmp3"] as! String
             self.copyright_id = jsonObject["copyright_id"] as! String
             self.hdmp3 = jsonObject["hdmp3"] as! String

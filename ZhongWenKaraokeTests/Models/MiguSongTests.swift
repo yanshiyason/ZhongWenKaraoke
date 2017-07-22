@@ -62,7 +62,7 @@ class MiguSongTests: XCTestCase {
     
     func test_songDetailsUrl_ItReturnsTheCorrectUrl() {
         XCTAssertEqual(
-            sut.mp3Url,
+            sut.songDetailsUrl,
             "http://music.migu.cn/webfront/player/findsong.do?itemid=1106678347&type=song&loc=P1Z1Y1L6N2&locno=7"
         )
     }

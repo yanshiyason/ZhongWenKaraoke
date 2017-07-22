@@ -32,16 +32,17 @@ class TopViewController: UIViewController {
         self.songsTable.reloadData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "SegueToSongView" {
+            if let row = songsTable.indexPathForSelectedRow?.row {
+                let dataService = songsTable.dataSource as! TopViewDataService
+                if let song = dataService.miguSongStore.songs?[row] {
+                    let songVC = segue.destination as! MiguSongViewController
+                    songVC.song = song
+                }
+            }
+        }
     }
-    */
 
 }
 

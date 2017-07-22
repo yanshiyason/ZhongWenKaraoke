@@ -14,18 +14,33 @@ class MiguDataService {
     
     
 
-//    func lyrics(_ miguSong: MiguSong) -> String {
-//        get(miguSong.lyricsUrl)
-//    }
+    func getLyrics(_ miguSong: MiguSong, handler: @escaping (MiguSongLyrics?, Error?) -> Void) {
+        get(miguSong.lyricsUrl) {data, error in
+            if error == nil {
+                handler(MiguSongLyrics(data!), nil)
+            } else {
+                print(error!)
+                handler(nil, error)
+            }
+        }
+    }
+
+    func getSongDetails(_ miguSong: MiguSong, handler: @escaping (MiguSongDetails?, Error?) -> Void) {
+        get(miguSong.songDetailsUrl) {data, error in
+            if(error == nil) {
+                handler(MiguSongDetails(fromJson: data!)!, nil)
+            } else {
+                print(error!)
+                handler(nil, error)
+            }
+        }
+    }
     
-    //    func mp3(_ miguSong: MiguSong) -> String {
-    //        get(miguSong.mp3Url)
-    //    }
-    
-    public func getHomePageSongs(_ handler: @escaping ([MiguSong]?, Error?) -> ()) {
-        get(homePageUrl) { string, error in
+    func getHomePageSongs(_ handler: @escaping ([MiguSong]?, Error?) -> ()) {
+        get(homePageUrl) { data, error in
             if (error == nil) {
-                handler(self.parseHomePage(string!), nil)
+                let utf8Text = String(data: data!, encoding: .utf8)
+                handler(self.parseHomePage(utf8Text!), nil)
             } else {
                 print(error!)
                 handler(nil, error!)
@@ -36,6 +51,7 @@ class MiguDataService {
     
 //    let homePageUrl = "http://music.migu.cn/184_11.html"
     let homePageUrl = "http://music.migu.cn/tag/1000587717/P2Z1Y1L2N1/1/001002A"
+
 
     func parseHomePage(_ html: String) -> [MiguSong] {
         let doc = HTML(html: html, encoding: .utf8)!
@@ -52,16 +68,15 @@ class MiguDataService {
         return try! JSONSerialization.jsonObject(with: json, options: .allowFragments) as! String
     }
     
-    func parseSongDetailsPage(_ json: Data) -> String {
-        return try! JSONSerialization.jsonObject(with: json, options: .allowFragments) as! String
+    func parseSongDetailsPage(_ json: Data) -> MiguSongDetails {
+        return MiguSongDetails(fromJson: json)!
     }
     
-    func get(_ url: String, handler: @escaping (String?, Error?) -> ()) {
+    func get(_ url: String, handler: @escaping (Data?, Error?) -> ()) {
         Alamofire.request(url).responseData { response in
             switch response.result {
             case .success(let value):
-                let utf8Text = String(data: value, encoding: .utf8)
-                handler(utf8Text, nil)
+                handler(value, nil)
             case .failure(let error):
                 handler(nil, error)
             }

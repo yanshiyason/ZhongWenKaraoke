@@ -27,10 +27,9 @@ struct MiguSong {
         return "http://music.migu.cn/webfront/player/lyrics.do?songid=\(itemId)"
     }
     
-    var mp3Url: String {
+    var songDetailsUrl: String {
         return "http://music.migu.cn/webfront/player/findsong.do?itemid=\(itemId)&type=song&loc=\(loc)&locno=\(locno)"
     }
-    
     
     static func match(for regex: String, in url: String) -> [String] {
         
