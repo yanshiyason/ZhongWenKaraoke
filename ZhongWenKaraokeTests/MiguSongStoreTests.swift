@@ -13,11 +13,12 @@ import OHHTTPStubs
 
 class MiguSongStoreTests: XCTestCase {
     
+    var sut: MiguSongStore!
+    
     override func setUp() {
         super.setUp()
-        stubHomePage(responseTime: 0.1)
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        
+        sut = MiguSongStore()
     }
     
     override func tearDown() {
@@ -26,16 +27,14 @@ class MiguSongStoreTests: XCTestCase {
     }
     
     func testInit_itAssignsMiguSongs() {
-        let manager = MiguSongStore()
         let exp = expectation(description: "\(#function)\(#line)")
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(2)) {
-            XCTAssertTrue(manager.songs!.count > 0)
+            XCTAssertTrue(self.sut.songs!.count > 0)
             exp.fulfill()
         }
         
         // Wait for the async request to complete
         waitForExpectations(timeout: 3, handler: nil)
     }
-    
 }
