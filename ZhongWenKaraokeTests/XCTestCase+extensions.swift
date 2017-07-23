@@ -9,6 +9,7 @@
 import Foundation
 import OHHTTPStubs
 import XCTest
+import Pantry
 
 extension XCTestCase {
     func HtmlFixtureURL(_ title: String) -> URL {
@@ -72,12 +73,14 @@ extension XCTestCase {
             print("\n\n\n")
         }
         
+        Pantry.removeAllCache()
         super.setUp()
     }
     
     override open func tearDown() {
         OHHTTPStubs.removeAllStubs()
-
+        
+        Pantry.removeAllCache()
         super.tearDown()
     }
 }

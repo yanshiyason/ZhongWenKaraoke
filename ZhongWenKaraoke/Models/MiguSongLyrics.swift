@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Pantry
+
 struct MiguSongLyrics {
     var rawLyrics: String
     var lyrics: [LyricLine]
@@ -32,4 +34,16 @@ struct MiguSongLyrics {
 struct LyricLine {
     var timestamp: String
     var text: String
+}
+
+extension MiguSongLyrics: Storable {
+    // Pantry: Storable
+    init(warehouse: Warehouseable) {
+        self.rawLyrics = warehouse.get("rawLyrics") ?? ""
+        self.lyrics = MiguSongLyrics.parseLyrics(rawLyrics)
+    }
+    
+    func toDictionary() -> [String : Any] {
+        return ["rawLyrics": self.rawLyrics]
+    }
 }

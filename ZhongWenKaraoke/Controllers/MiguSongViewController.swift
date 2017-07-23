@@ -23,7 +23,6 @@ class MiguSongViewController: UIViewController {
         super.viewDidLoad()
         lyricsTable.delegate = self
         lyricsTable.dataSource = self
-        print(song)
         // Do any additional setup after loading the view.
     }
 

@@ -36,6 +36,7 @@ class MiguSongDetailsTests: XCTestCase {
     }
     
     func testPantry_itIsDeserializable() {
+        XCTAssertNoThrow(Pantry.pack(sut, key: "sut"))
         let deserializedSut: MiguSongDetails = Pantry.unpack("sut")!
         XCTAssertEqual(deserializedSut.songName, "Praying")
     }

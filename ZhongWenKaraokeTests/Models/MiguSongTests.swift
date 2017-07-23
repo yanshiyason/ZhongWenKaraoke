@@ -7,15 +7,20 @@
 //
 
 import Foundation
+import Pantry
 
 import XCTest
 @testable import ZhongWenKaraoke
 
 class MiguSongTests: XCTestCase {
     var sut: MiguSong!
+    var songDetails: MiguSongDetails!
     
     override func setUp() {
         super.setUp()
+        let songDetailsJson = JsonFromFixture("songDetails")
+        songDetails = MiguSongDetails(fromJson: songDetailsJson)
+        
         // Put setup code here. This method is called before the invocation of each test method in the class.
         sut = MiguSong(
             artist: "Pockets",
@@ -62,8 +67,26 @@ class MiguSongTests: XCTestCase {
     
     func test_songDetailsUrl_ItReturnsTheCorrectUrl() {
         XCTAssertEqual(
+            
             sut.songDetailsUrl,
             "http://music.migu.cn/webfront/player/findsong.do?itemid=1106678347&type=song&loc=P1Z1Y1L6N2&locno=7"
         )
+    }
+    
+    func testPantry_itIsDeserializable() {
+        XCTAssertNoThrow(Pantry.pack(sut, key: "sut"))
+    }
+    
+    func testPantry_itIsSerializable() {
+        Pantry.pack(sut, key: "sut")
+        let deserializedSut: MiguSong = Pantry.unpack("sut")!
+        XCTAssertEqual(deserializedSut.artist, "Pockets")
+    }
+    
+    func testPantry_itSerializesAssociatedStructs() {
+        sut.songDetails = songDetails
+        Pantry.pack(sut, key: "sut")
+        let deserializedSut: MiguSong = Pantry.unpack("sut")!
+        XCTAssertEqual(deserializedSut.songDetails?.songName, "Praying")
     }
 }

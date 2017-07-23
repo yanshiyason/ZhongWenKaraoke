@@ -7,16 +7,39 @@
 //
 
 import Foundation
+import Pantry
 
 struct MiguSong {
+    var songDetails: MiguSongDetails? {
+        set {
+            if let newValue = newValue {
+                Pantry.pack(newValue, key: "songDetails_\(itemId)")
+            }
+        }
+        get {
+            return Pantry.unpack("songDetails_\(itemId)")
+        }
+    }
+
+    var songLyrics: MiguSongLyrics? {
+        set {
+            if let newValue = newValue {
+                Pantry.pack(newValue, key: "songLyrics_\(itemId)")
+            }
+        }
+        get {
+            return Pantry.unpack("songLyrics_\(itemId)")
+        }
+    }
+
     let urlRegex = "song/(\\d{1,})/(\\w{1,})/(\\d{1,})"
     let artist, song, url,
-        itemId, loc, locno: String
+    itemId, loc, locno: String
     init(artist: String, song: String, url: String){
         self.artist = artist
         self.song = song
         self.url = url
-
+        
         let matches = MiguSong.match(for: urlRegex, in: url)
         self.itemId = matches[1]
         self.loc    = matches[2]
@@ -37,7 +60,7 @@ struct MiguSong {
             let regex = try NSRegularExpression(pattern: regex)
             let nsString = url as NSString
             let results = regex.matches(in: url, range: NSRange(location: 0, length: nsString.length))
-
+            
             var data: [String] = []
             for i in 0 ..< results[0].numberOfRanges {
                 data.append(nsString.substring(with: results[0].rangeAt(i)))
@@ -58,5 +81,28 @@ extension MiguSong: Equatable {
                 lhs.song == rhs.song
         )
     }
+    
+}
 
+extension MiguSong: Storable {
+    // Pantry: Storable
+    init(warehouse: Warehouseable) {
+        self.artist = warehouse.get("artist") ?? ""
+        self.song   = warehouse.get("song") ?? ""
+        self.url    = warehouse.get("url") ?? ""
+        self.itemId = warehouse.get("itemId") ?? ""
+        self.loc    = warehouse.get("loc") ?? ""
+        self.locno  = warehouse.get("locno") ?? ""
+    }
+    
+    func toDictionary() -> [String : Any] {
+        return [
+            "artist": self.artist,
+            "song": self.song,
+            "url": self.url,
+            "itemId": self.itemId,
+            "loc": self.loc,
+            "locno": self.locno,
+        ]
+    }
 }
