@@ -7,12 +7,18 @@
 //
 
 import XCTest
+import Pantry
 @testable import ZhongWenKaraoke
 
 class MiguSongDetailsTests: XCTestCase {
     
+    var sut: MiguSongDetails!
+    var json: Data!
+    
     override func setUp() {
         super.setUp()
+        json = JsonFromFixture("songDetails")
+        sut = MiguSongDetails(fromJson: json)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -22,8 +28,15 @@ class MiguSongDetailsTests: XCTestCase {
     }
     
     func test_initFromJsonData() {
-        let json = JsonFromFixture("songDetails")
-        
         XCTAssertNotNil(MiguSongDetails(fromJson: json))
+    }
+    
+    func testPantry_itIsSerializable() {
+        XCTAssertNoThrow(Pantry.pack(sut, key: "sut"))
+    }
+    
+    func testPantry_itIsDeserializable() {
+        let deserializedSut: MiguSongDetails = Pantry.unpack("sut")!
+        XCTAssertEqual(deserializedSut.songName, "Praying")
     }
 }

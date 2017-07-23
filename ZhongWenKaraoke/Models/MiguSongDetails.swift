@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import Pantry
 
 struct MiguSongDetails {
     let albumId: Int?
     let albumName: String?
     let cmp3, copyright_id, hdmp3, mp3, mp4,
-        poster, singerId, singerName, songId, songName: String
+    poster, singerId, singerName, songId, songName: String
     
     init?(fromJson json: Data) {
         let object = try! JSONSerialization.jsonObject(with: json, options: .allowFragments) as! [String: Any]
@@ -36,3 +37,40 @@ struct MiguSongDetails {
     }
     
 }
+
+
+extension MiguSongDetails: Storable {
+    // Pantry: Storable
+    init(warehouse: Warehouseable) {
+        self.albumId      = warehouse.get("albumId") ?? nil
+        self.albumName    = warehouse.get("albumName") ?? ""
+        self.cmp3         = warehouse.get("cmp3") ?? ""
+        self.copyright_id = warehouse.get("copyright_id") ?? ""
+        self.hdmp3        = warehouse.get("hdmp3") ?? ""
+        self.mp3          = warehouse.get("mp3") ?? ""
+        self.mp4          = warehouse.get("mp4") ?? ""
+        self.poster       = warehouse.get("poster") ?? ""
+        self.singerId     = warehouse.get("singerId") ?? ""
+        self.singerName   = warehouse.get("singerName") ?? ""
+        self.songId       = warehouse.get("songId") ?? ""
+        self.songName     = warehouse.get("songName") ?? ""
+    }
+    
+    func toDictionary() -> [String : Any] {
+        return [
+            "albumId": self.albumId ?? "",
+            "albumName": self.albumName ?? "",
+            "cmp3": self.cmp3,
+            "copyright_id": self.copyright_id,
+            "hdmp3": self.hdmp3,
+            "mp3": self.mp3,
+            "mp4": self.mp4,
+            "poster": self.poster,
+            "singerId": self.singerId,
+            "singerName": self.singerName,
+            "songId": self.songId,
+            "songName": self.songName,
+        ]
+    }
+}
+
