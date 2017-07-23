@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Kingfisher
+
 extension UIImageView {
     func setImageFromURl(_ url: String){
-        if let url = NSURL(string: url) {
-            if let data = NSData(contentsOf: url as URL) {
-                self.image = UIImage(data: data as Data)
-            }
+        if let url = URL(string: url) {
+            kf.indicatorType = .activity
+            kf.setImage(with: url)
         }
     }
 }
