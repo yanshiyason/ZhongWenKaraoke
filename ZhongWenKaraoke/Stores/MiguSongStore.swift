@@ -16,7 +16,7 @@ class MiguSongStore {
             if error == nil {
                 self.songs = miguSongs!
                 self.fetchSongAssociations()
-                notifyNewSongs()
+                self.notifyNewSongs()
             } else {
                 print(error!)
                 self.songs = nil
@@ -33,7 +33,7 @@ class MiguSongStore {
                         debugPrint("Fetched \(String(describing: songDetails))")
                         if (songDetails != nil) {
                             self.songs?[i].songDetails = songDetails!
-                            notifyNewSongs()
+                            self.notifyNewSongs()
                         }
                     }
                 }
@@ -43,7 +43,7 @@ class MiguSongStore {
                         debugPrint("Fetched \(String(describing: lyrics))")
                         if (lyrics != nil) {
                             self.songs?[i].songLyrics = lyrics!
-                            notifyNewSongs()
+                            self.notifyNewSongs()
                         }
                     }
                 }

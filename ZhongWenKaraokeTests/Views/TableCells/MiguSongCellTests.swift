@@ -33,17 +33,19 @@ class MiguSongCellTests: XCTestCase {
     }
     
     func testConfigWithSong_SetsTheSong() {
-        let song = MiguSong(
+        var song = MiguSong(
             artist: "Pockets",
             song: "Show me the money",
             url: "http://music.migu.cn/#/song/1106678347/P1Z1Y1L6N2/7/001002A"
         )
         
+        song.songDetails = MiguSongDetails(fromJson: JsonFromFixture("songDetails"))
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MiguSongCell") as! MiguSongCell
         cell.config(withSong: song)
         XCTAssertEqual(song, cell.song)
-        XCTAssertEqual(cell.textLabel?.text, cell.song.song)
-        XCTAssertEqual(cell.detailTextLabel?.text, cell.song.artist)
+        XCTAssertEqual(cell.songTitle?.text, "Praying")
+        XCTAssertEqual(cell.artistName?.text, "Ke$ha")
     }
 }
 
