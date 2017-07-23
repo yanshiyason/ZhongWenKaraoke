@@ -8,6 +8,7 @@ target 'ZhongWenKaraoke' do
   # Pods for ZhongWenKaraoke
   pod 'Alamofire'
   pod 'Kanna'
+  pod 'Kingfisher', '~> 3.0'
 
 
   target 'ZhongWenKaraokeTests' do

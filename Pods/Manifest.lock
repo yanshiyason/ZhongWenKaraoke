@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.5.0)
   - Kanna (2.2.1)
+  - Kingfisher (3.10.3)
   - OHHTTPStubs/Core (6.0.0)
   - OHHTTPStubs/Default (6.0.0):
     - OHHTTPStubs/Core
@@ -18,13 +19,15 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Kanna
+  - Kingfisher (~> 3.0)
   - OHHTTPStubs/Swift
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Kanna: 182789ab065e8f9a6ccc2a74ce6283d3401c0c4a
+  Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
   OHHTTPStubs: 752f9b11fd810a15162d50f11c06ff94f8e012eb
 
-PODFILE CHECKSUM: fd2d75ac7244bf4c231e61a0a2a9caab56953237
+PODFILE CHECKSUM: fc3629dcbbbfac9cafb623add769388884fd275d
 
 COCOAPODS: 1.2.1
