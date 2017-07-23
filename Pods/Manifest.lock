@@ -15,19 +15,22 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (6.0.0)
   - OHHTTPStubs/Swift (6.0.0):
     - OHHTTPStubs/Default
+  - Pantry (0.3)
 
 DEPENDENCIES:
   - Alamofire
   - Kanna
   - Kingfisher (~> 3.0)
   - OHHTTPStubs/Swift
+  - Pantry
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Kanna: 182789ab065e8f9a6ccc2a74ce6283d3401c0c4a
   Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
   OHHTTPStubs: 752f9b11fd810a15162d50f11c06ff94f8e012eb
+  Pantry: 98481849be65d2b2cb9658976533e84ebd266192
 
-PODFILE CHECKSUM: fc3629dcbbbfac9cafb623add769388884fd275d
+PODFILE CHECKSUM: 598e2285ad61960c6094e4a16c89ed05dc6d866a
 
 COCOAPODS: 1.2.1

@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pantry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ZhongWenKaraoke.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2F0C0F810568D3E82219429D9D870F04</key>
+		<key>055ECA89C79CC8310F9CDFFF0DDC6E1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>41ECE22965E6E0A7AE094A37D74F027C</key>
+		<key>18054A1CD57973AC5B0B1409B5819E88</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F0C0F810568D3E82219429D9D870F04</key>
 		<dict>
 			<key>primary</key>
 			<true/>
