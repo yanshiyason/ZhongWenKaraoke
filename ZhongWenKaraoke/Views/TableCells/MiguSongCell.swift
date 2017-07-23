@@ -20,6 +20,9 @@ class MiguSongCell: UITableViewCell {
     @IBInspectable var shadowColor: CGColor?
 
 
+    @IBOutlet weak var posterImg: UIImageView!
+    @IBOutlet weak var songTitle: UILabel!
+    @IBOutlet weak var artistName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,8 +56,12 @@ class MiguSongCell: UITableViewCell {
     
     func config(withSong song: MiguSong) {
         self.song = song
-        self.textLabel?.text = song.song
-        self.detailTextLabel?.text = song.artist
+        if let poster = song.songDetails?.poster {
+            self.posterImg?.setImageFromURl(poster)
+        }
+        
+        self.songTitle.text = song.songDetails?.songName.removingPercentEncoding! ?? ""
+        self.artistName?.text = song.songDetails?.singerName ?? ""
     }
     
 }

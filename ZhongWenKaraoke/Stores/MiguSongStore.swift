@@ -16,7 +16,7 @@ class MiguSongStore {
             if error == nil {
                 self.songs = miguSongs!
                 self.fetchSongAssociations()
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "songsArrived"), object: nil)
+                notifyNewSongs()
             } else {
                 print(error!)
                 self.songs = nil
@@ -30,22 +30,28 @@ class MiguSongStore {
 
                 if (song.songDetails == nil) {
                     MiguDs.getSongDetails(song) { songDetails, error in
-                        debugPrint("Fetched \(songDetails)")
+                        debugPrint("Fetched \(String(describing: songDetails))")
                         if (songDetails != nil) {
                             self.songs?[i].songDetails = songDetails!
+                            notifyNewSongs()
                         }
                     }
                 }
                 
                 if (song.songLyrics == nil) {
                     MiguDs.getLyrics(song) {lyrics, error in
-                        debugPrint("Fetched \(lyrics)")
+                        debugPrint("Fetched \(String(describing: lyrics))")
                         if (lyrics != nil) {
                             self.songs?[i].songLyrics = lyrics!
+                            notifyNewSongs()
                         }
                     }
                 }
             }
         }
+    }
+    
+    func notifyNewSongs() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "songsArrived"), object: nil)
     }
 }
