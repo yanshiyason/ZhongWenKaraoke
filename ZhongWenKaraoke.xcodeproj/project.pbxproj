@@ -24,7 +24,6 @@
 		CD23747E1F23A9A800995105 /* UIImageView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23747D1F23A9A800995105 /* UIImageView+extensions.swift */; };
 		CD3EF47A1F1F74BA009036F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */; };
 		CD3EF47F1F1F74BA009036F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EF47D1F1F74BA009036F2 /* Main.storyboard */; };
-		CD3EF4811F1F74BA009036F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD3EF4801F1F74BA009036F2 /* Assets.xcassets */; };
 		CD3EF4841F1F74BA009036F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3EF4821F1F74BA009036F2 /* LaunchScreen.storyboard */; };
 		CD3EF49A1F1F74BA009036F2 /* ZhongWenKaraokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3EF4991F1F74BA009036F2 /* ZhongWenKaraokeUITests.swift */; };
 		CD4AA6ED1F1F8E290040627E /* MiguDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AA6EC1F1F8E290040627E /* MiguDataServiceTests.swift */; };
@@ -41,6 +40,8 @@
 		CD6332661F23C4D700CE78F2 /* LyricLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6332651F23C4D700CE78F2 /* LyricLineCell.swift */; };
 		CD6332681F2549BC00CE78F2 /* MiguSongTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6332671F2549BC00CE78F2 /* MiguSongTabBarController.swift */; };
 		CD63326A1F254B6800CE78F2 /* MiguSongLyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6332691F254B6800CE78F2 /* MiguSongLyricsViewController.swift */; };
+		CD63326C1F269D4400CE78F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD63326B1F269D4400CE78F2 /* Assets.xcassets */; };
+		CD6332701F26A34700CE78F2 /* JukeboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD63326F1F26A34600CE78F2 /* JukeboxViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +85,6 @@
 		CD3EF4761F1F74BA009036F2 /* ZhongWenKaraoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhongWenKaraoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD3EF47E1F1F74BA009036F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CD3EF4801F1F74BA009036F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD3EF4831F1F74BA009036F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD3EF4851F1F74BA009036F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD3EF48A1F1F74BA009036F2 /* ZhongWenKaraokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhongWenKaraokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +106,8 @@
 		CD6332651F23C4D700CE78F2 /* LyricLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricLineCell.swift; sourceTree = "<group>"; };
 		CD6332671F2549BC00CE78F2 /* MiguSongTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongTabBarController.swift; sourceTree = "<group>"; };
 		CD6332691F254B6800CE78F2 /* MiguSongLyricsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongLyricsViewController.swift; sourceTree = "<group>"; };
+		CD63326B1F269D4400CE78F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = /Users/yannickchiasson/shiyason/workspaces/xcode_workspace/ZhongWenKaraoke/ZhongWenKaraoke/Assets.xcassets; sourceTree = "<absolute>"; };
+		CD63326F1F26A34600CE78F2 /* JukeboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukeboxViewController.swift; sourceTree = "<group>"; };
 		CDAAD0AE129EA2B21D3992D6 /* Pods-ZhongWenKaraoke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraoke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 				CD23747B1F235A5800995105 /* MiguSongDetailsViewController.swift */,
 				CD6332671F2549BC00CE78F2 /* MiguSongTabBarController.swift */,
 				CD6332691F254B6800CE78F2 /* MiguSongLyricsViewController.swift */,
+				CD63326F1F26A34600CE78F2 /* JukeboxViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -247,8 +250,8 @@
 				CD4AA6EE1F1F8E5C0040627E /* Services */,
 				CD3EF4791F1F74BA009036F2 /* AppDelegate.swift */,
 				CD3EF47D1F1F74BA009036F2 /* Main.storyboard */,
-				CD3EF4801F1F74BA009036F2 /* Assets.xcassets */,
 				CD3EF4821F1F74BA009036F2 /* LaunchScreen.storyboard */,
+				CD63326B1F269D4400CE78F2 /* Assets.xcassets */,
 				CD3EF4851F1F74BA009036F2 /* Info.plist */,
 				CD23747D1F23A9A800995105 /* UIImageView+extensions.swift */,
 			);
@@ -461,7 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD3EF4841F1F74BA009036F2 /* LaunchScreen.storyboard in Resources */,
-				CD3EF4811F1F74BA009036F2 /* Assets.xcassets in Resources */,
+				CD63326C1F269D4400CE78F2 /* Assets.xcassets in Resources */,
 				CD3EF47F1F1F74BA009036F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,6 +638,7 @@
 				CD63326A1F254B6800CE78F2 /* MiguSongLyricsViewController.swift in Sources */,
 				CD2374681F22EB1600995105 /* MiguSongStore.swift in Sources */,
 				CD6332621F23B8BB00CE78F2 /* MiguSongLyrics.swift in Sources */,
+				CD6332701F26A34700CE78F2 /* JukeboxViewController.swift in Sources */,
 				CD23747E1F23A9A800995105 /* UIImageView+extensions.swift in Sources */,
 				CD6332681F2549BC00CE78F2 /* MiguSongTabBarController.swift in Sources */,
 				CD4AA6F91F20EB4B0040627E /* MiguSong.swift in Sources */,

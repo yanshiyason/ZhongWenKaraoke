@@ -113,25 +113,32 @@
                         <viewControllerLayoutGuide type="top" id="CGd-r7-tuw"/>
                         <viewControllerLayoutGuide type="bottom" id="0yB-0i-lMx"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="X9z-lw-qAN">
+                    <view key="view" contentMode="scaleToFill" id="X9z-lw-qAN" userLabel="SongOverview">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xFS-Qz-4NL">
-                                <rect key="frame" x="37" y="64" width="300" height="243"/>
+                                <rect key="frame" x="37" y="64" width="300" height="248"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeq-8j-PdA">
-                                <rect key="frame" x="37" y="315" width="300" height="29"/>
+                                <rect key="frame" x="37" y="320" width="300" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artist name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcD-6F-EPZ">
-                                <rect key="frame" x="37" y="352" width="300" height="21"/>
+                                <rect key="frame" x="37" y="357" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ECd-H9-1aW">
+                                <rect key="frame" x="0.0" y="505" width="375" height="118"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="xcY-D2-U5H" kind="embed" id="NqU-ii-ftA"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -148,6 +155,8 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Song" id="uEW-oR-Gq8"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="artistName" destination="IcD-6F-EPZ" id="xbY-bR-4vX"/>
                         <outlet property="posterImage" destination="xFS-Qz-4NL" id="KOx-v8-ape"/>
@@ -247,5 +256,64 @@
             </objects>
             <point key="canvasLocation" x="3636" y="36.431784107946029"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Faf-ou-Wfp">
+            <objects>
+                <viewController id="xcY-D2-U5H" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PNc-iD-rq5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3oZ-ni-0El" userLabel="jukeboxPlayer">
+                                <rect key="frame" x="0.0" y="20" width="375" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Am0-jJ-SwG" userLabel="nextBtn">
+                                        <rect key="frame" x="304" y="8" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="nextBtn"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCp-2G-bZf" userLabel="prevBtn">
+                                        <rect key="frame" x="16" y="8" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="prevBtn"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyB-rf-k3O" userLabel="playBtn">
+                                        <rect key="frame" x="119" y="8" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="playBtn"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUr-am-DAb" userLabel="pauseBtn">
+                                        <rect key="frame" x="119" y="8" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="pauseBtn"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCQ-22-GKU" userLabel="restartBtn">
+                                        <rect key="frame" x="213" y="8" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="restartBtn"/>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PPS-xR-nqK" userLabel="songProgress">
+                                        <rect key="frame" x="16" y="86" width="351" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </progressView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6E-HL-jua" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2260" y="622.48875562218893"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="nextBtn" width="128" height="128"/>
+        <image name="pauseBtn" width="128" height="128"/>
+        <image name="playBtn" width="128" height="128"/>
+        <image name="prevBtn" width="128" height="128"/>
+        <image name="restartBtn" width="128" height="128"/>
+    </resources>
 </document>
