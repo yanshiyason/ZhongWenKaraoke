@@ -256,10 +256,10 @@
             </objects>
             <point key="canvasLocation" x="3636" y="36.431784107946029"/>
         </scene>
-        <!--View Controller-->
+        <!--Jukebox View Controller-->
         <scene sceneID="Faf-ou-Wfp">
             <objects>
-                <viewController id="xcY-D2-U5H" sceneMemberID="viewController">
+                <viewController id="xcY-D2-U5H" customClass="JukeboxViewController" customModule="ZhongWenKaraoke" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PNc-iD-rq5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -303,6 +303,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="nextBtn" destination="Am0-jJ-SwG" id="iLS-GJ-hWb"/>
+                        <outlet property="pauseBtn" destination="JUr-am-DAb" id="Nw4-cz-lOL"/>
+                        <outlet property="playBtn" destination="DyB-rf-k3O" id="muN-TX-Qof"/>
+                        <outlet property="prevBtn" destination="kCp-2G-bZf" id="Z6F-2N-jQd"/>
+                        <outlet property="restartBtn" destination="uCQ-22-GKU" id="CC0-La-Dxg"/>
+                        <outlet property="songProgress" destination="PPS-xR-nqK" id="c26-2o-gxb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6E-HL-jua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
