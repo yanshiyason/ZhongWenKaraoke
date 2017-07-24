@@ -10,6 +10,7 @@ target 'ZhongWenKaraoke' do
   pod 'Kanna'
   pod 'Pantry'
   pod 'Kingfisher', '~> 3.0'
+  pod 'Jukebox'
 
 
   target 'ZhongWenKaraokeTests' do

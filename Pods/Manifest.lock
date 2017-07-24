@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.5.0)
+  - Jukebox (0.2.1)
   - Kanna (2.2.1)
   - Kingfisher (3.10.3)
   - OHHTTPStubs/Core (6.0.0)
@@ -19,6 +20,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Jukebox
   - Kanna
   - Kingfisher (~> 3.0)
   - OHHTTPStubs/Swift
@@ -26,11 +28,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Jukebox: 81db618ccd3a1cc9b154f4ae0f5c4b54638666dd
   Kanna: 182789ab065e8f9a6ccc2a74ce6283d3401c0c4a
   Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
   OHHTTPStubs: 752f9b11fd810a15162d50f11c06ff94f8e012eb
   Pantry: 98481849be65d2b2cb9658976533e84ebd266192
 
-PODFILE CHECKSUM: 598e2285ad61960c6094e4a16c89ed05dc6d866a
+PODFILE CHECKSUM: 2b5d64c78e687d41d5a0acc5955ebc03e4559f67
 
 COCOAPODS: 1.2.1
