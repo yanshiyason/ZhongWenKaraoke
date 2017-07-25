@@ -42,6 +42,7 @@
 		CD63326A1F254B6800CE78F2 /* MiguSongLyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6332691F254B6800CE78F2 /* MiguSongLyricsViewController.swift */; };
 		CD63326C1F269D4400CE78F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD63326B1F269D4400CE78F2 /* Assets.xcassets */; };
 		CD6332701F26A34700CE78F2 /* JukeboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD63326F1F26A34600CE78F2 /* JukeboxViewController.swift */; };
+		CD6332741F26F4E200CE78F2 /* JukeboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6332731F26F4E200CE78F2 /* JukeboxService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		CD6332691F254B6800CE78F2 /* MiguSongLyricsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongLyricsViewController.swift; sourceTree = "<group>"; };
 		CD63326B1F269D4400CE78F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = /Users/yannickchiasson/shiyason/workspaces/xcode_workspace/ZhongWenKaraoke/ZhongWenKaraoke/Assets.xcassets; sourceTree = "<absolute>"; };
 		CD63326F1F26A34600CE78F2 /* JukeboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukeboxViewController.swift; sourceTree = "<group>"; };
+		CD6332731F26F4E200CE78F2 /* JukeboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukeboxService.swift; sourceTree = "<group>"; };
 		CDAAD0AE129EA2B21D3992D6 /* Pods-ZhongWenKaraoke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraoke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,6 +289,7 @@
 			children = (
 				CD4AA6EF1F1F8E880040627E /* MiguDataService.swift */,
 				CD2374751F232E3900995105 /* TopViewDataService.swift */,
+				CD6332731F26F4E200CE78F2 /* JukeboxService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				CD6332621F23B8BB00CE78F2 /* MiguSongLyrics.swift in Sources */,
 				CD6332701F26A34700CE78F2 /* JukeboxViewController.swift in Sources */,
 				CD23747E1F23A9A800995105 /* UIImageView+extensions.swift in Sources */,
+				CD6332741F26F4E200CE78F2 /* JukeboxService.swift in Sources */,
 				CD6332681F2549BC00CE78F2 /* MiguSongTabBarController.swift in Sources */,
 				CD4AA6F91F20EB4B0040627E /* MiguSong.swift in Sources */,
 				CD2374761F232E3900995105 /* TopViewDataService.swift in Sources */,

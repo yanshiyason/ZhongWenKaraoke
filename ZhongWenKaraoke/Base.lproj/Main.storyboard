@@ -136,7 +136,7 @@
                                 <rect key="frame" x="0.0" y="505" width="375" height="118"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="xcY-D2-U5H" kind="embed" id="NqU-ii-ftA"/>
+                                    <segue destination="xcY-D2-U5H" kind="embed" identifier="SegueToJukebox" id="NqU-ii-ftA"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -269,27 +269,31 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Am0-jJ-SwG" userLabel="nextBtn">
-                                        <rect key="frame" x="304" y="8" width="70" height="70"/>
+                                        <rect key="frame" x="219" y="8" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="nextBtn"/>
+                                        <connections>
+                                            <action selector="nextAction:" destination="xcY-D2-U5H" eventType="touchUpInside" id="ycy-BG-Hah"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCp-2G-bZf" userLabel="prevBtn">
                                         <rect key="frame" x="16" y="8" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="prevBtn"/>
+                                        <connections>
+                                            <action selector="prevAction:" destination="xcY-D2-U5H" eventType="touchUpInside" id="NSQ-RY-HG1"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyB-rf-k3O" userLabel="playBtn">
-                                        <rect key="frame" x="119" y="8" width="70" height="70"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyB-rf-k3O" userLabel="playPauseBtn">
+                                        <rect key="frame" x="94" y="8" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="playBtn"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUr-am-DAb" userLabel="pauseBtn">
-                                        <rect key="frame" x="119" y="8" width="70" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button" image="pauseBtn"/>
+                                        <connections>
+                                            <action selector="playPauseAction:" destination="xcY-D2-U5H" eventType="touchUpInside" id="J01-dv-Wzw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCQ-22-GKU" userLabel="restartBtn">
-                                        <rect key="frame" x="213" y="8" width="70" height="70"/>
+                                        <rect key="frame" x="297" y="8" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="restartBtn"/>
                                     </button>
@@ -297,6 +301,14 @@
                                         <rect key="frame" x="16" y="86" width="351" height="2"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhW-Zq-Q4v" userLabel="stopBtn">
+                                        <rect key="frame" x="156" y="8" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="stopBtn"/>
+                                        <connections>
+                                            <action selector="stopAction:" destination="xcY-D2-U5H" eventType="touchUpInside" id="BzH-2O-6qx"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -305,11 +317,11 @@
                     </view>
                     <connections>
                         <outlet property="nextBtn" destination="Am0-jJ-SwG" id="iLS-GJ-hWb"/>
-                        <outlet property="pauseBtn" destination="JUr-am-DAb" id="Nw4-cz-lOL"/>
-                        <outlet property="playBtn" destination="DyB-rf-k3O" id="muN-TX-Qof"/>
+                        <outlet property="playPauseBtn" destination="DyB-rf-k3O" id="Cow-Bf-3Ug"/>
                         <outlet property="prevBtn" destination="kCp-2G-bZf" id="Z6F-2N-jQd"/>
                         <outlet property="restartBtn" destination="uCQ-22-GKU" id="CC0-La-Dxg"/>
-                        <outlet property="songProgress" destination="PPS-xR-nqK" id="c26-2o-gxb"/>
+                        <outlet property="songProgress" destination="PPS-xR-nqK" id="J1P-KK-3xH"/>
+                        <outlet property="stopBtn" destination="fhW-Zq-Q4v" id="KJl-jR-HGy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6E-HL-jua" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -319,9 +331,9 @@
     </scenes>
     <resources>
         <image name="nextBtn" width="128" height="128"/>
-        <image name="pauseBtn" width="128" height="128"/>
         <image name="playBtn" width="128" height="128"/>
         <image name="prevBtn" width="128" height="128"/>
         <image name="restartBtn" width="128" height="128"/>
+        <image name="stopBtn" width="128" height="128"/>
     </resources>
 </document>
