@@ -13,27 +13,25 @@ import Jukebox
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    static var jukeboxVC: JukeboxViewController?
-    static var jbService = JukeboxService()
-    static var jukebox = Jukebox(delegate: AppDelegate.jbService)
     static let miguSongStore = MiguSongStore()
+    
     
     override func remoteControlReceived(with event: UIEvent?) {
         if event?.type == .remoteControl {
             switch event!.subtype {
             case .remoteControlPlay :
-                AppDelegate.jukebox!.play()
+                JukeboxService.jukebox.play()
             case .remoteControlPause :
-                AppDelegate.jukebox!.pause()
+                JukeboxService.jukebox.pause()
             case .remoteControlNextTrack :
-                AppDelegate.jukebox!.playNext()
+                JukeboxService.jukebox.playNext()
             case .remoteControlPreviousTrack:
-                AppDelegate.jukebox!.playPrevious()
+                JukeboxService.jukebox.playPrevious()
             case .remoteControlTogglePlayPause:
-                if AppDelegate.jukebox!.state == .playing {
-                    AppDelegate.jukebox!.pause()
+                if JukeboxService.jukebox.state == .playing {
+                    JukeboxService.jukebox.pause()
                 } else {
-                    AppDelegate.jukebox!.play()
+                    JukeboxService.jukebox.play()
                 }
             default:
                 break

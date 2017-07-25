@@ -10,23 +10,27 @@ import Foundation
 import Jukebox
 
 class JukeboxService: JukeboxDelegate {
+    static var jukeboxVC: JukeboxViewController?
+    static var jukeboxService = JukeboxService()
+    static var jukebox = Jukebox(delegate: jukeboxService)!
+
     func jukeboxStateDidChange(_ jukebox: Jukebox) {
         
-        if AppDelegate.jukebox!.state == .ready {
-            AppDelegate.jukeboxVC!.playPauseBtn.setImage(UIImage(named: "playBtn"), for: UIControlState())
-        } else if AppDelegate.jukebox!.state == .loading {
-            AppDelegate.jukeboxVC!.playPauseBtn.setImage(UIImage(named: "pauseBtn"), for: UIControlState())
+        if jukebox.state == .ready {
+            JukeboxService.jukeboxVC!.playPauseBtn.setImage(UIImage(named: "playBtn"), for: UIControlState())
+        } else if jukebox.state == .loading {
+            JukeboxService.jukeboxVC!.playPauseBtn.setImage(UIImage(named: "pauseBtn"), for: UIControlState())
         } else {
             let imageName: String
-            switch AppDelegate.jukebox!.state {
+            switch jukebox.state {
             case .playing, .loading:
                 imageName = "pauseBtn"
             case .paused, .failed, .ready:
                 imageName = "playBtn"
             }
-            AppDelegate.jukeboxVC!.playPauseBtn.setImage(UIImage(named: imageName), for: UIControlState())
+            JukeboxService.jukeboxVC!.playPauseBtn.setImage(UIImage(named: imageName), for: UIControlState())
         }
-        print("Jukebox state changed to \(AppDelegate.jukebox!.state)")
+        print("Jukebox state changed to \(jukebox.state)")
     }
     
     func jukeboxPlaybackProgressDidChange(_ jukebox: Jukebox) {

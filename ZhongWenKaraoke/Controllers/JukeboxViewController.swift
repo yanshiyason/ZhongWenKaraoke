@@ -26,10 +26,10 @@ class JukeboxViewController: UIViewController {
         // begin receiving remote events
         UIApplication.shared.beginReceivingRemoteControlEvents()
         
-        AppDelegate.jukebox!.stop()
+        JukeboxService.jukebox.stop()
         
-        for item in AppDelegate.jukebox!.queuedItems {
-            AppDelegate.jukebox!.remove(item: item)
+        for item in JukeboxService.jukebox.queuedItems {
+            JukeboxService.jukebox.remove(item: item)
         }
         
         let jukeboxItem: JukeboxItem = {
@@ -42,8 +42,8 @@ class JukeboxViewController: UIViewController {
             }
         }()
         
-        AppDelegate.jukebox!.append(item: jukeboxItem, loadingAssets: true)
-        AppDelegate.jukebox!.play()
+        JukeboxService.jukebox.append(item: jukeboxItem, loadingAssets: true)
+        JukeboxService.jukebox.play()
         
 //        jukebox = Jukebox(delegate: self, items: [
 //            JukeboxItem(URL: URL(string: miguSong.songDetails!.safeMp3Url)!)
@@ -58,29 +58,29 @@ class JukeboxViewController: UIViewController {
     }
     
     @IBAction func prevAction(_ sender: Any) {
-        if let time = AppDelegate.jukebox!.currentItem?.currentTime, time > 5.0 || AppDelegate.jukebox!.playIndex == 0 {
-            AppDelegate.jukebox!.replayCurrentItem()
+        if let time = JukeboxService.jukebox.currentItem?.currentTime, time > 5.0 || JukeboxService.jukebox.playIndex == 0 {
+            JukeboxService.jukebox.replayCurrentItem()
         } else {
-            AppDelegate.jukebox!.playPrevious()
+            JukeboxService.jukebox.playPrevious()
         }
     }
     @IBAction func nextAction(_ sender: Any) {
-        AppDelegate.jukebox!.playNext()
+        JukeboxService.jukebox.playNext()
     }
     @IBAction func playPauseAction(_ sender: Any) {
-        switch AppDelegate.jukebox!.state {
+        switch JukeboxService.jukebox.state {
         case .ready :
-            AppDelegate.jukebox!.play(atIndex: 0)
+            JukeboxService.jukebox.play(atIndex: 0)
         case .playing :
-            AppDelegate.jukebox!.pause()
+            JukeboxService.jukebox.pause()
         case .paused :
-            AppDelegate.jukebox!.play()
+            JukeboxService.jukebox.play()
         default:
-            AppDelegate.jukebox!.stop()
+            JukeboxService.jukebox.stop()
         }
     }
     @IBAction func stopAction(_ sender: Any) {
-        AppDelegate.jukebox!.stop()
+        JukeboxService.jukebox.stop()
     }
 
     /*

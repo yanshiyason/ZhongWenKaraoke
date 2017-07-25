@@ -51,7 +51,7 @@ class MiguSongDetailsViewController: UIViewController {
             let parentVC = self.tabBarController as! MiguSongTabBarController
             
             jukeboxVC.miguSong = parentVC.song
-            AppDelegate.jukeboxVC = jukeboxVC
+            JukeboxService.jukeboxVC = jukeboxVC
         }
     }
 
