@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AVKit
 import Pantry
 
 struct MiguSongDetails {
@@ -34,6 +35,39 @@ struct MiguSongDetails {
         } else {
             return nil
         }
+    }
+    
+    var mp3FilePath: String? {
+        get {
+            if let filePath: String = Pantry.unpack(mp3FileName) {
+                return filePath
+            } else {
+                fetchAndStoreMp3()
+                return nil
+            }
+        }
+    }
+    
+    func fetchAndStoreMp3() {
+        MiguDataService().downloadMp3(self) { url in
+            if let url = url {
+                Pantry.pack(url.absoluteString, key: self.mp3FileName)
+            }
+        }
+    }
+    
+//    let mp3Asset = AVURLAsset(URL: NSURL(fileURLWithPath: safeMp3Url))
+    
+//    let asset = AVURLAsset(URL: NSURL(fileURLWithPath: pathString), options: nil)
+//    let audioDuration = asset.duration
+//    let audioDurationSeconds = CMTimeGetSeconds(audioDuration)
+    
+    var safeMp3Url: String {
+        return self.mp3.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    }
+    
+    var mp3FileName: String {
+        return "\(singerId)_\(songId).mp3"
     }
     
 }

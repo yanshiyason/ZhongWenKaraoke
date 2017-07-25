@@ -12,6 +12,26 @@ import Kanna
 
 class MiguDataService {
     
+    func downloadMp3(_ miguSongDetails: MiguSongDetails, handler: @escaping (URL?) -> Void) {
+        print("starting download!")
+        let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+            var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            documentsURL.appendPathComponent(miguSongDetails.mp3FileName)
+            print("Downloading to: \(documentsURL)")
+            return (documentsURL, [.removePreviousFile])
+        }
+        
+        Alamofire.download(miguSongDetails.safeMp3Url, to: destination).responseData { response in
+            print("inside download handler")
+            if let destinationUrl = response.destinationURL {
+                print("destinationUrl was valid! \(destinationUrl)")
+                handler(destinationUrl)
+            } else {
+                print("destinationUrl was invalid! \(response)")
+            }
+        }
+    }
+    
     
 
     func getLyrics(_ miguSong: MiguSong, handler: @escaping (MiguSongLyrics?, Error?) -> Void) {

@@ -20,6 +20,7 @@ class TopViewController: UIViewController {
         songsTable.delegate = topViewDataService
         songsTable.dataSource = topViewDataService
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(loadSongs), name: NSNotification.Name(rawValue: "songsArrived"), object: nil)
     }
 
@@ -33,16 +34,20 @@ class TopViewController: UIViewController {
         self.songsTable.reloadData()
     }
     
+    func songForRow() -> MiguSong? {
+        if let row = songsTable.indexPathForSelectedRow?.row {
+            let dataService = songsTable.dataSource as! TopViewDataService
+            return dataService.miguSongStore.songs?[row]
+        } else {
+            return nil
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueToSongView" {
-            if let row = songsTable.indexPathForSelectedRow?.row {
-                let dataService = songsTable.dataSource as! TopViewDataService
-                if let song = dataService.miguSongStore.songs?[row] {
-                    let tabBarVC = segue.destination as! MiguSongTabBarController
-                    tabBarVC.song = song
-//                    let detailsVC = tabBarVC.viewControllers![0] as! MiguSongDetailsViewController
-//                    let lyricsVC = tabBarVC.viewControllers![1] as! MiguSongLyricsViewController
-                }
+            if let song = songForRow() {
+                let tabBarVC = segue.destination as! MiguSongTabBarController
+                tabBarVC.song = song
             }
         }
     }
