@@ -11,12 +11,16 @@ target 'ZhongWenKaraoke' do
   pod 'Pantry'
   pod 'Kingfisher', '~> 3.0'
   pod 'Jukebox'
+  pod 'RxSwift',    '~> 3.0'
+  pod 'RxCocoa',    '~> 3.0'
 
 
   target 'ZhongWenKaraokeTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'OHHTTPStubs/Swift'
+    pod 'RxBlocking', '~> 3.0'
+    pod 'RxTest',     '~> 3.0'
   end
 
   target 'ZhongWenKaraokeUITests' do
