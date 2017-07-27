@@ -8,6 +8,8 @@
 
 import UIKit
 import Jukebox
+import RxSwift
+import RxCocoa
 
 class JukeboxViewController: UIViewController {
 
@@ -17,9 +19,13 @@ class JukeboxViewController: UIViewController {
     @IBOutlet weak var playPauseBtn: UIButton!
     @IBOutlet weak var restartBtn: UIButton!
     @IBOutlet weak var songProgress: UIProgressView!
+    var progress = Variable<Float>(0)
     
     var jukebox: Jukebox!
     var miguSong: MiguSong!
+    
+    let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +50,32 @@ class JukeboxViewController: UIViewController {
         
         JukeboxService.jukebox.append(item: jukeboxItem, loadingAssets: true)
         JukeboxService.jukebox.play()
+        
+//        let variable = Variable(JukeboxService.jukebox.currentItem!)
+        JukeboxService.currentItem.asObservable()
+            .subscribe {
+                print($0)
+            }
+            .addDisposableTo(disposeBag)
+        
+        progress.asDriver().drive(onNext: {
+            self.songProgress!.setProgress(Float($0), animated: true)
+        })
+        .addDisposableTo(disposeBag)
+        
+//        progress.asDriver().drive(songProgress.rx.progress).addDisposableTo(disposeBag)
+//            .drive(songProgress.rx.progress)
+        
+        
+        JukeboxService.playbackTime.asObservable()
+            .subscribe {
+                if let time = $0.element ?? nil {
+                    let duration = JukeboxService.currentItem.value?.meta.duration ?? 0
+                    self.progress.value = (Float(time) / Float(duration)) * 1.0
+                }
+            }
+            .addDisposableTo(disposeBag)
+//        jukebox!.currentItem!
         
 //        jukebox = Jukebox(delegate: self, items: [
 //            JukeboxItem(URL: URL(string: miguSong.songDetails!.safeMp3Url)!)

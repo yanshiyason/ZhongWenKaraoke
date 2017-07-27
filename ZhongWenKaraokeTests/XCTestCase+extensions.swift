@@ -10,6 +10,7 @@ import Foundation
 import OHHTTPStubs
 import XCTest
 import Pantry
+@testable import ZhongWenKaraoke
 
 extension XCTestCase {
     func HtmlFixtureURL(_ title: String) -> URL {
@@ -27,6 +28,17 @@ extension XCTestCase {
     
     func JsonFromFixture(_ title: String) -> Data {
         return try! Data.init(contentsOf: JsonFixtureURL(title))
+    }
+    
+    func songWithDetails() -> MiguSong {
+        var song = MiguSong(
+            artist: "Pockets",
+            song: "Show me the money",
+            url: "http://music.migu.cn/#/song/1106678347/P1Z1Y1L6N2/7/001002A")
+        let json = JsonFromFixture("songDetails")
+        let songDetails = MiguSongDetails(fromJson: json)
+        song.songDetails = songDetails
+        return song
     }
     
     func stubHomePage(responseTime: Double) {

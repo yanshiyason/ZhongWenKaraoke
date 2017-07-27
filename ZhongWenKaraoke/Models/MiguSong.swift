@@ -54,8 +54,16 @@ struct MiguSong {
         return "http://music.migu.cn/webfront/player/findsong.do?itemid=\(itemId)&type=song&loc=\(loc)&locno=\(locno)"
     }
     
+    var localOrRemoteUrl: URL {
+        if let filePath: String = Pantry.unpack(songDetails!.mp3FileName) {
+            return URL(string: filePath)!
+        } else {
+            return URL(string: songDetails!.safeMp3Url)!
+        }
+    }
+    
     static func match(for regex: String, in url: String) -> [String] {
-        
+
         do {
             let regex = try NSRegularExpression(pattern: regex)
             let nsString = url as NSString

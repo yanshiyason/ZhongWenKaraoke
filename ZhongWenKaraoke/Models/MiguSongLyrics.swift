@@ -29,11 +29,44 @@ struct MiguSongLyrics {
             return LyricLine(timestamp: $0, text: $0)
         }
     }
+    
+    func lineIndex(for seconds: Float) -> Int {
+        
+        if let i = lyrics.index(where: { $0.timestampToSeconds() >= seconds }) {
+            return i - 1
+        } else {
+            return 0
+        }
+    }
 }
 
 struct LyricLine {
     var timestamp: String
     var text: String
+    
+    let minSecFractionsRegex = "(\\d{2,}):(\\d{2,})\\.(\\d{2,})"
+    
+    func timestampToSeconds () -> Float {
+        do {
+            
+            let regex = try NSRegularExpression(pattern: minSecFractionsRegex)
+            let nsString = timestamp as NSString
+            let results = regex.matches(in: timestamp, range: NSRange(location: 0, length: nsString.length))
+
+            if results.count == 0 {
+                return Float(0)
+            }
+            
+            let minutes = Int(nsString.substring(with: results[0].rangeAt(1)))! * 60
+            let seconds = Int(nsString.substring(with: results[0].rangeAt(2)))!
+            let ms      = nsString.substring(with: results[0].rangeAt(3))
+            let result  = Float("\(minutes + seconds).\(ms)")!
+            return result
+        } catch let error {
+            print("invalid regex: \(error.localizedDescription)")
+            return Float(0)
+        }
+    }
 }
 
 extension MiguSongLyrics: Storable {

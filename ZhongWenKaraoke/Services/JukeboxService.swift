@@ -8,11 +8,15 @@
 
 import Foundation
 import Jukebox
+import RxSwift
 
 class JukeboxService: JukeboxDelegate {
     static var jukeboxVC: JukeboxViewController?
     static var jukeboxService = JukeboxService()
+    
     static var jukebox = Jukebox(delegate: jukeboxService)!
+    static var currentItem = Variable<JukeboxItem?>(nil)
+    static var playbackTime = Variable<Double?>(nil)
 
     func jukeboxStateDidChange(_ jukebox: Jukebox) {
         
@@ -34,11 +38,11 @@ class JukeboxService: JukeboxDelegate {
     }
     
     func jukeboxPlaybackProgressDidChange(_ jukebox: Jukebox) {
-        
+        JukeboxService.playbackTime.value = JukeboxService.currentItem.value?.currentTime ?? 0   
     }
     
     func jukeboxDidLoadItem(_ jukebox: Jukebox, item: JukeboxItem) {
-        
+        JukeboxService.currentItem.value = item
     }
     
     func jukeboxDidUpdateMetadata(_ jukebox: Jukebox, forItem: JukeboxItem) {

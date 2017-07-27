@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import AVKit
+import AVFoundation
 import Pantry
 
 struct MiguSongDetails {
@@ -55,12 +55,6 @@ struct MiguSongDetails {
             }
         }
     }
-    
-//    let mp3Asset = AVURLAsset(URL: NSURL(fileURLWithPath: safeMp3Url))
-    
-//    let asset = AVURLAsset(URL: NSURL(fileURLWithPath: pathString), options: nil)
-//    let audioDuration = asset.duration
-//    let audioDurationSeconds = CMTimeGetSeconds(audioDuration)
     
     var safeMp3Url: String {
         return self.mp3.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!

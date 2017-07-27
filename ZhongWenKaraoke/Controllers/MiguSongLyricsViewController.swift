@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MiguSongLyricsViewController: UIViewController {
     var song: MiguSong!
     
     @IBOutlet weak var lyricsTable: UITableView!
+    
+    let disposeBag = DisposeBag()
+    var lastTouch = Date()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +26,22 @@ class MiguSongLyricsViewController: UIViewController {
         // Do any additional setup after loading the view.
         lyricsTable.delegate = self
         lyricsTable.dataSource = self
+        
+        JukeboxService.playbackTime.asDriver()
+            .throttle(1)
+            .filter({ _ in
+                self.lastTouch.timeIntervalSinceNow < -3.0 // more than 3 second should have passed since last touch
+            })
+            .map({
+                self.song.songLyrics!.lineIndex(for: Float($0 ?? 0))
+            })
+            .map({ $0 == -1 ? 0 : $0 })
+            .map({ IndexPath(row: $0, section: 0) })
+            .drive(onNext: {
+                print("currentLineIndex: \($0.row)")
+                self.lyricsTable.scrollToRow(at: $0, at: .middle, animated: true)
+            })
+            .addDisposableTo(disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +52,11 @@ class MiguSongLyricsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.lastTouch = Date()
+    }
+
     
 }
 

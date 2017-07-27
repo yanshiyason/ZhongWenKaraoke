@@ -10,10 +10,13 @@ import XCTest
 @testable import ZhongWenKaraoke
 
 class MiguSongLyricsTest: XCTestCase {
+    var sut: MiguSongLyrics!
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        let rawLyrics = JsonFromFixture("lyrics")
+        sut = MiguSongLyrics(rawLyrics)
     }
     
     override func tearDown() {
@@ -22,9 +25,18 @@ class MiguSongLyricsTest: XCTestCase {
     }
     
     func testParseLyrics_itReturnsLyricLines() {
-        let rawLyrics = JsonFromFixture("lyrics")
-        let lyrics = MiguSongLyrics(rawLyrics)
+        XCTAssertTrue(sut.lyrics.count > 0)
+    }
+    
+    func testTimestampToSeconds() {
+        XCTAssertEqual(sut.lyrics[3].timestampToSeconds(), Float(1))
+        XCTAssertEqual(sut.lyrics[5].timestampToSeconds(), Float(15.66))
+    }
+    
+    func testLineIndexForSeconds() {
         
-        XCTAssertTrue(lyrics.lyrics.count > 0)
+        XCTAssertEqual(sut.lineIndex(for: Float(16)), 5)
+        XCTAssertEqual(sut.lineIndex(for: Float(239.99)), 49)
+        
     }
 }
