@@ -24,9 +24,9 @@
 ////}
 ////let v = JukeboxService()
 //
-import Foundation
+//import Foundation
 //import UIKit
-import Alamofire
+//import Alamofire
 //import Jukebox
 //import AVKit
 //import AVFoundation
@@ -49,27 +49,27 @@ import Alamofire
 //
 //print(NAME_MAX)
 //
-let urlDecoded = "http://tyst.migu.cn/public/product01/2017/07/2017年07月03日11点35分紧急内容准入SONY259首/全曲试听/Mp3_128_44_16/Praying-Kesha.mp3?msisdn=99f246f5bd2d"
-let urlEncoded = urlDecoded.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-print(urlEncoded.lengthOfBytes(using: .utf8))
-
-let urlFilename = urlDecoded.addingPercentEncoding(withAllowedCharacters: .urlUserAllowed)!
-let url = URL(string: urlEncoded)!
-
-
-let destination: DownloadRequest.DownloadFileDestination = { _, _ in
-    var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-    print(documentsURL.appendPathComponent("12321_123321"))
-    return (documentsURL, [.removePreviousFile])
-}
-
+//let urlDecoded = "http://tyst.migu.cn/public/product01/2017/07/2017年07月03日11点35分紧急内容准入SONY259首/全曲试听/Mp3_128_44_16/Praying-Kesha.mp3?msisdn=99f246f5bd2d"
+//let urlEncoded = urlDecoded.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+//print(urlEncoded.lengthOfBytes(using: .utf8))
+//
+//let urlFilename = urlDecoded.addingPercentEncoding(withAllowedCharacters: .urlUserAllowed)!
+//let url = URL(string: urlEncoded)!
+//
+//
+//let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+//    var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+//    print(documentsURL.appendPathComponent("12321_123321"))
+//    return (documentsURL, [.removePreviousFile])
+//}
+//
+////var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 //var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-documentsURL.appendPathComponent("12321_123321.mp3")
-print(documentsURL)
-print(documentsURL.appendPathComponent("12321_123321.mp3"))
-
-URL(string: documentsURL.absoluteString) == documentsURL
+//documentsURL.appendPathComponent("12321_123321.mp3")
+//print(documentsURL)
+//print(documentsURL.appendPathComponent("12321_123321.mp3"))
+//
+//URL(string: documentsURL.absoluteString) == documentsURL
 
 
 
@@ -109,3 +109,122 @@ URL(string: documentsURL.absoluteString) == documentsURL
 ////        videoData = video
 ////    }
 ////})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//import AVFoundation
+//import Pantry
+//
+//class MiguAVURLAsset: AVURLAsset {
+//    // TODO: implement ways to find out playback time
+//    init(_ miguSong: URL) {
+//        super.init(url: miguSong, options: nil)
+//    }
+//    //    let mp3Asset = AVURLAsset(URL: NSURL(fileURLWithPath: safeMp3Url))
+//    func totalDurationInSeconds() -> Int {
+//        return 1
+//    }
+//    
+//    func currentPlaybackTimeInSeconds() -> Int {
+//        return 1
+//    }
+//}
+//
+//var u = URL(string: "http://www.mylocation.com/file.mp3")!
+//var m = MiguAVURLAsset(u)
+
+
+
+
+
+//import Foundation
+
+//let isoDate = "00:4:20"
+//
+//let dateFormatter = DateFormatter()
+////dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+//dateFormatter.dateFormat = "HH:mm:ss"
+//let date = dateFormatter.date(from:isoDate)!
+////date.
+//let calendar = Calendar.current
+//let components = calendar.dateComponents([.year, .month, .day, .hour], from: date)
+//let finalDate = calendar.date(from:components)
+
+
+//parseTimeStampTo_ms(timeStamp){
+//    let regexResult = timeStamp.match(/(\d{2})\:(\d{2}\.\d{2})/)
+//    let minutes = (1000 * 60) * +regexResult[1]
+//    let seconds = 1000 * +regexResult[2]
+//    return minutes + seconds
+//}
+
+//let timestamp = "03:58.99"
+//func timestampToSeconds (_ timestamp: String) -> Float {
+//    let minSecFractionsRegex = "(\\d{2,}):(\\d{2,})\\.(\\d{2,})"
+//    do {
+//        let regex = try NSRegularExpression(pattern: minSecFractionsRegex)
+//        let nsString = timestamp as NSString
+//        let results = regex.matches(in: timestamp, range: NSRange(location: 0, length: nsString.length))
+//        let minutes = Int(nsString.substring(with: results[0].rangeAt(1)))! * 60
+//        let seconds = Int(nsString.substring(with: results[0].rangeAt(2)))!
+//        let ms      = nsString.substring(with: results[0].rangeAt(3))
+//        let result  = Float("\(minutes + seconds).\(ms)")!
+//        return result
+//    } catch let error {
+//        print("invalid regex: \(error.localizedDescription)")
+//        return Float(0)
+//    }
+//}
+//
+//
+//func secondsToHoursMinutesSeconds (_ seconds : Int) -> (Int, Int, Int) {
+//    return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
+//}
+//
+//timestampToSeconds(timestamp)
+//
+//
+//secondsToHoursMinutesSeconds(60)
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import Foundation
+
+var d1 = Date()
+var d2 = Date()
+
+let date = Date()
+
+let dateComponents = Calendar.current.dateComponents([.second], from: date)
+let seconds = dateComponents.second
+print(String(describing: seconds)) // may print: Optional(13)
+
+
