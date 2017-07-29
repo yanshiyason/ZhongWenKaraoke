@@ -214,17 +214,32 @@
 
 
 
+//
+//
+//import Foundation
+//
+//var d1 = Date()
+//var d2 = Date()
+//
+//let date = Date()
+//
+//let dateComponents = Calendar.current.dateComponents([.second], from: date)
+//let seconds = dateComponents.second
+//print(String(describing: seconds)) // may print: Optional(13)
+//
+//
 
 
-import Foundation
 
-var d1 = Date()
-var d2 = Date()
+let dict: [String:[String:String]] = [
+    "a": [
+        "b":"c",
+        "d":"e",
+    ],
+    "f": [
+    "b":"c",
+    "d":"e",
+    ]
+]
 
-let date = Date()
-
-let dateComponents = Calendar.current.dateComponents([.second], from: date)
-let seconds = dateComponents.second
-print(String(describing: seconds)) // may print: Optional(13)
-
-
+print(dict["a"]!["b"])
