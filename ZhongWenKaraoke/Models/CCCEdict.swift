@@ -33,6 +33,32 @@ struct CCCEdict {
         return pinyinString
     }
     
+    static func simplified(_ text: String) -> String {
+        let results = CCCEdict.cut(text)
+        var simplifiedString = ""
+        for r in results {
+            if let noHit = r["notAWord"] {
+                simplifiedString += noHit
+            } else {
+                simplifiedString += (r["simplified"] ?? "")
+            }
+        }
+        return simplifiedString
+    }
+    
+    static func traditional(_ text: String) -> String {
+        let results = CCCEdict.cut(text)
+        var traditionalString = ""
+        for r in results {
+            if let noHit = r["notAWord"] {
+                traditionalString += noHit
+            } else {
+                traditionalString += (r["traditional"] ?? "")
+            }
+        }
+        return traditionalString
+    }
+    
     // more complex pinyinify function. Tries to maintain spaces.
 //    static func pinyinify(_ text: String) -> String {
 //        let results = CCCEdict.cut(text)
@@ -60,6 +86,10 @@ struct CCCEdict {
 //    }
 
     static func cut(_ text: String) -> [Entry] {
+        if text.characters.count == 0 {
+            return [Entry]()
+        }
+        
         var pointer = (0, Entry())
         let longestWordCheck = 7
         var results = [Entry]()
@@ -89,5 +119,18 @@ struct CCCEdict {
             
         }
         return results
+    }
+}
+
+
+extension String {
+    func toPinyin() -> String {
+        return CCCEdict.pinyinify(self)
+    }
+    func toSimplified() -> String {
+        return CCCEdict.simplified(self)
+    }
+    func toTraditional() -> String {
+        return CCCEdict.traditional(self)
     }
 }

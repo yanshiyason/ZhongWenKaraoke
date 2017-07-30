@@ -47,6 +47,28 @@ class CCCEdictTests: XCTestCase {
         XCTAssertEqual(CCCEdict.pinyinify("我有2个。他有540！50%的意思是百分之五十。"), "wǒ yǒu 2gè 。tā yǒu 540！50%de yìsi shì bǎifēnzhī wǔshí 。")
     }
     
+    func testSimplified_itTranslatesToSimplified() {
+        XCTAssertEqual(CCCEdict.simplified("让他温暖我的双眼"), "让他温暖我的双眼")
+        XCTAssertEqual(CCCEdict.simplified("我受不了了"), "我受不了了")
+        XCTAssertEqual(CCCEdict.simplified("好"), "好")
+        XCTAssertEqual(CCCEdict.simplified("我觉得睡觉是很重要的。我睡了一个好觉有很好的感觉。"), "我觉得睡觉是很重要的。我睡了一个好觉有很好的感觉。")
+        XCTAssertEqual(CCCEdict.simplified("他给我发了个短信：“我长大的时候我的头发很长。但是现在我喜欢理发。”"), "他给我发了个短信：“我长大的时候我的头发很长。但是现在我喜欢理发。”")
+        XCTAssertEqual(CCCEdict.simplified("我有2个。他有540！50%的意思是百分之五十。"), "我有2个。他有540！50%的意思是百分之五十。")
+    }
+    
+    func testTraditional_itTranslatesToTraditional() {
+        XCTAssertEqual(CCCEdict.traditional("让他温暖我的双眼"), "讓他溫暖我的雙眼")
+        XCTAssertEqual(CCCEdict.traditional("我受不了了"), "我受不了了")
+        XCTAssertEqual(CCCEdict.traditional("好"), "好")
+        XCTAssertEqual(CCCEdict.traditional("我觉得睡觉是很重要的。我睡了一个好觉有很好的感觉。"), "我覺得睡覺是很重要的。我睡了一個好覺有很好的感覺。")
+        XCTAssertEqual(CCCEdict.traditional("他给我发了个短信：“我长大的时候我的头发很长。但是现在我喜欢理发。”"), "他給我發了個短信：“我長大的時候我的頭髮很長。但是現在我喜歡理髮。”")
+        XCTAssertEqual(CCCEdict.traditional("我有2个。他有540！50%的意思是百分之五十。"), "我有2個。他有540！50%的意思是百分之五十。")
+    }
+    
+    func testCut_itDoesntBreakWhenGivenEmptyString() {
+        XCTAssertNoThrow(CCCEdict.cut(""))
+    }
+    
     
     
 }

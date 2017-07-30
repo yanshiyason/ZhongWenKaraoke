@@ -56,6 +56,26 @@ class MiguSongLyricsViewController: UIViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.lastTouch = Date()
     }
+    
+    enum ValidDisplay {
+        case none
+        case pinyin
+        case traditional
+    }
+    
+    var currentlyDisplaying: ValidDisplay = .none
+
+    @IBAction func didTapCycle(_ sender: Any) {
+        switch currentlyDisplaying {
+        case .none:
+            currentlyDisplaying = .pinyin
+        case .pinyin:
+            currentlyDisplaying = .traditional
+        case .traditional:
+            currentlyDisplaying = .none
+        }
+        lyricsTable.reloadData()
+    }
 
     
 }
@@ -68,8 +88,19 @@ extension MiguSongLyricsViewController: UITableViewDataSource {
         if song.songLyrics == nil {
             return UITableViewCell()
         } else {
-            let cell = lyricsTable.dequeueReusableCell(withIdentifier: "LyricLineCell", for: indexPath)
-            cell.textLabel?.text = self.song.songLyrics?.lyrics[indexPath.row].text()
+            let cell = lyricsTable.dequeueReusableCell(withIdentifier: "LyricLineCell", for: indexPath) as! LyricLineCell
+            
+            cell.simplified?.text = self.song.songLyrics?.lyrics[indexPath.row].text().toSimplified()
+
+            switch currentlyDisplaying {
+            case .none:
+                cell.tradOrpinyin?.text = ""
+            case .pinyin:
+                cell.tradOrpinyin?.text = self.song.songLyrics?.lyrics[indexPath.row].text().toPinyin()
+            case .traditional:
+                cell.tradOrpinyin?.text = self.song.songLyrics?.lyrics[indexPath.row].text().toTraditional()
+            }
+
             return cell
         }
     }

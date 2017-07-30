@@ -10,6 +10,9 @@ import UIKit
 
 class LyricLineCell: UITableViewCell {
 
+    @IBOutlet weak var simplified: UILabel!
+    @IBOutlet weak var tradOrpinyin: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
