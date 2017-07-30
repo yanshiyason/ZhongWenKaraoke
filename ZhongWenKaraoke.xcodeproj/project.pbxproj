@@ -1,0 +1,965 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B7DAE3992A5C72DE2F9CEB9 /* Pods_ZhongWenKaraokeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F014DBCEF2EA2E6BFFFE2B0 /* Pods_ZhongWenKaraokeTests.framework */; };
+		CD0D66AE1F2DF77300CDBC65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D668E1F2DF77300CDBC65 /* AppDelegate.swift */; };
+		CD0D66B11F2DF77300CDBC65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0D668F1F2DF77300CDBC65 /* Assets.xcassets */; };
+		CD0D66B21F2DF77300CDBC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0D66901F2DF77300CDBC65 /* LaunchScreen.storyboard */; };
+		CD0D66B31F2DF77300CDBC65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0D66921F2DF77300CDBC65 /* Main.storyboard */; };
+		CD0D66B41F2DF77300CDBC65 /* Comparable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66941F2DF77300CDBC65 /* Comparable+Extensions.swift */; };
+		CD0D66B51F2DF77300CDBC65 /* JukeboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66961F2DF77300CDBC65 /* JukeboxViewController.swift */; };
+		CD0D66B61F2DF77300CDBC65 /* MiguSongDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66971F2DF77300CDBC65 /* MiguSongDetailsViewController.swift */; };
+		CD0D66B71F2DF77300CDBC65 /* MiguSongLyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66981F2DF77300CDBC65 /* MiguSongLyricsViewController.swift */; };
+		CD0D66B81F2DF77300CDBC65 /* MiguSongTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66991F2DF77300CDBC65 /* MiguSongTabBarController.swift */; };
+		CD0D66B91F2DF77300CDBC65 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D669A1F2DF77300CDBC65 /* TopViewController.swift */; };
+		CD0D66BA1F2DF77300CDBC65 /* dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = CD0D669B1F2DF77300CDBC65 /* dictionary.json */; };
+		CD0D66BB1F2DF77300CDBC65 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0D669C1F2DF77300CDBC65 /* Info.plist */; };
+		CD0D66BC1F2DF77300CDBC65 /* CCCEdict.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D669E1F2DF77300CDBC65 /* CCCEdict.swift */; };
+		CD0D66BD1F2DF77300CDBC65 /* MiguSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D669F1F2DF77300CDBC65 /* MiguSong.swift */; };
+		CD0D66BE1F2DF77300CDBC65 /* MiguSongDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A01F2DF77300CDBC65 /* MiguSongDetails.swift */; };
+		CD0D66BF1F2DF77300CDBC65 /* MiguSongLyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A11F2DF77300CDBC65 /* MiguSongLyrics.swift */; };
+		CD0D66C01F2DF77300CDBC65 /* JukeboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A31F2DF77300CDBC65 /* JukeboxService.swift */; };
+		CD0D66C11F2DF77300CDBC65 /* MiguDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A41F2DF77300CDBC65 /* MiguDataService.swift */; };
+		CD0D66C21F2DF77300CDBC65 /* TopViewDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A51F2DF77300CDBC65 /* TopViewDataService.swift */; };
+		CD0D66C31F2DF77300CDBC65 /* MiguSongStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A71F2DF77300CDBC65 /* MiguSongStore.swift */; };
+		CD0D66C41F2DF77300CDBC65 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A81F2DF77300CDBC65 /* String+Extensions.swift */; };
+		CD0D66C51F2DF77300CDBC65 /* UIImageView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A91F2DF77300CDBC65 /* UIImageView+extensions.swift */; };
+		CD0D66C61F2DF77300CDBC65 /* LyricLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66AC1F2DF77300CDBC65 /* LyricLineCell.swift */; };
+		CD0D66C71F2DF77300CDBC65 /* MiguSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66AD1F2DF77300CDBC65 /* MiguSongCell.swift */; };
+		CD0D66F71F2DF79E00CDBC65 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0D66F51F2DF79E00CDBC65 /* Info.plist */; };
+		CD0D66F81F2DF79E00CDBC65 /* ZhongWenKaraokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66F61F2DF79E00CDBC65 /* ZhongWenKaraokeUITests.swift */; };
+		CD0D671A1F2DFA0600CDBC65 /* TopViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67051F2DFA0600CDBC65 /* TopViewControllerTests.swift */; };
+		CD0D671B1F2DFA0600CDBC65 /* genre_index_70s.html in Resources */ = {isa = PBXBuildFile; fileRef = CD0D67071F2DFA0600CDBC65 /* genre_index_70s.html */; };
+		CD0D671C1F2DFA0600CDBC65 /* lyrics.json in Resources */ = {isa = PBXBuildFile; fileRef = CD0D67081F2DFA0600CDBC65 /* lyrics.json */; };
+		CD0D671D1F2DFA0600CDBC65 /* lyrics1.json in Resources */ = {isa = PBXBuildFile; fileRef = CD0D67091F2DFA0600CDBC65 /* lyrics1.json */; };
+		CD0D671E1F2DFA0600CDBC65 /* miguTopPage.html in Resources */ = {isa = PBXBuildFile; fileRef = CD0D670A1F2DFA0600CDBC65 /* miguTopPage.html */; };
+		CD0D671F1F2DFA0600CDBC65 /* songDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = CD0D670B1F2DFA0600CDBC65 /* songDetails.json */; };
+		CD0D67201F2DFA0600CDBC65 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0D670C1F2DFA0600CDBC65 /* Info.plist */; };
+		CD0D67211F2DFA0600CDBC65 /* MiguSongStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D670D1F2DFA0600CDBC65 /* MiguSongStoreTests.swift */; };
+		CD0D67221F2DFA0600CDBC65 /* CCCEdictTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D670F1F2DFA0600CDBC65 /* CCCEdictTests.swift */; };
+		CD0D67231F2DFA0600CDBC65 /* MiguSongDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67101F2DFA0600CDBC65 /* MiguSongDetailsTests.swift */; };
+		CD0D67241F2DFA0600CDBC65 /* MiguSongLyricsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67111F2DFA0600CDBC65 /* MiguSongLyricsTest.swift */; };
+		CD0D67251F2DFA0600CDBC65 /* MiguSongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67121F2DFA0600CDBC65 /* MiguSongTests.swift */; };
+		CD0D67261F2DFA0600CDBC65 /* MiguDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67141F2DFA0600CDBC65 /* MiguDataServiceTests.swift */; };
+		CD0D67271F2DFA0600CDBC65 /* TopViewDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67151F2DFA0600CDBC65 /* TopViewDataServiceTests.swift */; };
+		CD0D67281F2DFA0600CDBC65 /* MiguSongCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67181F2DFA0600CDBC65 /* MiguSongCellTests.swift */; };
+		CD0D67291F2DFA0600CDBC65 /* XCTestCase+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67191F2DFA0600CDBC65 /* XCTestCase+extensions.swift */; };
+		DB99ED633FD1C52647580229 /* Pods_ZhongWenKaraoke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AA044CC89D18C7515D85C8 /* Pods_ZhongWenKaraoke.framework */; };
+		E7BE7B184A9A987C8C4B64F6 /* Pods_ZhongWenKaraokeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D70D152F981D5F592460E04 /* Pods_ZhongWenKaraokeUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD0D660D1F2DF59300CDBC65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0D65F01F2DF59200CDBC65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD0D65F71F2DF59200CDBC65;
+			remoteInfo = ZhongWenKaraoke;
+		};
+		CD0D66181F2DF59300CDBC65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD0D65F01F2DF59200CDBC65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD0D65F71F2DF59200CDBC65;
+			remoteInfo = ZhongWenKaraoke;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		31B6F0B80A8BEFF0B7DB18BA /* Pods-ZhongWenKaraoke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraoke.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke.release.xcconfig"; sourceTree = "<group>"; };
+		4D70D152F981D5F592460E04 /* Pods_ZhongWenKaraokeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhongWenKaraokeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52409E5C3310DEA538260757 /* Pods-ZhongWenKaraokeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeUITests/Pods-ZhongWenKaraokeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7F014DBCEF2EA2E6BFFFE2B0 /* Pods_ZhongWenKaraokeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhongWenKaraokeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		998C00903F1504ED2600E302 /* Pods-ZhongWenKaraokeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeUITests/Pods-ZhongWenKaraokeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADF1CEE162F68B4AC20A11AC /* Pods-ZhongWenKaraokeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeTests/Pods-ZhongWenKaraokeTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD0D668E1F2DF77300CDBC65 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD0D668F1F2DF77300CDBC65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD0D66911F2DF77300CDBC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD0D66931F2DF77300CDBC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD0D66941F2DF77300CDBC65 /* Comparable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+Extensions.swift"; sourceTree = "<group>"; };
+		CD0D66961F2DF77300CDBC65 /* JukeboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukeboxViewController.swift; sourceTree = "<group>"; };
+		CD0D66971F2DF77300CDBC65 /* MiguSongDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongDetailsViewController.swift; sourceTree = "<group>"; };
+		CD0D66981F2DF77300CDBC65 /* MiguSongLyricsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongLyricsViewController.swift; sourceTree = "<group>"; };
+		CD0D66991F2DF77300CDBC65 /* MiguSongTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongTabBarController.swift; sourceTree = "<group>"; };
+		CD0D669A1F2DF77300CDBC65 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		CD0D669B1F2DF77300CDBC65 /* dictionary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dictionary.json; sourceTree = "<group>"; };
+		CD0D669C1F2DF77300CDBC65 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0D669E1F2DF77300CDBC65 /* CCCEdict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCEdict.swift; sourceTree = "<group>"; };
+		CD0D669F1F2DF77300CDBC65 /* MiguSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSong.swift; sourceTree = "<group>"; };
+		CD0D66A01F2DF77300CDBC65 /* MiguSongDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongDetails.swift; sourceTree = "<group>"; };
+		CD0D66A11F2DF77300CDBC65 /* MiguSongLyrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongLyrics.swift; sourceTree = "<group>"; };
+		CD0D66A31F2DF77300CDBC65 /* JukeboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukeboxService.swift; sourceTree = "<group>"; };
+		CD0D66A41F2DF77300CDBC65 /* MiguDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguDataService.swift; sourceTree = "<group>"; };
+		CD0D66A51F2DF77300CDBC65 /* TopViewDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewDataService.swift; sourceTree = "<group>"; };
+		CD0D66A71F2DF77300CDBC65 /* MiguSongStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongStore.swift; sourceTree = "<group>"; };
+		CD0D66A81F2DF77300CDBC65 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		CD0D66A91F2DF77300CDBC65 /* UIImageView+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+extensions.swift"; sourceTree = "<group>"; };
+		CD0D66AC1F2DF77300CDBC65 /* LyricLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricLineCell.swift; sourceTree = "<group>"; };
+		CD0D66AD1F2DF77300CDBC65 /* MiguSongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongCell.swift; sourceTree = "<group>"; };
+		CD0D66F51F2DF79E00CDBC65 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0D66F61F2DF79E00CDBC65 /* ZhongWenKaraokeUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhongWenKaraokeUITests.swift; sourceTree = "<group>"; };
+		CD0D66FC1F2DF84100CDBC65 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ZhongWenKaraokeUITests/Podfile; sourceTree = "<group>"; };
+		CD0D67001F2DF8CC00CDBC65 /* ZhongWenKaraoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhongWenKaraoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0D67011F2DF8CC00CDBC65 /* ZhongWenKaraokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhongWenKaraokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0D67021F2DF8CC00CDBC65 /* ZhongWenKaraokeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhongWenKaraokeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0D67051F2DFA0600CDBC65 /* TopViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewControllerTests.swift; sourceTree = "<group>"; };
+		CD0D67071F2DFA0600CDBC65 /* genre_index_70s.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = genre_index_70s.html; sourceTree = "<group>"; };
+		CD0D67081F2DFA0600CDBC65 /* lyrics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lyrics.json; sourceTree = "<group>"; };
+		CD0D67091F2DFA0600CDBC65 /* lyrics1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lyrics1.json; sourceTree = "<group>"; };
+		CD0D670A1F2DFA0600CDBC65 /* miguTopPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = miguTopPage.html; sourceTree = "<group>"; };
+		CD0D670B1F2DFA0600CDBC65 /* songDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songDetails.json; sourceTree = "<group>"; };
+		CD0D670C1F2DFA0600CDBC65 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0D670D1F2DFA0600CDBC65 /* MiguSongStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongStoreTests.swift; sourceTree = "<group>"; };
+		CD0D670F1F2DFA0600CDBC65 /* CCCEdictTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCEdictTests.swift; sourceTree = "<group>"; };
+		CD0D67101F2DFA0600CDBC65 /* MiguSongDetailsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongDetailsTests.swift; sourceTree = "<group>"; };
+		CD0D67111F2DFA0600CDBC65 /* MiguSongLyricsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongLyricsTest.swift; sourceTree = "<group>"; };
+		CD0D67121F2DFA0600CDBC65 /* MiguSongTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongTests.swift; sourceTree = "<group>"; };
+		CD0D67141F2DFA0600CDBC65 /* MiguDataServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguDataServiceTests.swift; sourceTree = "<group>"; };
+		CD0D67151F2DFA0600CDBC65 /* TopViewDataServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewDataServiceTests.swift; sourceTree = "<group>"; };
+		CD0D67181F2DFA0600CDBC65 /* MiguSongCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongCellTests.swift; sourceTree = "<group>"; };
+		CD0D67191F2DFA0600CDBC65 /* XCTestCase+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+extensions.swift"; sourceTree = "<group>"; };
+		E1AA044CC89D18C7515D85C8 /* Pods_ZhongWenKaraoke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhongWenKaraoke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEC5460585D04A741E2DD47F /* Pods-ZhongWenKaraokeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeTests/Pods-ZhongWenKaraokeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD588EBAC3C3B7401E4B4219 /* Pods-ZhongWenKaraoke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraoke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD0D65F51F2DF59200CDBC65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB99ED633FD1C52647580229 /* Pods_ZhongWenKaraoke.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0D66091F2DF59300CDBC65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7DAE3992A5C72DE2F9CEB9 /* Pods_ZhongWenKaraokeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0D66141F2DF59300CDBC65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7BE7B184A9A987C8C4B64F6 /* Pods_ZhongWenKaraokeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B252F030E02FAEDB058ECEAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1AA044CC89D18C7515D85C8 /* Pods_ZhongWenKaraoke.framework */,
+				7F014DBCEF2EA2E6BFFFE2B0 /* Pods_ZhongWenKaraokeTests.framework */,
+				4D70D152F981D5F592460E04 /* Pods_ZhongWenKaraokeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD0D65EF1F2DF59200CDBC65 = {
+			isa = PBXGroup;
+			children = (
+				CD0D668D1F2DF77300CDBC65 /* ZhongWenKaraoke */,
+				CD0D67001F2DF8CC00CDBC65 /* ZhongWenKaraoke.app */,
+				CD0D67011F2DF8CC00CDBC65 /* ZhongWenKaraokeTests.xctest */,
+				CD0D67021F2DF8CC00CDBC65 /* ZhongWenKaraokeUITests.xctest */,
+				CD0D66FC1F2DF84100CDBC65 /* Podfile */,
+				CD0D67031F2DFA0600CDBC65 /* ZhongWenKaraokeTests */,
+				CD0D66F41F2DF79E00CDBC65 /* ZhongWenKaraokeUITests */,
+				E6953A67B13FEA43954277D2 /* Pods */,
+				B252F030E02FAEDB058ECEAC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CD0D668D1F2DF77300CDBC65 /* ZhongWenKaraoke */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D668E1F2DF77300CDBC65 /* AppDelegate.swift */,
+				CD0D668F1F2DF77300CDBC65 /* Assets.xcassets */,
+				CD0D66901F2DF77300CDBC65 /* LaunchScreen.storyboard */,
+				CD0D66921F2DF77300CDBC65 /* Main.storyboard */,
+				CD0D66941F2DF77300CDBC65 /* Comparable+Extensions.swift */,
+				CD0D66951F2DF77300CDBC65 /* Controllers */,
+				CD0D669B1F2DF77300CDBC65 /* dictionary.json */,
+				CD0D669C1F2DF77300CDBC65 /* Info.plist */,
+				CD0D669D1F2DF77300CDBC65 /* Models */,
+				CD0D66A21F2DF77300CDBC65 /* Services */,
+				CD0D66A61F2DF77300CDBC65 /* Stores */,
+				CD0D66A81F2DF77300CDBC65 /* String+Extensions.swift */,
+				CD0D66A91F2DF77300CDBC65 /* UIImageView+extensions.swift */,
+				CD0D66AA1F2DF77300CDBC65 /* Views */,
+			);
+			path = ZhongWenKaraoke;
+			sourceTree = "<group>";
+		};
+		CD0D66951F2DF77300CDBC65 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D66961F2DF77300CDBC65 /* JukeboxViewController.swift */,
+				CD0D66971F2DF77300CDBC65 /* MiguSongDetailsViewController.swift */,
+				CD0D66981F2DF77300CDBC65 /* MiguSongLyricsViewController.swift */,
+				CD0D66991F2DF77300CDBC65 /* MiguSongTabBarController.swift */,
+				CD0D669A1F2DF77300CDBC65 /* TopViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CD0D669D1F2DF77300CDBC65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D669E1F2DF77300CDBC65 /* CCCEdict.swift */,
+				CD0D669F1F2DF77300CDBC65 /* MiguSong.swift */,
+				CD0D66A01F2DF77300CDBC65 /* MiguSongDetails.swift */,
+				CD0D66A11F2DF77300CDBC65 /* MiguSongLyrics.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD0D66A21F2DF77300CDBC65 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D66A31F2DF77300CDBC65 /* JukeboxService.swift */,
+				CD0D66A41F2DF77300CDBC65 /* MiguDataService.swift */,
+				CD0D66A51F2DF77300CDBC65 /* TopViewDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CD0D66A61F2DF77300CDBC65 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D66A71F2DF77300CDBC65 /* MiguSongStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		CD0D66AA1F2DF77300CDBC65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D66AB1F2DF77300CDBC65 /* TableCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD0D66AB1F2DF77300CDBC65 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D66AC1F2DF77300CDBC65 /* LyricLineCell.swift */,
+				CD0D66AD1F2DF77300CDBC65 /* MiguSongCell.swift */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		CD0D66F41F2DF79E00CDBC65 /* ZhongWenKaraokeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D66F51F2DF79E00CDBC65 /* Info.plist */,
+				CD0D66F61F2DF79E00CDBC65 /* ZhongWenKaraokeUITests.swift */,
+			);
+			path = ZhongWenKaraokeUITests;
+			sourceTree = "<group>";
+		};
+		CD0D67031F2DFA0600CDBC65 /* ZhongWenKaraokeTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D67041F2DFA0600CDBC65 /* Controllers */,
+				CD0D67061F2DFA0600CDBC65 /* Fixtures */,
+				CD0D670C1F2DFA0600CDBC65 /* Info.plist */,
+				CD0D670D1F2DFA0600CDBC65 /* MiguSongStoreTests.swift */,
+				CD0D670E1F2DFA0600CDBC65 /* Models */,
+				CD0D67131F2DFA0600CDBC65 /* Services */,
+				CD0D67161F2DFA0600CDBC65 /* Views */,
+				CD0D67191F2DFA0600CDBC65 /* XCTestCase+extensions.swift */,
+			);
+			path = ZhongWenKaraokeTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		CD0D67041F2DFA0600CDBC65 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D67051F2DFA0600CDBC65 /* TopViewControllerTests.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CD0D67061F2DFA0600CDBC65 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D67071F2DFA0600CDBC65 /* genre_index_70s.html */,
+				CD0D67081F2DFA0600CDBC65 /* lyrics.json */,
+				CD0D67091F2DFA0600CDBC65 /* lyrics1.json */,
+				CD0D670A1F2DFA0600CDBC65 /* miguTopPage.html */,
+				CD0D670B1F2DFA0600CDBC65 /* songDetails.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		CD0D670E1F2DFA0600CDBC65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D670F1F2DFA0600CDBC65 /* CCCEdictTests.swift */,
+				CD0D67101F2DFA0600CDBC65 /* MiguSongDetailsTests.swift */,
+				CD0D67111F2DFA0600CDBC65 /* MiguSongLyricsTest.swift */,
+				CD0D67121F2DFA0600CDBC65 /* MiguSongTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD0D67131F2DFA0600CDBC65 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D67141F2DFA0600CDBC65 /* MiguDataServiceTests.swift */,
+				CD0D67151F2DFA0600CDBC65 /* TopViewDataServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CD0D67161F2DFA0600CDBC65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D67171F2DFA0600CDBC65 /* TableCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD0D67171F2DFA0600CDBC65 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				CD0D67181F2DFA0600CDBC65 /* MiguSongCellTests.swift */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		E6953A67B13FEA43954277D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD588EBAC3C3B7401E4B4219 /* Pods-ZhongWenKaraoke.debug.xcconfig */,
+				31B6F0B80A8BEFF0B7DB18BA /* Pods-ZhongWenKaraoke.release.xcconfig */,
+				EEC5460585D04A741E2DD47F /* Pods-ZhongWenKaraokeTests.debug.xcconfig */,
+				ADF1CEE162F68B4AC20A11AC /* Pods-ZhongWenKaraokeTests.release.xcconfig */,
+				998C00903F1504ED2600E302 /* Pods-ZhongWenKaraokeUITests.debug.xcconfig */,
+				52409E5C3310DEA538260757 /* Pods-ZhongWenKaraokeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD0D65F71F2DF59200CDBC65 /* ZhongWenKaraoke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0D66201F2DF59300CDBC65 /* Build configuration list for PBXNativeTarget "ZhongWenKaraoke" */;
+			buildPhases = (
+				0B51D1663F817A8E067A2980 /* [CP] Check Pods Manifest.lock */,
+				CD0D65F41F2DF59200CDBC65 /* Sources */,
+				CD0D65F51F2DF59200CDBC65 /* Frameworks */,
+				CD0D65F61F2DF59200CDBC65 /* Resources */,
+				52548A89314A9180F1180DEA /* [CP] Embed Pods Frameworks */,
+				B2167D58B8E221711AA108DC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZhongWenKaraoke;
+			productName = ZhongWenKaraoke;
+			productReference = CD0D67001F2DF8CC00CDBC65 /* ZhongWenKaraoke.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD0D660B1F2DF59300CDBC65 /* ZhongWenKaraokeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0D66231F2DF59300CDBC65 /* Build configuration list for PBXNativeTarget "ZhongWenKaraokeTests" */;
+			buildPhases = (
+				19FDA75F601405DBB61ADD7D /* [CP] Check Pods Manifest.lock */,
+				CD0D66081F2DF59300CDBC65 /* Sources */,
+				CD0D66091F2DF59300CDBC65 /* Frameworks */,
+				CD0D660A1F2DF59300CDBC65 /* Resources */,
+				71C0E3478963D878F56D28E1 /* [CP] Embed Pods Frameworks */,
+				7567A2B8FB6E90D1727DD447 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD0D660E1F2DF59300CDBC65 /* PBXTargetDependency */,
+			);
+			name = ZhongWenKaraokeTests;
+			productName = ZhongWenKaraokeTests;
+			productReference = CD0D67011F2DF8CC00CDBC65 /* ZhongWenKaraokeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD0D66161F2DF59300CDBC65 /* ZhongWenKaraokeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD0D66261F2DF59300CDBC65 /* Build configuration list for PBXNativeTarget "ZhongWenKaraokeUITests" */;
+			buildPhases = (
+				41E725B2E3B5B078135635D1 /* [CP] Check Pods Manifest.lock */,
+				CD0D66131F2DF59300CDBC65 /* Sources */,
+				CD0D66141F2DF59300CDBC65 /* Frameworks */,
+				CD0D66151F2DF59300CDBC65 /* Resources */,
+				54B80A0489D686D9F1C26974 /* [CP] Embed Pods Frameworks */,
+				4223A4D0D2E74B4BE6687EBA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD0D66191F2DF59300CDBC65 /* PBXTargetDependency */,
+			);
+			name = ZhongWenKaraokeUITests;
+			productName = ZhongWenKaraokeUITests;
+			productReference = CD0D67021F2DF8CC00CDBC65 /* ZhongWenKaraokeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD0D65F01F2DF59200CDBC65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Yannick Chiasson";
+				TargetAttributes = {
+					CD0D65F71F2DF59200CDBC65 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 2SJ5L2D5W6;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					CD0D660B1F2DF59300CDBC65 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 2SJ5L2D5W6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CD0D65F71F2DF59200CDBC65;
+					};
+					CD0D66161F2DF59300CDBC65 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 2SJ5L2D5W6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CD0D65F71F2DF59200CDBC65;
+					};
+				};
+			};
+			buildConfigurationList = CD0D65F31F2DF59200CDBC65 /* Build configuration list for PBXProject "ZhongWenKaraoke" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD0D65EF1F2DF59200CDBC65;
+			productRefGroup = CD0D65EF1F2DF59200CDBC65;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD0D65F71F2DF59200CDBC65 /* ZhongWenKaraoke */,
+				CD0D660B1F2DF59300CDBC65 /* ZhongWenKaraokeTests */,
+				CD0D66161F2DF59300CDBC65 /* ZhongWenKaraokeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD0D65F61F2DF59200CDBC65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0D66B31F2DF77300CDBC65 /* Main.storyboard in Resources */,
+				CD0D66BA1F2DF77300CDBC65 /* dictionary.json in Resources */,
+				CD0D66B11F2DF77300CDBC65 /* Assets.xcassets in Resources */,
+				CD0D66BB1F2DF77300CDBC65 /* Info.plist in Resources */,
+				CD0D66B21F2DF77300CDBC65 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0D660A1F2DF59300CDBC65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0D671B1F2DFA0600CDBC65 /* genre_index_70s.html in Resources */,
+				CD0D671F1F2DFA0600CDBC65 /* songDetails.json in Resources */,
+				CD0D67201F2DFA0600CDBC65 /* Info.plist in Resources */,
+				CD0D671E1F2DFA0600CDBC65 /* miguTopPage.html in Resources */,
+				CD0D671C1F2DFA0600CDBC65 /* lyrics.json in Resources */,
+				CD0D671D1F2DFA0600CDBC65 /* lyrics1.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0D66151F2DF59300CDBC65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0D66F71F2DF79E00CDBC65 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B51D1663F817A8E067A2980 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		19FDA75F601405DBB61ADD7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		41E725B2E3B5B078135635D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4223A4D0D2E74B4BE6687EBA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraokeUITests/Pods-ZhongWenKaraokeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52548A89314A9180F1180DEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54B80A0489D686D9F1C26974 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraokeUITests/Pods-ZhongWenKaraokeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71C0E3478963D878F56D28E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraokeTests/Pods-ZhongWenKaraokeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7567A2B8FB6E90D1727DD447 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraokeTests/Pods-ZhongWenKaraokeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2167D58B8E221711AA108DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD0D65F41F2DF59200CDBC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0D66B81F2DF77300CDBC65 /* MiguSongTabBarController.swift in Sources */,
+				CD0D66C11F2DF77300CDBC65 /* MiguDataService.swift in Sources */,
+				CD0D66B61F2DF77300CDBC65 /* MiguSongDetailsViewController.swift in Sources */,
+				CD0D66B51F2DF77300CDBC65 /* JukeboxViewController.swift in Sources */,
+				CD0D66C41F2DF77300CDBC65 /* String+Extensions.swift in Sources */,
+				CD0D66C51F2DF77300CDBC65 /* UIImageView+extensions.swift in Sources */,
+				CD0D66C21F2DF77300CDBC65 /* TopViewDataService.swift in Sources */,
+				CD0D66BC1F2DF77300CDBC65 /* CCCEdict.swift in Sources */,
+				CD0D66C71F2DF77300CDBC65 /* MiguSongCell.swift in Sources */,
+				CD0D66BF1F2DF77300CDBC65 /* MiguSongLyrics.swift in Sources */,
+				CD0D66AE1F2DF77300CDBC65 /* AppDelegate.swift in Sources */,
+				CD0D66B71F2DF77300CDBC65 /* MiguSongLyricsViewController.swift in Sources */,
+				CD0D66B41F2DF77300CDBC65 /* Comparable+Extensions.swift in Sources */,
+				CD0D66C01F2DF77300CDBC65 /* JukeboxService.swift in Sources */,
+				CD0D66B91F2DF77300CDBC65 /* TopViewController.swift in Sources */,
+				CD0D66BD1F2DF77300CDBC65 /* MiguSong.swift in Sources */,
+				CD0D66C61F2DF77300CDBC65 /* LyricLineCell.swift in Sources */,
+				CD0D66C31F2DF77300CDBC65 /* MiguSongStore.swift in Sources */,
+				CD0D66BE1F2DF77300CDBC65 /* MiguSongDetails.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0D66081F2DF59300CDBC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0D67251F2DFA0600CDBC65 /* MiguSongTests.swift in Sources */,
+				CD0D67211F2DFA0600CDBC65 /* MiguSongStoreTests.swift in Sources */,
+				CD0D67241F2DFA0600CDBC65 /* MiguSongLyricsTest.swift in Sources */,
+				CD0D671A1F2DFA0600CDBC65 /* TopViewControllerTests.swift in Sources */,
+				CD0D67271F2DFA0600CDBC65 /* TopViewDataServiceTests.swift in Sources */,
+				CD0D67261F2DFA0600CDBC65 /* MiguDataServiceTests.swift in Sources */,
+				CD0D67221F2DFA0600CDBC65 /* CCCEdictTests.swift in Sources */,
+				CD0D67281F2DFA0600CDBC65 /* MiguSongCellTests.swift in Sources */,
+				CD0D67291F2DFA0600CDBC65 /* XCTestCase+extensions.swift in Sources */,
+				CD0D67231F2DFA0600CDBC65 /* MiguSongDetailsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0D66131F2DF59300CDBC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0D66F81F2DF79E00CDBC65 /* ZhongWenKaraokeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD0D660E1F2DF59300CDBC65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD0D65F71F2DF59200CDBC65 /* ZhongWenKaraoke */;
+			targetProxy = CD0D660D1F2DF59300CDBC65 /* PBXContainerItemProxy */;
+		};
+		CD0D66191F2DF59300CDBC65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD0D65F71F2DF59200CDBC65 /* ZhongWenKaraoke */;
+			targetProxy = CD0D66181F2DF59300CDBC65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD0D66901F2DF77300CDBC65 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD0D66911F2DF77300CDBC65 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CD0D66921F2DF77300CDBC65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD0D66931F2DF77300CDBC65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD0D661E1F2DF59300CDBC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD0D661F1F2DF59300CDBC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD0D66211F2DF59300CDBC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD588EBAC3C3B7401E4B4219 /* Pods-ZhongWenKaraoke.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2SJ5L2D5W6;
+				INFOPLIST_FILE = ZhongWenKaraoke/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shiyason.ZhongWenKaraoke;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CD0D66221F2DF59300CDBC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B6F0B80A8BEFF0B7DB18BA /* Pods-ZhongWenKaraoke.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 2SJ5L2D5W6;
+				INFOPLIST_FILE = ZhongWenKaraoke/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shiyason.ZhongWenKaraoke;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CD0D66241F2DF59300CDBC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEC5460585D04A741E2DD47F /* Pods-ZhongWenKaraokeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2SJ5L2D5W6;
+				INFOPLIST_FILE = ZhongWenKaraokeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shiyason.ZhongWenKaraokeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZhongWenKaraoke.app/ZhongWenKaraoke";
+			};
+			name = Debug;
+		};
+		CD0D66251F2DF59300CDBC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADF1CEE162F68B4AC20A11AC /* Pods-ZhongWenKaraokeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2SJ5L2D5W6;
+				INFOPLIST_FILE = ZhongWenKaraokeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shiyason.ZhongWenKaraokeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZhongWenKaraoke.app/ZhongWenKaraoke";
+			};
+			name = Release;
+		};
+		CD0D66271F2DF59300CDBC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 998C00903F1504ED2600E302 /* Pods-ZhongWenKaraokeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2SJ5L2D5W6;
+				INFOPLIST_FILE = ZhongWenKaraokeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shiyason.ZhongWenKaraokeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ZhongWenKaraoke;
+			};
+			name = Debug;
+		};
+		CD0D66281F2DF59300CDBC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52409E5C3310DEA538260757 /* Pods-ZhongWenKaraokeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2SJ5L2D5W6;
+				INFOPLIST_FILE = ZhongWenKaraokeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shiyason.ZhongWenKaraokeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ZhongWenKaraoke;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD0D65F31F2DF59200CDBC65 /* Build configuration list for PBXProject "ZhongWenKaraoke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0D661E1F2DF59300CDBC65 /* Debug */,
+				CD0D661F1F2DF59300CDBC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD0D66201F2DF59300CDBC65 /* Build configuration list for PBXNativeTarget "ZhongWenKaraoke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0D66211F2DF59300CDBC65 /* Debug */,
+				CD0D66221F2DF59300CDBC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD0D66231F2DF59300CDBC65 /* Build configuration list for PBXNativeTarget "ZhongWenKaraokeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0D66241F2DF59300CDBC65 /* Debug */,
+				CD0D66251F2DF59300CDBC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD0D66261F2DF59300CDBC65 /* Build configuration list for PBXNativeTarget "ZhongWenKaraokeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD0D66271F2DF59300CDBC65 /* Debug */,
+				CD0D66281F2DF59300CDBC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD0D65F01F2DF59200CDBC65 /* Project object */;
+}
