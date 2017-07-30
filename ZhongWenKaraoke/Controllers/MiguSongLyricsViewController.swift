@@ -69,7 +69,7 @@ extension MiguSongLyricsViewController: UITableViewDataSource {
             return UITableViewCell()
         } else {
             let cell = lyricsTable.dequeueReusableCell(withIdentifier: "LyricLineCell", for: indexPath)
-            cell.textLabel?.text = self.song.songLyrics?.lyrics[indexPath.row].text
+            cell.textLabel?.text = self.song.songLyrics?.lyrics[indexPath.row].text()
             return cell
         }
     }

@@ -26,7 +26,7 @@ struct MiguSongLyrics {
 
     static func parseLyrics(_ rawLyrics: String) -> [LyricLine] {
         return rawLyrics.components(separatedBy: "\n").map {
-            return LyricLine(timestamp: $0, text: $0)
+            return LyricLine(timestamp: $0, rawText: $0)
         }
     }
     
@@ -42,14 +42,32 @@ struct MiguSongLyrics {
 
 struct LyricLine {
     var timestamp: String
-    var text: String
+    var rawText: String
     
-    let minSecFractionsRegex = "(\\d{2,}):(\\d{2,})\\.(\\d{2,})"
+    func text() -> String {
+        do {
+            let regex = try NSRegularExpression(pattern: LyricLine.textRe)
+            let nsString = rawText as NSString
+            let results = regex.matches(in: timestamp, range: NSRange(location: 0, length: nsString.length))
+            
+            if results.count == 0 {
+                return ""
+            }
+
+            return nsString.substring(with: results[0].rangeAt(1))
+        } catch let error {
+            print("invalid regex: \(error.localizedDescription)")
+            return ""
+        }
+    }
+
+    static let textRe = "\\[.+\\](.+)"
+    static let minSecFractionsRegex = "(\\d{2,}):(\\d{2,})\\.(\\d{2,})"
     
     func timestampToSeconds () -> Float {
         do {
             
-            let regex = try NSRegularExpression(pattern: minSecFractionsRegex)
+            let regex = try NSRegularExpression(pattern: LyricLine.minSecFractionsRegex)
             let nsString = timestamp as NSString
             let results = regex.matches(in: timestamp, range: NSRange(location: 0, length: nsString.length))
 

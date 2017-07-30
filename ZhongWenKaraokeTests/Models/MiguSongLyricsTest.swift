@@ -34,9 +34,16 @@ class MiguSongLyricsTest: XCTestCase {
     }
     
     func testLineIndexForSeconds() {
-        
         XCTAssertEqual(sut.lineIndex(for: Float(16)), 5)
         XCTAssertEqual(sut.lineIndex(for: Float(239.99)), 49)
-        
+    }
+    
+    func testText_itReturnsLyricsWithoutTimestamps() {
+        XCTAssertEqual(sut.lyrics[5].text(), "We were just about to lose our home ")
+    }
+    
+    func testText_itReturnsLyricsWithoutTimestampsWhenChineseLyrics() {
+        let s = MiguSongLyrics(JsonFromFixture("lyrics1"))
+        XCTAssertEqual(s.lyrics[6].text(), "让他温暖我的双眼")
     }
 }
