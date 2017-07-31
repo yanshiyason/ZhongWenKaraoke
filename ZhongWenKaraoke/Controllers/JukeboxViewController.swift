@@ -50,8 +50,7 @@ class JukeboxViewController: UIViewController {
         
         JukeboxService.jukebox.append(item: jukeboxItem, loadingAssets: true)
         JukeboxService.jukebox.play()
-        
-//        let variable = Variable(JukeboxService.jukebox.currentItem!)
+
         JukeboxService.currentItem.asObservable()
             .subscribe {
                 print($0)
@@ -59,13 +58,9 @@ class JukeboxViewController: UIViewController {
             .addDisposableTo(disposeBag)
         
         progress.asDriver().drive(onNext: {
-            self.songProgress!.setProgress(Float($0), animated: true)
+            self.songProgress!.setProgress(Float($0), animated: false)
         })
         .addDisposableTo(disposeBag)
-        
-//        progress.asDriver().drive(songProgress.rx.progress).addDisposableTo(disposeBag)
-//            .drive(songProgress.rx.progress)
-        
         
         JukeboxService.playbackTime.asObservable()
             .subscribe {
@@ -75,13 +70,6 @@ class JukeboxViewController: UIViewController {
                 }
             }
             .addDisposableTo(disposeBag)
-//        jukebox!.currentItem!
-        
-//        jukebox = Jukebox(delegate: self, items: [
-//            JukeboxItem(URL: URL(string: miguSong.songDetails!.safeMp3Url)!)
-//        ])!
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -114,15 +102,5 @@ class JukeboxViewController: UIViewController {
     @IBAction func stopAction(_ sender: Any) {
         JukeboxService.jukebox.stop()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
