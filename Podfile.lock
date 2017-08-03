@@ -24,6 +24,7 @@ PODS:
   - RxSwift (3.6.0)
   - RxTest (3.6.0):
     - RxSwift (~> 3.6)
+  - SideMenu (2.3.3)
 
 DEPENDENCIES:
   - Alamofire
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - RxTest (~> 3.0)
+  - SideMenu
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
@@ -48,7 +50,8 @@ SPEC CHECKSUMS:
   RxCocoa: cb865569239ebf1b1434056e5c8859d99dff103a
   RxSwift: a0925c7fb11fbe60055285f6f2062241aa37a175
   RxTest: 9cf69fa8f33e43cfcb154ad9b78f54afeb877423
+  SideMenu: a447554ae5c982e8077666389e1c8b0c8656e065
 
-PODFILE CHECKSUM: 4882876ee5a31a27d296e9eb8dee71a32b89d625
+PODFILE CHECKSUM: bd5a8708aafb771eb092846692f2bda8f2f5df07
 
 COCOAPODS: 1.2.1
