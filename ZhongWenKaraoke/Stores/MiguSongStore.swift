@@ -7,51 +7,84 @@
 //
 
 import Foundation
+import RxSwift
+import Pantry
 
 class MiguSongStore {
-    let MiguDs = MiguDataService()
-    var songs: [MiguSong]?
-    init() {
-        MiguDataService().getHomePageSongs { miguSongs, error in
-            if error == nil {
-                self.songs = miguSongs!
-                self.fetchSongAssociations()
-                self.notifyNewSongs()
-            } else {
-                print(error!)
-                self.songs = nil
+    static var tempSongHolder: [MiguSong]!
+    static var _songs = BehaviorSubject<[MiguSong]>(value: [MiguSong]())
+    static var songs: Observable<[MiguSong]> = MiguSongStore._songs
+//    static var songs = Variable<[MiguSong]>([MiguSong]())
+    
+    static func categorySongsKey(_ category: MiguCategory) -> String {
+        return category.english
+    }
+    
+    static func songsFor(category: MiguCategory) {
+        if let songs: [MiguSong] = Pantry.unpack(self.categorySongsKey(category)) {
+            print("about to change value")
+            MiguSongStore._songs.onNext(songs)
+//            MiguSongStore.songs.value = songs
+        } else {
+            MiguDataService().getSongsFor(category: category) { songs, error in
+                if let songs = songs {
+                    MiguSongStore.tempSongHolder = songs
+                    MiguSongStore.fetchSongAssociations()
+                    Pantry.pack(songs, key: self.categorySongsKey(category))
+                }
             }
         }
     }
     
-    func fetchSongAssociations() {
-        if let songs = songs {
-            for (i, song) in songs.enumerated() {
+    static func fetchSongAssociations() {
+        for (i, song) in MiguSongStore.tempSongHolder.enumerated() {
 
-                if (song.songDetails == nil) {
-                    MiguDs.getSongDetails(song) { songDetails, error in
-                        debugPrint("Fetched \(String(describing: songDetails))")
-                        if (songDetails != nil) {
-                            self.songs?[i].songDetails = songDetails!
-                            self.notifyNewSongs()
-                        }
+            if (song.songDetails == nil) {
+                MiguDataService().getSongDetails(song) { songDetails, error in
+//                    debugPrint("Fetched \(String(describing: songDetails))")
+                    if (songDetails != nil) {
+                        MiguSongStore.tempSongHolder[i].songDetails = songDetails!
+                        
+                        print("about to change value")
+//                        MiguSongStore.songs.value = MiguSongStore.tempSongHolder
+                        MiguSongStore._songs.onNext(MiguSongStore.tempSongHolder)
                     }
                 }
-                
-                if (song.songLyrics == nil) {
-                    MiguDs.getLyrics(song) {lyrics, error in
-                        debugPrint("Fetched \(String(describing: lyrics))")
-                        if (lyrics != nil) {
-                            self.songs?[i].songLyrics = lyrics!
-                            self.notifyNewSongs()
-                        }
+            }
+            
+            if (song.songLyrics == nil) {
+                MiguDataService().getLyrics(song) {lyrics, error in
+//                    debugPrint("Fetched \(String(describing: lyrics))")
+                    if (lyrics != nil) {
+                        MiguSongStore.tempSongHolder[i].songLyrics = lyrics!
+                        MiguSongStore._songs.onNext(MiguSongStore.tempSongHolder)
+                        print("about to change value")
+//                        MiguSongStore.songs.value = MiguSongStore.tempSongHolder
                     }
                 }
             }
         }
+        print("about to change value")
+        MiguSongStore._songs.onNext(MiguSongStore.tempSongHolder)
+//        MiguSongStore.songs.value = MiguSongStore.tempSongHolder
     }
     
-    func notifyNewSongs() {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "songsArrived"), object: nil)
+    static let categories = loadCategories()
+    
+    private static func loadCategories() -> [MiguParentCategory] {
+        let url = Bundle.main.url(forResource: "categories", withExtension: "json")
+        let data = try! Data.init(contentsOf: url!)
+        
+        let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
+        let parentCategoriesJson = json["parent_categories"] as! [[String:Any]]
+        return parentCategoriesJson.map { c in
+            let categoriesArray = c["categories"]! as! [[String:String]]
+            let categories = categoriesArray.map { c in
+                MiguCategory(chinese: c["category"]!, english: c["en"]!, url: c["url"]!)
+            }
+            return MiguParentCategory(chinese:c["category"]! as! String, english: c["en"]! as! String, categories: categories)
+        }
     }
+    
+    
 }

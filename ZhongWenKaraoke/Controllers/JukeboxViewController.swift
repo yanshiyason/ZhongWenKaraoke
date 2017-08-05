@@ -38,18 +38,25 @@ class JukeboxViewController: UIViewController {
             JukeboxService.jukebox.remove(item: item)
         }
         
-        let jukeboxItem: JukeboxItem = {
+        let jukeboxItem: JukeboxItem? = {
             if let filePath = miguSong.songDetails?.mp3FilePath {
                 print("Found mp3 path: \(filePath)\nUsing local asset for jukebox item")
                 return JukeboxItem(URL: URL(string: filePath)!)
             } else {
                 print("Couldn't find local mp3 path\nStreaming from remote url")
-                return JukeboxItem(URL: URL(string: miguSong.songDetails!.safeMp3Url)!)
+                guard let url = miguSong.songDetails?.safeMp3Url else {
+                    
+                    return nil
+                }
+                return JukeboxItem(URL: URL(string: url)!)
             }
         }()
         
-        JukeboxService.jukebox.append(item: jukeboxItem, loadingAssets: true)
+        if jukeboxItem == nil { return }
+        
+        JukeboxService.jukebox.append(item: jukeboxItem!, loadingAssets: true)
         JukeboxService.jukebox.play()
+        
 
         JukeboxService.currentItem.asObservable()
             .subscribe {

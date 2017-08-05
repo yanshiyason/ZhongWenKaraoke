@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategorySectionTitle" id="Twg-GX-8Mf" customClass="CategorySectionHeader" customModule="ZhongWenKaraoke" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z21-Gd-fZu">
+                    <rect key="frame" x="8" y="8" width="359" height="34"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="日本のなんとか" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wNk-cl-a82">
+                            <rect key="frame" x="2" y="3" width="150" height="26"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="none" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DoP-1g-heb" userLabel="English">
+                            <rect key="frame" x="157" y="11" width="202" height="23"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="DoP-1g-heb" secondAttribute="trailing" id="17A-vE-OLS"/>
+                        <constraint firstItem="DoP-1g-heb" firstAttribute="leading" secondItem="wNk-cl-a82" secondAttribute="trailing" constant="5" id="5kB-QM-ycv"/>
+                        <constraint firstItem="DoP-1g-heb" firstAttribute="top" secondItem="z21-Gd-fZu" secondAttribute="top" constant="11" id="9g2-s0-ryg"/>
+                        <constraint firstItem="wNk-cl-a82" firstAttribute="top" secondItem="z21-Gd-fZu" secondAttribute="top" constant="3" id="Qvk-vi-7gP"/>
+                        <constraint firstAttribute="bottom" secondItem="DoP-1g-heb" secondAttribute="bottom" id="Rv1-W8-huk"/>
+                        <constraint firstItem="wNk-cl-a82" firstAttribute="leading" secondItem="z21-Gd-fZu" secondAttribute="leading" constant="2" id="ewF-eE-9QG"/>
+                        <constraint firstItem="DoP-1g-heb" firstAttribute="leading" secondItem="wNk-cl-a82" secondAttribute="trailing" constant="5" id="gwH-rt-ynK"/>
+                        <constraint firstAttribute="bottom" secondItem="wNk-cl-a82" secondAttribute="bottom" constant="5" id="kE9-my-m7M"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottomMargin" secondItem="z21-Gd-fZu" secondAttribute="bottom" id="5Q3-8V-T9b"/>
+                <constraint firstItem="z21-Gd-fZu" firstAttribute="leading" secondItem="Twg-GX-8Mf" secondAttribute="leadingMargin" id="7Za-j7-sTD"/>
+                <constraint firstAttribute="trailingMargin" secondItem="z21-Gd-fZu" secondAttribute="trailing" id="Qye-ia-yMs"/>
+                <constraint firstItem="z21-Gd-fZu" firstAttribute="top" secondItem="Twg-GX-8Mf" secondAttribute="topMargin" id="UCl-e7-TZJ"/>
+            </constraints>
+            <connections>
+                <outlet property="chinese" destination="wNk-cl-a82" id="y26-cP-cSS"/>
+                <outlet property="english" destination="DoP-1g-heb" id="30a-w0-9ID"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>

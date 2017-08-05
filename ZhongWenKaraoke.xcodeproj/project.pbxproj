@@ -17,39 +17,41 @@
 		CD0D66B61F2DF77300CDBC65 /* MiguSongDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66971F2DF77300CDBC65 /* MiguSongDetailsViewController.swift */; };
 		CD0D66B71F2DF77300CDBC65 /* MiguSongLyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66981F2DF77300CDBC65 /* MiguSongLyricsViewController.swift */; };
 		CD0D66B81F2DF77300CDBC65 /* MiguSongTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66991F2DF77300CDBC65 /* MiguSongTabBarController.swift */; };
-		CD0D66B91F2DF77300CDBC65 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D669A1F2DF77300CDBC65 /* TopViewController.swift */; };
+		CD0D66B91F2DF77300CDBC65 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D669A1F2DF77300CDBC65 /* CategoryViewController.swift */; };
 		CD0D66BA1F2DF77300CDBC65 /* dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = CD0D669B1F2DF77300CDBC65 /* dictionary.json */; };
-		CD0D66BB1F2DF77300CDBC65 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0D669C1F2DF77300CDBC65 /* Info.plist */; };
 		CD0D66BC1F2DF77300CDBC65 /* CCCEdict.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D669E1F2DF77300CDBC65 /* CCCEdict.swift */; };
 		CD0D66BD1F2DF77300CDBC65 /* MiguSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D669F1F2DF77300CDBC65 /* MiguSong.swift */; };
 		CD0D66BE1F2DF77300CDBC65 /* MiguSongDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A01F2DF77300CDBC65 /* MiguSongDetails.swift */; };
 		CD0D66BF1F2DF77300CDBC65 /* MiguSongLyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A11F2DF77300CDBC65 /* MiguSongLyrics.swift */; };
 		CD0D66C01F2DF77300CDBC65 /* JukeboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A31F2DF77300CDBC65 /* JukeboxService.swift */; };
 		CD0D66C11F2DF77300CDBC65 /* MiguDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A41F2DF77300CDBC65 /* MiguDataService.swift */; };
-		CD0D66C21F2DF77300CDBC65 /* TopViewDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A51F2DF77300CDBC65 /* TopViewDataService.swift */; };
 		CD0D66C31F2DF77300CDBC65 /* MiguSongStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A71F2DF77300CDBC65 /* MiguSongStore.swift */; };
 		CD0D66C41F2DF77300CDBC65 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A81F2DF77300CDBC65 /* String+Extensions.swift */; };
 		CD0D66C51F2DF77300CDBC65 /* UIImageView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66A91F2DF77300CDBC65 /* UIImageView+extensions.swift */; };
 		CD0D66C61F2DF77300CDBC65 /* LyricLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66AC1F2DF77300CDBC65 /* LyricLineCell.swift */; };
 		CD0D66C71F2DF77300CDBC65 /* MiguSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66AD1F2DF77300CDBC65 /* MiguSongCell.swift */; };
-		CD0D66F71F2DF79E00CDBC65 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0D66F51F2DF79E00CDBC65 /* Info.plist */; };
 		CD0D66F81F2DF79E00CDBC65 /* ZhongWenKaraokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D66F61F2DF79E00CDBC65 /* ZhongWenKaraokeUITests.swift */; };
-		CD0D671A1F2DFA0600CDBC65 /* TopViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67051F2DFA0600CDBC65 /* TopViewControllerTests.swift */; };
+		CD0D671A1F2DFA0600CDBC65 /* CategoryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67051F2DFA0600CDBC65 /* CategoryViewControllerTests.swift */; };
 		CD0D671B1F2DFA0600CDBC65 /* genre_index_70s.html in Resources */ = {isa = PBXBuildFile; fileRef = CD0D67071F2DFA0600CDBC65 /* genre_index_70s.html */; };
 		CD0D671C1F2DFA0600CDBC65 /* lyrics.json in Resources */ = {isa = PBXBuildFile; fileRef = CD0D67081F2DFA0600CDBC65 /* lyrics.json */; };
 		CD0D671D1F2DFA0600CDBC65 /* lyrics1.json in Resources */ = {isa = PBXBuildFile; fileRef = CD0D67091F2DFA0600CDBC65 /* lyrics1.json */; };
 		CD0D671E1F2DFA0600CDBC65 /* miguTopPage.html in Resources */ = {isa = PBXBuildFile; fileRef = CD0D670A1F2DFA0600CDBC65 /* miguTopPage.html */; };
 		CD0D671F1F2DFA0600CDBC65 /* songDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = CD0D670B1F2DFA0600CDBC65 /* songDetails.json */; };
-		CD0D67201F2DFA0600CDBC65 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0D670C1F2DFA0600CDBC65 /* Info.plist */; };
 		CD0D67211F2DFA0600CDBC65 /* MiguSongStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D670D1F2DFA0600CDBC65 /* MiguSongStoreTests.swift */; };
 		CD0D67221F2DFA0600CDBC65 /* CCCEdictTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D670F1F2DFA0600CDBC65 /* CCCEdictTests.swift */; };
 		CD0D67231F2DFA0600CDBC65 /* MiguSongDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67101F2DFA0600CDBC65 /* MiguSongDetailsTests.swift */; };
 		CD0D67241F2DFA0600CDBC65 /* MiguSongLyricsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67111F2DFA0600CDBC65 /* MiguSongLyricsTest.swift */; };
 		CD0D67251F2DFA0600CDBC65 /* MiguSongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67121F2DFA0600CDBC65 /* MiguSongTests.swift */; };
 		CD0D67261F2DFA0600CDBC65 /* MiguDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67141F2DFA0600CDBC65 /* MiguDataServiceTests.swift */; };
-		CD0D67271F2DFA0600CDBC65 /* TopViewDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67151F2DFA0600CDBC65 /* TopViewDataServiceTests.swift */; };
 		CD0D67281F2DFA0600CDBC65 /* MiguSongCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67181F2DFA0600CDBC65 /* MiguSongCellTests.swift */; };
 		CD0D67291F2DFA0600CDBC65 /* XCTestCase+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67191F2DFA0600CDBC65 /* XCTestCase+extensions.swift */; };
+		CDDE0E801F2F68F300A97059 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = CDDE0E7F1F2F68F300A97059 /* categories.json */; };
+		CDE02BAC1F31255F009A3E8C /* MiguSongStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE02BAB1F31255F009A3E8C /* MiguSongStoreTests.swift */; };
+		CDE02BB11F3128A6009A3E8C /* MiguCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE02BB01F3128A6009A3E8C /* MiguCategoryCell.swift */; };
+		CDE02BB31F326B4E009A3E8C /* CategorySectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE02BB21F326B4E009A3E8C /* CategorySectionHeader.swift */; };
+		CDEEBC2D1F334EF900CAE63E /* CategorySectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDEEBC2C1F334EF900CAE63E /* CategorySectionHeader.xib */; };
+		CDF3E2D11F2F5D84006C65BC /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3E2D01F2F5D84006C65BC /* CategoriesViewController.swift */; };
+		CDF3E2D51F2F5FDF006C65BC /* MiguCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3E2D41F2F5FDF006C65BC /* MiguCategories.swift */; };
 		DB99ED633FD1C52647580229 /* Pods_ZhongWenKaraoke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AA044CC89D18C7515D85C8 /* Pods_ZhongWenKaraoke.framework */; };
 		E7BE7B184A9A987C8C4B64F6 /* Pods_ZhongWenKaraokeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D70D152F981D5F592460E04 /* Pods_ZhongWenKaraokeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -87,7 +89,7 @@
 		CD0D66971F2DF77300CDBC65 /* MiguSongDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongDetailsViewController.swift; sourceTree = "<group>"; };
 		CD0D66981F2DF77300CDBC65 /* MiguSongLyricsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongLyricsViewController.swift; sourceTree = "<group>"; };
 		CD0D66991F2DF77300CDBC65 /* MiguSongTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongTabBarController.swift; sourceTree = "<group>"; };
-		CD0D669A1F2DF77300CDBC65 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		CD0D669A1F2DF77300CDBC65 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CategoryViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CD0D669B1F2DF77300CDBC65 /* dictionary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dictionary.json; sourceTree = "<group>"; };
 		CD0D669C1F2DF77300CDBC65 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0D669E1F2DF77300CDBC65 /* CCCEdict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCCEdict.swift; sourceTree = "<group>"; };
@@ -96,7 +98,6 @@
 		CD0D66A11F2DF77300CDBC65 /* MiguSongLyrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongLyrics.swift; sourceTree = "<group>"; };
 		CD0D66A31F2DF77300CDBC65 /* JukeboxService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JukeboxService.swift; sourceTree = "<group>"; };
 		CD0D66A41F2DF77300CDBC65 /* MiguDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguDataService.swift; sourceTree = "<group>"; };
-		CD0D66A51F2DF77300CDBC65 /* TopViewDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewDataService.swift; sourceTree = "<group>"; };
 		CD0D66A71F2DF77300CDBC65 /* MiguSongStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongStore.swift; sourceTree = "<group>"; };
 		CD0D66A81F2DF77300CDBC65 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		CD0D66A91F2DF77300CDBC65 /* UIImageView+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+extensions.swift"; sourceTree = "<group>"; };
@@ -108,7 +109,7 @@
 		CD0D67001F2DF8CC00CDBC65 /* ZhongWenKaraoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhongWenKaraoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0D67011F2DF8CC00CDBC65 /* ZhongWenKaraokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhongWenKaraokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0D67021F2DF8CC00CDBC65 /* ZhongWenKaraokeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhongWenKaraokeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD0D67051F2DFA0600CDBC65 /* TopViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewControllerTests.swift; sourceTree = "<group>"; };
+		CD0D67051F2DFA0600CDBC65 /* CategoryViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CategoryViewControllerTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CD0D67071F2DFA0600CDBC65 /* genre_index_70s.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = genre_index_70s.html; sourceTree = "<group>"; };
 		CD0D67081F2DFA0600CDBC65 /* lyrics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lyrics.json; sourceTree = "<group>"; };
 		CD0D67091F2DFA0600CDBC65 /* lyrics1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lyrics1.json; sourceTree = "<group>"; };
@@ -121,9 +122,15 @@
 		CD0D67111F2DFA0600CDBC65 /* MiguSongLyricsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongLyricsTest.swift; sourceTree = "<group>"; };
 		CD0D67121F2DFA0600CDBC65 /* MiguSongTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongTests.swift; sourceTree = "<group>"; };
 		CD0D67141F2DFA0600CDBC65 /* MiguDataServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguDataServiceTests.swift; sourceTree = "<group>"; };
-		CD0D67151F2DFA0600CDBC65 /* TopViewDataServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewDataServiceTests.swift; sourceTree = "<group>"; };
-		CD0D67181F2DFA0600CDBC65 /* MiguSongCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongCellTests.swift; sourceTree = "<group>"; };
+		CD0D67181F2DFA0600CDBC65 /* MiguSongCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = MiguSongCellTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CD0D67191F2DFA0600CDBC65 /* XCTestCase+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+extensions.swift"; sourceTree = "<group>"; };
+		CDDE0E7F1F2F68F300A97059 /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = categories.json; path = ../categories.json; sourceTree = "<group>"; };
+		CDE02BAB1F31255F009A3E8C /* MiguSongStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongStoreTests.swift; sourceTree = "<group>"; };
+		CDE02BB01F3128A6009A3E8C /* MiguCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguCategoryCell.swift; sourceTree = "<group>"; };
+		CDE02BB21F326B4E009A3E8C /* CategorySectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySectionHeader.swift; sourceTree = "<group>"; };
+		CDEEBC2C1F334EF900CAE63E /* CategorySectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySectionHeader.xib; sourceTree = "<group>"; };
+		CDF3E2D01F2F5D84006C65BC /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		CDF3E2D41F2F5FDF006C65BC /* MiguCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguCategories.swift; sourceTree = "<group>"; };
 		E1AA044CC89D18C7515D85C8 /* Pods_ZhongWenKaraoke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhongWenKaraoke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC5460585D04A741E2DD47F /* Pods-ZhongWenKaraokeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeTests/Pods-ZhongWenKaraokeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FD588EBAC3C3B7401E4B4219 /* Pods-ZhongWenKaraoke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraoke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,9 +196,11 @@
 				CD0D668F1F2DF77300CDBC65 /* Assets.xcassets */,
 				CD0D66901F2DF77300CDBC65 /* LaunchScreen.storyboard */,
 				CD0D66921F2DF77300CDBC65 /* Main.storyboard */,
+				CDEEBC2C1F334EF900CAE63E /* CategorySectionHeader.xib */,
 				CD0D66941F2DF77300CDBC65 /* Comparable+Extensions.swift */,
 				CD0D66951F2DF77300CDBC65 /* Controllers */,
 				CD0D669B1F2DF77300CDBC65 /* dictionary.json */,
+				CDDE0E7F1F2F68F300A97059 /* categories.json */,
 				CD0D669C1F2DF77300CDBC65 /* Info.plist */,
 				CD0D669D1F2DF77300CDBC65 /* Models */,
 				CD0D66A21F2DF77300CDBC65 /* Services */,
@@ -210,7 +219,8 @@
 				CD0D66971F2DF77300CDBC65 /* MiguSongDetailsViewController.swift */,
 				CD0D66981F2DF77300CDBC65 /* MiguSongLyricsViewController.swift */,
 				CD0D66991F2DF77300CDBC65 /* MiguSongTabBarController.swift */,
-				CD0D669A1F2DF77300CDBC65 /* TopViewController.swift */,
+				CD0D669A1F2DF77300CDBC65 /* CategoryViewController.swift */,
+				CDF3E2D01F2F5D84006C65BC /* CategoriesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -222,6 +232,7 @@
 				CD0D669F1F2DF77300CDBC65 /* MiguSong.swift */,
 				CD0D66A01F2DF77300CDBC65 /* MiguSongDetails.swift */,
 				CD0D66A11F2DF77300CDBC65 /* MiguSongLyrics.swift */,
+				CDF3E2D41F2F5FDF006C65BC /* MiguCategories.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -231,7 +242,6 @@
 			children = (
 				CD0D66A31F2DF77300CDBC65 /* JukeboxService.swift */,
 				CD0D66A41F2DF77300CDBC65 /* MiguDataService.swift */,
-				CD0D66A51F2DF77300CDBC65 /* TopViewDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -247,7 +257,9 @@
 		CD0D66AA1F2DF77300CDBC65 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CDE02BAD1F312849009A3E8C /* CollectionViewCells */,
 				CD0D66AB1F2DF77300CDBC65 /* TableCells */,
+				CDE02BB21F326B4E009A3E8C /* CategorySectionHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -273,6 +285,7 @@
 		CD0D67031F2DFA0600CDBC65 /* ZhongWenKaraokeTests */ = {
 			isa = PBXGroup;
 			children = (
+				CDE02BAA1F312526009A3E8C /* Stores */,
 				CD0D67041F2DFA0600CDBC65 /* Controllers */,
 				CD0D67061F2DFA0600CDBC65 /* Fixtures */,
 				CD0D670C1F2DFA0600CDBC65 /* Info.plist */,
@@ -288,7 +301,7 @@
 		CD0D67041F2DFA0600CDBC65 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CD0D67051F2DFA0600CDBC65 /* TopViewControllerTests.swift */,
+				CD0D67051F2DFA0600CDBC65 /* CategoryViewControllerTests.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -320,7 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				CD0D67141F2DFA0600CDBC65 /* MiguDataServiceTests.swift */,
-				CD0D67151F2DFA0600CDBC65 /* TopViewDataServiceTests.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -339,6 +351,22 @@
 				CD0D67181F2DFA0600CDBC65 /* MiguSongCellTests.swift */,
 			);
 			path = TableCells;
+			sourceTree = "<group>";
+		};
+		CDE02BAA1F312526009A3E8C /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				CDE02BAB1F31255F009A3E8C /* MiguSongStoreTests.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		CDE02BAD1F312849009A3E8C /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				CDE02BB01F3128A6009A3E8C /* MiguCategoryCell.swift */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 		E6953A67B13FEA43954277D2 /* Pods */ = {
@@ -476,8 +504,9 @@
 			files = (
 				CD0D66B31F2DF77300CDBC65 /* Main.storyboard in Resources */,
 				CD0D66BA1F2DF77300CDBC65 /* dictionary.json in Resources */,
+				CDEEBC2D1F334EF900CAE63E /* CategorySectionHeader.xib in Resources */,
 				CD0D66B11F2DF77300CDBC65 /* Assets.xcassets in Resources */,
-				CD0D66BB1F2DF77300CDBC65 /* Info.plist in Resources */,
+				CDDE0E801F2F68F300A97059 /* categories.json in Resources */,
 				CD0D66B21F2DF77300CDBC65 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,7 +517,6 @@
 			files = (
 				CD0D671B1F2DFA0600CDBC65 /* genre_index_70s.html in Resources */,
 				CD0D671F1F2DFA0600CDBC65 /* songDetails.json in Resources */,
-				CD0D67201F2DFA0600CDBC65 /* Info.plist in Resources */,
 				CD0D671E1F2DFA0600CDBC65 /* miguTopPage.html in Resources */,
 				CD0D671C1F2DFA0600CDBC65 /* lyrics.json in Resources */,
 				CD0D671D1F2DFA0600CDBC65 /* lyrics1.json in Resources */,
@@ -499,7 +527,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD0D66F71F2DF79E00CDBC65 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,16 +680,19 @@
 				CD0D66B61F2DF77300CDBC65 /* MiguSongDetailsViewController.swift in Sources */,
 				CD0D66B51F2DF77300CDBC65 /* JukeboxViewController.swift in Sources */,
 				CD0D66C41F2DF77300CDBC65 /* String+Extensions.swift in Sources */,
+				CDE02BB11F3128A6009A3E8C /* MiguCategoryCell.swift in Sources */,
 				CD0D66C51F2DF77300CDBC65 /* UIImageView+extensions.swift in Sources */,
-				CD0D66C21F2DF77300CDBC65 /* TopViewDataService.swift in Sources */,
 				CD0D66BC1F2DF77300CDBC65 /* CCCEdict.swift in Sources */,
 				CD0D66C71F2DF77300CDBC65 /* MiguSongCell.swift in Sources */,
 				CD0D66BF1F2DF77300CDBC65 /* MiguSongLyrics.swift in Sources */,
+				CDE02BB31F326B4E009A3E8C /* CategorySectionHeader.swift in Sources */,
 				CD0D66AE1F2DF77300CDBC65 /* AppDelegate.swift in Sources */,
+				CDF3E2D51F2F5FDF006C65BC /* MiguCategories.swift in Sources */,
 				CD0D66B71F2DF77300CDBC65 /* MiguSongLyricsViewController.swift in Sources */,
 				CD0D66B41F2DF77300CDBC65 /* Comparable+Extensions.swift in Sources */,
 				CD0D66C01F2DF77300CDBC65 /* JukeboxService.swift in Sources */,
-				CD0D66B91F2DF77300CDBC65 /* TopViewController.swift in Sources */,
+				CDF3E2D11F2F5D84006C65BC /* CategoriesViewController.swift in Sources */,
+				CD0D66B91F2DF77300CDBC65 /* CategoryViewController.swift in Sources */,
 				CD0D66BD1F2DF77300CDBC65 /* MiguSong.swift in Sources */,
 				CD0D66C61F2DF77300CDBC65 /* LyricLineCell.swift in Sources */,
 				CD0D66C31F2DF77300CDBC65 /* MiguSongStore.swift in Sources */,
@@ -677,11 +707,11 @@
 				CD0D67251F2DFA0600CDBC65 /* MiguSongTests.swift in Sources */,
 				CD0D67211F2DFA0600CDBC65 /* MiguSongStoreTests.swift in Sources */,
 				CD0D67241F2DFA0600CDBC65 /* MiguSongLyricsTest.swift in Sources */,
-				CD0D671A1F2DFA0600CDBC65 /* TopViewControllerTests.swift in Sources */,
-				CD0D67271F2DFA0600CDBC65 /* TopViewDataServiceTests.swift in Sources */,
+				CD0D671A1F2DFA0600CDBC65 /* CategoryViewControllerTests.swift in Sources */,
 				CD0D67261F2DFA0600CDBC65 /* MiguDataServiceTests.swift in Sources */,
 				CD0D67221F2DFA0600CDBC65 /* CCCEdictTests.swift in Sources */,
 				CD0D67281F2DFA0600CDBC65 /* MiguSongCellTests.swift in Sources */,
+				CDE02BAC1F31255F009A3E8C /* MiguSongStoreTests.swift in Sources */,
 				CD0D67291F2DFA0600CDBC65 /* XCTestCase+extensions.swift in Sources */,
 				CD0D67231F2DFA0600CDBC65 /* MiguSongDetailsTests.swift in Sources */,
 			);

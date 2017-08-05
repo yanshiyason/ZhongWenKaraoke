@@ -38,7 +38,6 @@ class MiguSongLyricsViewController: UIViewController {
             .map({ $0 == -1 ? 0 : $0 })
             .map({ IndexPath(row: $0, section: 0) })
             .drive(onNext: {
-                print("currentLineIndex: \($0.row)")
                 self.lyricsTable.scrollToRow(at: $0, at: .middle, animated: true)
             })
             .addDisposableTo(disposeBag)

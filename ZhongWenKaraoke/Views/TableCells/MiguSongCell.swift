@@ -60,7 +60,7 @@ class MiguSongCell: UITableViewCell {
             self.posterImg?.setImageFromURl(poster)
         }
         
-        self.songTitle.text = song.songDetails?.songName.removingPercentEncoding! ?? ""
+        self.songTitle.text = song.songDetails?.songName?.removingPercentEncoding! ?? ""
         self.artistName?.text = song.songDetails?.singerName ?? ""
     }
     

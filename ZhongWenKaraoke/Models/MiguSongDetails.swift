@@ -14,24 +14,24 @@ struct MiguSongDetails {
     let albumId: Int?
     let albumName: String?
     let cmp3, copyright_id, hdmp3, mp3, mp4,
-    poster, singerId, singerName, songId, songName: String
+    poster, singerId, singerName, songId, songName: String?
     
     init?(fromJson json: Data) {
-        let object = try! JSONSerialization.jsonObject(with: json, options: .allowFragments) as! [String: Any]
-        if let msg = object["msg"] as! [[String: Any]?]?,
-            let jsonObject = msg[0] {
-            self.albumId = jsonObject["albumId"] as! Int?
-            self.albumName = jsonObject["albumName"] as! String?
-            self.cmp3 = jsonObject["cmp3"] as! String
-            self.copyright_id = jsonObject["copyright_id"] as! String
-            self.hdmp3 = jsonObject["hdmp3"] as! String
-            self.mp3 = jsonObject["mp3"] as! String
-            self.mp4 = jsonObject["mp4"] as! String
-            self.poster = jsonObject["poster"] as! String
-            self.singerId = jsonObject["singerId"] as! String
-            self.singerName = jsonObject["singerName"] as! String
-            self.songId = jsonObject["songId"] as! String
-            self.songName = jsonObject["songName"] as! String
+        if let object = try? JSONSerialization.jsonObject(with: json, options: .allowFragments) as! [String: Any],
+         let msg = object["msg"] as? [[String: Any?]?]?,
+            let jsonObject = msg?[0] {
+            self.albumId = jsonObject["albumId"] as? Int ?? nil
+            self.albumName = jsonObject["albumName"] as? String ?? nil
+            self.cmp3 = jsonObject["cmp3"] as? String ?? nil
+            self.copyright_id = jsonObject["copyright_id"] as? String ?? nil
+            self.hdmp3 = jsonObject["hdmp3"] as? String ?? nil
+            self.mp3 = jsonObject["mp3"] as? String ?? nil
+            self.mp4 = jsonObject["mp4"] as? String ?? nil
+            self.poster = jsonObject["poster"] as? String ?? nil
+            self.singerId = jsonObject["singerId"] as? String ?? nil
+            self.singerName = jsonObject["singerName"] as? String ?? nil
+            self.songId = jsonObject["songId"] as? String ?? nil
+            self.songName = jsonObject["songName"] as? String ?? nil
         } else {
             return nil
         }
@@ -56,8 +56,8 @@ struct MiguSongDetails {
         }
     }
     
-    var safeMp3Url: String {
-        return self.mp3.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    var safeMp3Url: String? {
+        return self.mp3?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     }
     
     var mp3FileName: String {
