@@ -26,11 +26,12 @@ class CategoryViewController: UIViewController {
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
         
         MiguSongStore.songs.asObservable()
-            .bind(to: songsTable.rx.items(cellIdentifier: "MiguSongCell", cellType: MiguSongCell.self)) {_, song, cell in
+            .bind(to: songsTable.rx.items(cellIdentifier: "MiguSongCell", cellType: MiguSongCell.self)) {row, song, cell in
                 if let sd = song.songDetails,
                     let _ = sd.safeMp3Url {
                     cell.config(withSong: song)
                 } else {
+//                    cell.delete(nil)
                     cell.isHidden = true
                 }
             }

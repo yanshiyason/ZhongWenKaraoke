@@ -170,7 +170,7 @@
         <!--Navigation Controller-->
         <scene sceneID="DwB-I9-pFr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dUq-FF-21i" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="dUq-FF-21i" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wlB-Xn-iw4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -324,7 +324,7 @@
         <!--Lyrics-->
         <scene sceneID="HgS-K7-lOV">
             <objects>
-                <viewController id="1Gm-NZ-yom" customClass="MiguSongLyricsViewController" customModule="ZhongWenKaraoke" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="1Gm-NZ-yom" customClass="MiguSongLyricsViewController" customModule="ZhongWenKaraoke" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LbA-mg-9LE"/>
                         <viewControllerLayoutGuide type="bottom" id="W0Z-0i-3fa"/>
@@ -333,43 +333,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K0Q-dS-bh2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K0Q-dS-bh2">
                                 <rect key="frame" x="16" y="72" width="343" height="546"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LyricLineCell" rowHeight="100" id="OPP-eH-lwF" customClass="LyricLineCell" customModule="ZhongWenKaraoke" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="LyricLineCell" rowHeight="100" id="OPP-eH-lwF" customClass="LyricLineCell" customModule="ZhongWenKaraoke" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OPP-eH-lwF" id="cd4-xX-dcr">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJd-jn-QSs" userLabel="TradOrPinyin">
-                                                    <rect key="frame" x="0.0" y="4" width="343" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="zQi-PU-EBi"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="UJd-jn-QSs" userLabel="TradOrPinyin">
+                                                    <rect key="frame" x="0.0" y="47.5" width="343" height="15.5"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="labe la la ks mo na bie cha fu">
+                                                            <attributes>
+                                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <font key="NSFont" size="13" name="Monaco"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="テキストテキストテキスト" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2n-C7-3Z1" userLabel="simplified">
-                                                    <rect key="frame" x="0.0" y="25" width="343" height="70"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="X2n-C7-3Z1" userLabel="simplified">
+                                                    <rect key="frame" x="8" y="63" width="327" height="29.5"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="中国">
+                                                            <attributes>
+                                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <font key="NSFont" size="25" name="STSongti-TC-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="中国中国中国中国中国中国中国中国">
+                                                            <attributes>
+                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" size="25" name="STSongti-TC-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="UJd-jn-QSs" secondAttribute="trailing" id="4vQ-B7-isK"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="X2n-C7-3Z1" secondAttribute="bottom" constant="-3.5" id="TY7-P8-4cd"/>
-                                                <constraint firstItem="UJd-jn-QSs" firstAttribute="leading" secondItem="X2n-C7-3Z1" secondAttribute="leading" id="Ud2-qY-sbg"/>
-                                                <constraint firstItem="UJd-jn-QSs" firstAttribute="top" secondItem="cd4-xX-dcr" secondAttribute="topMargin" constant="-4" id="l35-sr-TVP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="X2n-C7-3Z1" secondAttribute="trailing" id="FII-au-Hmp"/>
+                                                <constraint firstItem="X2n-C7-3Z1" firstAttribute="leading" secondItem="cd4-xX-dcr" secondAttribute="leadingMargin" id="PzG-mY-YDj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="X2n-C7-3Z1" secondAttribute="bottom" id="TY7-P8-4cd"/>
                                                 <constraint firstItem="X2n-C7-3Z1" firstAttribute="top" secondItem="UJd-jn-QSs" secondAttribute="bottom" id="uLD-sG-pOO"/>
-                                                <constraint firstItem="UJd-jn-QSs" firstAttribute="trailing" secondItem="X2n-C7-3Z1" secondAttribute="trailing" id="vIg-Cs-RCq"/>
                                                 <constraint firstItem="UJd-jn-QSs" firstAttribute="leading" secondItem="cd4-xX-dcr" secondAttribute="leading" id="via-HW-uHJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="simplified" destination="X2n-C7-3Z1" id="Lbf-Wy-Hkk"/>
                                             <outlet property="tradOrpinyin" destination="UJd-jn-QSs" id="0i5-n8-Ce9"/>
@@ -385,7 +405,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="K0Q-dS-bh2" firstAttribute="top" secondItem="LbA-mg-9LE" secondAttribute="bottom" constant="8" symbolic="YES" id="1PX-hp-AY6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="biD-89-aDw" secondAttribute="trailing" constant="10" id="X3z-Vv-sB7"/>

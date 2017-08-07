@@ -61,7 +61,7 @@ struct MiguSongDetails {
     }
     
     var mp3FileName: String {
-        return "\(singerId)_\(songId).mp3"
+        return "\(singerId!)_\(songId!).mp3"
     }
     
 }
@@ -88,16 +88,16 @@ extension MiguSongDetails: Storable {
         return [
             "albumId": self.albumId ?? "",
             "albumName": self.albumName ?? "",
-            "cmp3": self.cmp3,
-            "copyright_id": self.copyright_id,
-            "hdmp3": self.hdmp3,
-            "mp3": self.mp3,
-            "mp4": self.mp4,
-            "poster": self.poster,
-            "singerId": self.singerId,
-            "singerName": self.singerName,
-            "songId": self.songId,
-            "songName": self.songName,
+            "cmp3": self.cmp3 as Any,
+            "copyright_id": self.copyright_id as Any,
+            "hdmp3": self.hdmp3 as Any,
+            "mp3": self.mp3 as Any,
+            "mp4": self.mp4 as Any,
+            "poster": self.poster as Any,
+            "singerId": self.singerId as Any,
+            "singerName": self.singerName as Any,
+            "songId": self.songId as Any,
+            "songName": self.songName as Any,
         ]
     }
 }
