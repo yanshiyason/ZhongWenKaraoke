@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class CategoriesViewController: UIViewController {
 
@@ -20,6 +21,7 @@ class CategoriesViewController: UIViewController {
 
         categoriesView.register(UINib(nibName:"CategorySectionHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CategorySectionTitle")
         
+        categoriesView.backgroundColor = .mainColor
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -56,7 +58,7 @@ class CategoryLayout: UICollectionViewFlowLayout {
     override init() {
         super.init()
         sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        itemSize = CGSize(width: screenWidth/5, height: screenHeight/4)
+        itemSize = CGSize(width: screenWidth/3, height: screenHeight/4)
         minimumLineSpacing = 0
         minimumInteritemSpacing = 0
         headerReferenceSize = CGSize(width: screenWidth, height: 50)
@@ -98,8 +100,14 @@ extension CategoriesViewController: UICollectionViewDataSource {
             
             let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CategorySectionTitle", for: indexPath) as! CategorySectionHeader
             
-            sectionHeader.chinese?.text = parentCategory.chinese
-            sectionHeader.english?.text = parentCategory.english
+            // Set background colors:
+            sectionHeader.backgroundColor = .mainColor
+            for view in sectionHeader.subviews {
+                view.backgroundColor = .mainColor
+            }
+            
+            sectionHeader.chinese?.attributedText = UILabel.strokedText(parentCategory.chinese, strokeWidth: -3)
+            sectionHeader.english?.attributedText = UILabel.strokedText(parentCategory.english, strokeWidth: -3)
             return sectionHeader
         default:
             assert(false, "Section Header of kind: \(kind) not implemented")
@@ -109,10 +117,12 @@ extension CategoriesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MiguCategoryCell", for: indexPath) as! MiguCategoryCell
         
+        cell.backgroundColor = colors[indexPath.row % colors.count]
+        
         // Configure the cell
         let category = MiguSongStore.categories[indexPath.section].categories[indexPath.row]
-        cell.english.text = category.english
-        cell.chinese.text = category.chinese
+        cell.english.attributedText = UILabel.strokedText(category.english, font: .systemFont(ofSize: 12))
+        cell.chinese.attributedText = UILabel.strokedText(category.chinese, font: .boldSystemFont(ofSize: 25))
         
         return cell
     }

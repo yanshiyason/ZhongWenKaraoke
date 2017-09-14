@@ -87,6 +87,18 @@ struct LyricLine {
     }
 }
 
+extension LyricLine: Equatable {
+    static func == (lhs: LyricLine, rhs: LyricLine) -> Bool {
+        return (
+            lhs.rawText == rhs.rawText &&
+                lhs.timestamp == rhs.timestamp
+        )
+    }
+    
+}
+
+
+
 extension MiguSongLyrics: Storable {
     // Pantry: Storable
     init(warehouse: Warehouseable) {

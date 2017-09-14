@@ -30,6 +30,7 @@ class CategoryViewController: UIViewController {
                 if let sd = song.songDetails,
                     let _ = sd.safeMp3Url {
                     cell.config(withSong: song)
+                    cell.backgroundColor = colors[row % colors.count]
                 } else {
 //                    cell.delete(nil)
                     cell.isHidden = true
@@ -107,6 +108,8 @@ extension CategoryViewController: UITableViewDelegate {
 extension CategoryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MiguSongCell", for: indexPath) as! MiguSongCell
+        
+        cell.backgroundColor = colors[indexPath.row % colors.count]
         
         if let song = songs?[indexPath.row] {
             cell.config(withSong: song)

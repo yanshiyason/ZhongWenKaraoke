@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+let colors: [UIColor] = [.flatRed, .flatOrange, .flatYellow, .flatSand]
+
+extension UIColor {
+    static let mainColor = UIColor.flatSand
+}

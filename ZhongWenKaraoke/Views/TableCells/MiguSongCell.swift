@@ -58,10 +58,14 @@ class MiguSongCell: UITableViewCell {
         self.song = song
         if let poster = song.songDetails?.poster {
             self.posterImg?.setImageFromURl(poster)
+            self.posterImg?.borderRadius()
         }
         
-        self.songTitle.text = song.songDetails?.songName?.removingPercentEncoding! ?? ""
-        self.artistName?.text = song.songDetails?.singerName ?? ""
+        let songTitle = song.songDetails?.songName?.removingPercentEncoding! ?? ""
+        let artistName = song.songDetails?.singerName ?? ""
+        
+        self.songTitle.attributedText = UILabel.strokedText(songTitle, font: .systemFont(ofSize: 20))
+        self.artistName?.attributedText = UILabel.strokedText(artistName, font: .systemFont(ofSize: 16))
     }
     
 }

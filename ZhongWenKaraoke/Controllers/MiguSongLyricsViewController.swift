@@ -48,13 +48,13 @@ class MiguSongLyricsViewController: UIViewController {
             .map({ IndexPath(row: $0, section: 0) })
             .distinctUntilChanged()
             .drive(onNext: {
-                if $0.row > 0 { self.currentyPlayingIndex = $0 }
+                if $0.row >= 0 { self.currentyPlayingIndex = $0 }
                 if let previous = self.previousIndexPath($0) {
-//                    self.lyricsTable.cellForRow(at: previous)?.backgroundColor = .black
                     self.lyricsTable.deselectRow(at: previous, animated: false)
                 }
 //                self.lyricsTable.scrollToRow(at: $0, at: .middle, animated: true)
-                self.lyricsTable.selectRow(at: $0, animated: true, scrollPosition: .middle)
+                self.lyricsTable.selectRow(at: $0, animated: false, scrollPosition: .middle)
+                self.lyricsTable.reloadData()
             })
             .addDisposableTo(disposeBag)
     }
@@ -116,15 +116,29 @@ extension MiguSongLyricsViewController: UITableViewDataSource {
         } else {
             let cell = lyricsTable.dequeueReusableCell(withIdentifier: "LyricLineCell", for: indexPath) as! LyricLineCell
             
-            cell.simplified?.text = self.song.songLyrics?.lyrics[indexPath.row].text().toSimplified()
+            guard let line = self.song.songLyrics?.lyrics[indexPath.row] else { return UITableViewCell() }
+            
+            
+            cell.simplified?.text = line.text().toSimplified()
 
             switch currentlyDisplaying {
             case .none:
                 cell.tradOrpinyin?.text = ""
             case .pinyin:
-                cell.tradOrpinyin?.text = self.song.songLyrics?.lyrics[indexPath.row].text().toPinyin()
+                cell.tradOrpinyin?.text = line.text().toPinyin()
             case .traditional:
-                cell.tradOrpinyin?.text = self.song.songLyrics?.lyrics[indexPath.row].text().toTraditional()
+                cell.tradOrpinyin?.text = line.text().toTraditional()
+            }
+            
+            if let i = self.currentyPlayingIndex?.row,
+                let currentLine = self.song.songLyrics?.lyrics[i] {
+                if line == currentLine {
+                    cell.simplified?.shadowColor = .blue
+                    cell.simplified?.shadowOffset = CGSize(width: -1, height: -1)
+                } else {
+                    cell.simplified?.shadowColor = .none
+                }
+                
             }
 
             return cell
