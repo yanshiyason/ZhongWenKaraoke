@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.5.0)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
   - Jukebox (0.2.1)
   - Kanna (2.2.1)
   - Kingfisher (3.10.3)
@@ -28,6 +31,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Jukebox
   - Kanna
   - Kingfisher (~> 3.0)
@@ -39,8 +43,18 @@ DEPENDENCIES:
   - RxTest (~> 3.0)
   - SideMenu
 
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Jukebox: 81db618ccd3a1cc9b154f4ae0f5c4b54638666dd
   Kanna: 182789ab065e8f9a6ccc2a74ce6283d3401c0c4a
   Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
@@ -52,6 +66,6 @@ SPEC CHECKSUMS:
   RxTest: 9cf69fa8f33e43cfcb154ad9b78f54afeb877423
   SideMenu: a447554ae5c982e8077666389e1c8b0c8656e065
 
-PODFILE CHECKSUM: bd5a8708aafb771eb092846692f2bda8f2f5df07
+PODFILE CHECKSUM: fb348a267ec55632c33610fae23c98469c55bbbb
 
 COCOAPODS: 1.2.1
