@@ -18,8 +18,16 @@ class CategoryViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "\(category.chinese) / \(category.english)"
+
+        setNowPlayingLabel()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavbarColor()
         // Do any additional setup after loading the view.
 //        songsTable.delegate = self
 //        songsTable.dataSource = self
@@ -86,9 +94,17 @@ class CategoryViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueToSongView" {
             if let song = songForSelectedRow() {
-                let tabBarVC = segue.destination as! MiguSongTabBarController
-                tabBarVC.song = song
+                AppState.currentSong = song
+                
+                // Set the color of the following the same as cell
+                AppState.cellBgColor = songsTable.cellForRow(at: songsTable.indexPathForSelectedRow!)?.backgroundColor
             }
+        }
+        
+        if segue.identifier == "ShowNowPlaying" {
+            let vc = segue.destination as! MiguSongTabBarController
+            let songDetailsVC = vc.childViewControllers[0] as! MiguSongDetailsViewController
+            songDetailsVC.song = AppState.currentSong
         }
     }
     
@@ -110,6 +126,7 @@ extension CategoryViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MiguSongCell", for: indexPath) as! MiguSongCell
         
         cell.backgroundColor = colors[indexPath.row % colors.count]
+        cell.addShadow()
         
         if let song = songs?[indexPath.row] {
             cell.config(withSong: song)

@@ -47,6 +47,9 @@
 		CD0D67291F2DFA0600CDBC65 /* XCTestCase+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D67191F2DFA0600CDBC65 /* XCTestCase+extensions.swift */; };
 		CD1E0AD91F6B190300DC2969 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E0AD81F6B190300DC2969 /* UILabel+Extension.swift */; };
 		CD1E0ADB1F6B1F2300DC2969 /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E0ADA1F6B1F2300DC2969 /* GlobalSettings.swift */; };
+		CD1E0ADD1F6B254000DC2969 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E0ADC1F6B254000DC2969 /* UIViewController+Extensions.swift */; };
+		CD1E0ADF1F6C094200DC2969 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E0ADE1F6C094200DC2969 /* AppState.swift */; };
+		CD1E0AE11F6C233600DC2969 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E0AE01F6C233600DC2969 /* UIView+Extensions.swift */; };
 		CDDE0E801F2F68F300A97059 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = CDDE0E7F1F2F68F300A97059 /* categories.json */; };
 		CDE02BAC1F31255F009A3E8C /* MiguSongStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE02BAB1F31255F009A3E8C /* MiguSongStoreTests.swift */; };
 		CDE02BB11F3128A6009A3E8C /* MiguCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE02BB01F3128A6009A3E8C /* MiguCategoryCell.swift */; };
@@ -128,6 +131,9 @@
 		CD0D67191F2DFA0600CDBC65 /* XCTestCase+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+extensions.swift"; sourceTree = "<group>"; };
 		CD1E0AD81F6B190300DC2969 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		CD1E0ADA1F6B1F2300DC2969 /* GlobalSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSettings.swift; sourceTree = "<group>"; };
+		CD1E0ADC1F6B254000DC2969 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		CD1E0ADE1F6C094200DC2969 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CD1E0AE01F6C233600DC2969 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		CDDE0E7F1F2F68F300A97059 /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = categories.json; path = ../categories.json; sourceTree = "<group>"; };
 		CDE02BAB1F31255F009A3E8C /* MiguSongStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongStoreTests.swift; sourceTree = "<group>"; };
 		CDE02BB01F3128A6009A3E8C /* MiguCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguCategoryCell.swift; sourceTree = "<group>"; };
@@ -212,6 +218,7 @@
 				CD0D66A61F2DF77300CDBC65 /* Stores */,
 				CD0D66AA1F2DF77300CDBC65 /* Views */,
 				CD1E0ADA1F6B1F2300DC2969 /* GlobalSettings.swift */,
+				CD1E0ADE1F6C094200DC2969 /* AppState.swift */,
 			);
 			path = ZhongWenKaraoke;
 			sourceTree = "<group>";
@@ -363,6 +370,8 @@
 				CD0D66A81F2DF77300CDBC65 /* String+Extensions.swift */,
 				CD0D66A91F2DF77300CDBC65 /* UIImageView+extensions.swift */,
 				CD1E0AD81F6B190300DC2969 /* UILabel+Extension.swift */,
+				CD1E0ADC1F6B254000DC2969 /* UIViewController+Extensions.swift */,
+				CD1E0AE01F6C233600DC2969 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -701,6 +710,8 @@
 				CD0D66C71F2DF77300CDBC65 /* MiguSongCell.swift in Sources */,
 				CD0D66BF1F2DF77300CDBC65 /* MiguSongLyrics.swift in Sources */,
 				CDE02BB31F326B4E009A3E8C /* CategorySectionHeader.swift in Sources */,
+				CD1E0AE11F6C233600DC2969 /* UIView+Extensions.swift in Sources */,
+				CD1E0ADD1F6B254000DC2969 /* UIViewController+Extensions.swift in Sources */,
 				CD0D66AE1F2DF77300CDBC65 /* AppDelegate.swift in Sources */,
 				CDF3E2D51F2F5FDF006C65BC /* MiguCategories.swift in Sources */,
 				CD0D66B71F2DF77300CDBC65 /* MiguSongLyricsViewController.swift in Sources */,
@@ -711,6 +722,7 @@
 				CD0D66B91F2DF77300CDBC65 /* CategoryViewController.swift in Sources */,
 				CD0D66BD1F2DF77300CDBC65 /* MiguSong.swift in Sources */,
 				CD0D66C61F2DF77300CDBC65 /* LyricLineCell.swift in Sources */,
+				CD1E0ADF1F6C094200DC2969 /* AppState.swift in Sources */,
 				CD0D66C31F2DF77300CDBC65 /* MiguSongStore.swift in Sources */,
 				CD0D66BE1F2DF77300CDBC65 /* MiguSongDetails.swift in Sources */,
 			);

@@ -12,9 +12,16 @@ import ChameleonFramework
 class CategoriesViewController: UIViewController {
 
     @IBOutlet weak var categoriesView: UICollectionView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = "Categories"
+        setNowPlayingLabel()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavbarColor()
         
         categoriesView.delegate = self
         categoriesView.dataSource = self
@@ -48,6 +55,12 @@ class CategoriesViewController: UIViewController {
                 categoryVC.category = category
             }
         }
+        
+        if segue.identifier == "ShowNowPlaying" {
+            let vc = segue.destination as! MiguSongTabBarController
+            let songDetailsVC = vc.childViewControllers[0] as! MiguSongDetailsViewController
+            songDetailsVC.song = AppState.currentSong
+        }
     }
 }
 
@@ -57,10 +70,13 @@ class CategoryLayout: UICollectionViewFlowLayout {
     
     override init() {
         super.init()
-        sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        itemSize = CGSize(width: screenWidth/3, height: screenHeight/4)
-        minimumLineSpacing = 0
-        minimumInteritemSpacing = 0
+        let padding = CGFloat(5)
+        sectionInset = UIEdgeInsets(top: 0, left: padding, bottom: 0, right: padding)
+        minimumLineSpacing = padding
+        minimumInteritemSpacing = padding
+        let itemWidth = (screenWidth/3) - (padding * 2)
+        let itemHeight = (screenHeight/4) - padding
+        itemSize = CGSize(width: itemWidth, height: itemHeight)
         headerReferenceSize = CGSize(width: screenWidth, height: 50)
         
     }
@@ -106,8 +122,10 @@ extension CategoriesViewController: UICollectionViewDataSource {
                 view.backgroundColor = .mainColor
             }
             
-            sectionHeader.chinese?.attributedText = UILabel.strokedText(parentCategory.chinese, strokeWidth: -3)
-            sectionHeader.english?.attributedText = UILabel.strokedText(parentCategory.english, strokeWidth: -3)
+//            sectionHeader.chinese?.attributedText = UILabel.strokedText(parentCategory.chinese, strokeWidth: -3)
+//            sectionHeader.english?.attributedText = UILabel.strokedText(parentCategory.english, strokeWidth: -3)
+            sectionHeader.chinese?.attributedText = UILabel.coloredText(parentCategory.chinese, color: .flatMagenta, font: .boldSystemFont(ofSize: 21))
+            sectionHeader.english?.attributedText = UILabel.coloredText(parentCategory.english, color: .flatSkyBlue, font: .boldSystemFont(ofSize: 16))
             return sectionHeader
         default:
             assert(false, "Section Header of kind: \(kind) not implemented")
@@ -124,6 +142,9 @@ extension CategoriesViewController: UICollectionViewDataSource {
         cell.english.attributedText = UILabel.strokedText(category.english, font: .systemFont(ofSize: 12))
         cell.chinese.attributedText = UILabel.strokedText(category.chinese, font: .boldSystemFont(ofSize: 25))
         
+        cell.cornerRadius = 10.0
+        cell.addShadow()
+
         return cell
     }
     

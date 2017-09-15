@@ -1,5 +1,5 @@
 //
-//  GlobalSettings.swift
+//  AppState.swift
 //  ZhongWenKaraoke
 //
 //  Created by Yannick Chiasson on 9/15/17.
@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
-let colors: [UIColor] = [.flatMagenta, .flatSkyBlue]
-
-extension UIColor {
-    static let mainColor = UIColor.flatSand
+struct AppState {
+    static var currentSong: MiguSong!
+    static var cellBgColor: UIColor!
 }

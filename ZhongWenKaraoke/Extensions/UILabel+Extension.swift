@@ -10,6 +10,16 @@ import Foundation
 import UIKit
 
 extension UILabel {
+    static func coloredText(_ text: String, color: UIColor = .black, font: UIFont = .systemFont(ofSize: 14)) -> NSMutableAttributedString {
+
+        let strokeTextAttributes = [
+            NSForegroundColorAttributeName : color,
+            NSFontAttributeName : font
+        ] as [String : Any]
+        
+        return NSMutableAttributedString(string: text, attributes: strokeTextAttributes)
+    }
+
     static func strokedText(_ text: String,
                      strokeColor: UIColor = .black,
                      foregroundColor: UIColor = .white,

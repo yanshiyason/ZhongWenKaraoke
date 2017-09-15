@@ -18,14 +18,28 @@ class MiguSongLyricsViewController: UIViewController {
     let disposeBag = DisposeBag()
     var lastTouch = Date()
     var currentyPlayingIndex: IndexPath?
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        let parentVC = self.tabBarController as! MiguSongTabBarController
+        parentVC.hidesBottomBarWhenPushed = false
+        navigationController?.hidesBarsOnSwipe = false
+        showNavBar()
+        showTabBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let parentVC = self.tabBarController as! MiguSongTabBarController
+        parentVC.hidesBottomBarWhenPushed = true
+        navigationController?.hidesBarsOnSwipe = true
+        showNavBar()
+        showTabBar()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let parentVC = self.tabBarController as! MiguSongTabBarController
-        parentVC.hidesBottomBarWhenPushed = true
-        self.navigationController!.hidesBarsOnSwipe = true
-
-        self.song = parentVC.song
+        self.song = AppState.currentSong
         
         // Do any additional setup after loading the view.
         lyricsTable.delegate = self
@@ -37,8 +51,8 @@ class MiguSongLyricsViewController: UIViewController {
             })
             .do(onNext: { _ in
                 if self.tabBarController?.selectedIndex == 1 {
-                    self.tabBarController?.tabBar.isHidden = true
-                    self.navigationController?.isNavigationBarHidden = true
+                    self.hideTabBar()
+                    self.hideNavBar()
                 }
             })
             .map({
@@ -59,10 +73,6 @@ class MiguSongLyricsViewController: UIViewController {
             .addDisposableTo(disposeBag)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         guard let i = currentyPlayingIndex else { return }
         self.lyricsTable.selectRow(at: i, animated: true, scrollPosition: .middle)
@@ -77,12 +87,8 @@ class MiguSongLyricsViewController: UIViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard lyricsTable.isDragging || lyricsTable.isDecelerating else { return } // return unless drag is caused by user
         self.lastTouch = Date()
-        showTabBars()
-    }
-    
-    func showTabBars() {
-        self.tabBarController?.tabBar.isHidden = false
-        self.navigationController?.isNavigationBarHidden = false
+        showTabBar()
+        showNavBar()
     }
     
     enum ValidDisplay {

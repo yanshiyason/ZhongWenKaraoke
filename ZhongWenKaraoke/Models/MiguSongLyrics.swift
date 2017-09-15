@@ -19,9 +19,13 @@ struct MiguSongLyrics {
     }
     
     init(_ rawLyrics: Data) {
-        let lyrics = try! JSONSerialization.jsonObject(with:rawLyrics, options: .allowFragments) as! String
-        self.rawLyrics = lyrics
-        self.lyrics = MiguSongLyrics.parseLyrics(lyrics)
+        if let lyrics = try? JSONSerialization.jsonObject(with:rawLyrics, options: .allowFragments) as! String {
+            self.rawLyrics = lyrics
+        } else {
+            print("Failed to parse lyrics. Setting empty string.")
+            self.rawLyrics = ""
+        }
+        self.lyrics = MiguSongLyrics.parseLyrics(self.rawLyrics)
     }
 
     static func parseLyrics(_ rawLyrics: String) -> [LyricLine] {

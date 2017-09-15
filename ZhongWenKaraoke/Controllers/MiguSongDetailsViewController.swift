@@ -14,11 +14,32 @@ class MiguSongDetailsViewController: UIViewController {
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var songTitle: UILabel!
     @IBOutlet weak var artistName: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.hidesBarsOnSwipe = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let parentVC = self.tabBarController as! MiguSongTabBarController
-        self.song = parentVC.song
+        
+        view.backgroundColor = AppState.cellBgColor
+        for sv in view.subviews {
+            sv.backgroundColor = AppState.cellBgColor
+        }
+        setNavbarColor()
+
+        if let song = self.song {
+            if song == AppState.currentSong && JukeboxService.jukebox.state == .playing {
+                print("song already playing")
+            } else {
+                self.song = AppState.currentSong
+                JukeboxService.play()
+            }
+        } else {
+            self.song = AppState.currentSong
+            JukeboxService.play()
+        }
         
         fillUIWith(song: song)
     }
@@ -26,10 +47,6 @@ class MiguSongDetailsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
     }
     
     func fillUIWith(song: MiguSong) {
@@ -46,13 +63,17 @@ class MiguSongDetailsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SegueToJukebox" {
-            let jukeboxVC = segue.destination as! JukeboxViewController
-            let parentVC = self.tabBarController as! MiguSongTabBarController
-            
-            jukeboxVC.miguSong = parentVC.song
-            JukeboxService.jukeboxVC = jukeboxVC
-        }
+        //
+        // trying to remove the jukebox view
+        // and play the music by setting it as a static attribute on the AppState struct
+        //
+//        if segue.identifier == "SegueToJukebox" {
+//            if let parentVC = self.tabBarController as! MiguSongTabBarController? {
+//                let jukeboxVC = segue.destination as! JukeboxViewController
+//                jukeboxVC.miguSong = parentVC.song
+//                JukeboxService.jukeboxVC = jukeboxVC
+//            }
+//        }
     }
 
 }
