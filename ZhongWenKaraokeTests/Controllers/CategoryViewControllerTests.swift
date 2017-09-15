@@ -1,5 +1,5 @@
 //
-//  TopViewControllerTests.swift
+//  CategoryViewControllerTests.swift
 //  ZhongWenKaraoke
 //
 //  Created by Yannick Chiasson on 7/22/17.
@@ -11,14 +11,14 @@ import OHHTTPStubs
 
 @testable import ZhongWenKaraoke
 
-class TopViewControllerTests: XCTestCase {
-    var sut: TopViewController!
+class CategoryViewControllerTests: XCTestCase {
+    var sut: CategoryViewController!
 
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        sut = storyboard.instantiateViewController(withIdentifier: "TopViewController") as! TopViewController
+        sut = storyboard.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
         _ = sut.view
     }
     

@@ -19,10 +19,10 @@ class MiguSongCellTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let topVC = storyboard.instantiateViewController(withIdentifier: "TopViewController") as! TopViewController
-        _ = topVC.view
+        let categoryVC = storyboard.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
+        _ = categoryVC.view
         
-        tableView = topVC.songsTable
+        tableView = categoryVC.songsTable
         dataSource = MockTableViewDataSource()
         tableView.dataSource = dataSource
     }

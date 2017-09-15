@@ -13,6 +13,8 @@ target 'ZhongWenKaraoke' do
   pod 'Jukebox'
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
+  pod 'SideMenu'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 
 
   target 'ZhongWenKaraokeTests' do

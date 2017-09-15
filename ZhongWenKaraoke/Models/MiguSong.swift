@@ -13,7 +13,9 @@ struct MiguSong {
     var songDetails: MiguSongDetails? {
         set {
             if let newValue = newValue {
-                Pantry.pack(newValue, key: "songDetails_\(itemId)")
+                if newValue.mp3 != nil {
+                    Pantry.pack(newValue, key: "songDetails_\(itemId)")
+                }
             }
         }
         get {
@@ -54,11 +56,12 @@ struct MiguSong {
         return "http://music.migu.cn/webfront/player/findsong.do?itemid=\(itemId)&type=song&loc=\(loc)&locno=\(locno)"
     }
     
-    var localOrRemoteUrl: URL {
+    var localOrRemoteUrl: URL? {
         if let filePath: String = Pantry.unpack(songDetails!.mp3FileName) {
             return URL(string: filePath)!
         } else {
-            return URL(string: songDetails!.safeMp3Url)!
+            guard let url = songDetails!.safeMp3Url else { return nil }
+            return URL(string: url)
         }
     }
     

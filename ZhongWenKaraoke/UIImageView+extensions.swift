@@ -16,4 +16,9 @@ extension UIImageView {
             kf.setImage(with: url)
         }
     }
+    
+    func borderRadius(_ radius: CGFloat = 20.0) {
+        layer.cornerRadius = radius
+        clipsToBounds = true
+    }
 }

@@ -10,10 +10,11 @@ import UIKit
 
 class MiguSongTabBarController: UITabBarController {
     
-    var song: MiguSong!
+//    var song: MiguSong!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavbarColor()
 
         // Do any additional setup after loading the view.
     }

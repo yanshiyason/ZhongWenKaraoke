@@ -9,9 +9,10 @@
 import Foundation
 import Alamofire
 import Kanna
+import RxSwift
 
 class MiguDataService {
-    
+
     func downloadMp3(_ miguSongDetails: MiguSongDetails, handler: @escaping (URL?) -> Void) {
         print("starting download!")
         let destination: DownloadRequest.DownloadFileDestination = { _, _ in
@@ -21,7 +22,9 @@ class MiguDataService {
             return (documentsURL, [.removePreviousFile])
         }
         
-        Alamofire.download(miguSongDetails.safeMp3Url, to: destination).responseData { response in
+        if miguSongDetails.safeMp3Url == nil { return }
+        
+        Alamofire.download(miguSongDetails.safeMp3Url!, to: destination).responseData { response in
             print("inside download handler")
             if let destinationUrl = response.destinationURL {
                 print("destinationUrl was valid! \(destinationUrl)")
@@ -48,10 +51,22 @@ class MiguDataService {
     func getSongDetails(_ miguSong: MiguSong, handler: @escaping (MiguSongDetails?, Error?) -> Void) {
         get(miguSong.songDetailsUrl) {data, error in
             if(error == nil) {
-                handler(MiguSongDetails(fromJson: data!)!, nil)
+                handler(MiguSongDetails(fromJson: data!), nil)
             } else {
                 print(error!)
                 handler(nil, error)
+            }
+        }
+    }
+    
+    func getSongsFor(category: MiguCategory, _ handler: @escaping ([MiguSong]?, Error?) -> ()) {
+        get(category.url) { data, error in
+            if (error == nil) {
+                let utf8Text = String(data: data!, encoding: .utf8)
+                handler(self.parseHomePage(utf8Text!), nil)
+            } else {
+                print(error!)
+                handler(nil, error!)
             }
         }
     }

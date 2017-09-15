@@ -1,0 +1,207 @@
+{
+  "主题": {
+    "en": "Subjects",
+    "categories": [
+      {
+        "70后": { "url": "http://music.migu.cn/tag/1000587717/P2Z1Y1L2N1/1/001002A", "en": "70'S"}
+      },
+      {
+        "80后": { "url": "http://music.migu.cn/tag/1000587718/P2Z1Y1L2N1/2/001002A", "en": "80'S"}
+      },
+      {
+        "90后": { "url": "http://music.migu.cn/tag/1000587726/P2Z1Y1L2N1/3/001002A", "en": "90'S"}
+      },
+      {
+        "搞笑彩铃": { "url": "http://music.migu.cn/tag/1000001664/P2Z1Y1L2N1/4/001002A", "en": "Funny Ring Tones"}
+      },
+      {
+        "儿童歌曲": { "url": "http://music.migu.cn/tag/1000001780/P2Z1Y1L2N1/5/001002A", "en": "Children's Songs"}
+      },
+      {
+        "经典老歌": { "url": "http://music.migu.cn/tag/1000001635/P2Z1Y1L2N1/6/001002A", "en": "Classic Old Songs"}
+      },
+      {
+        "中国风": { "url": "http://music.migu.cn/tag/1000001675/P2Z1Y1L2N1/7/001002A", "en": "Chinese Style"}
+      },
+      {
+        "电视剧音乐": { "url": "http://music.migu.cn/tag/1001076078/P2Z1Y1L2N1/8/001002A", "en": "TV Series Susic"}
+      },
+      {
+        "电影音乐": { "url": "http://music.migu.cn/tag/1001076080/P2Z1Y1L2N1/9/001002A", "en": "Movie Music"}
+      },
+      {
+        "游戏音乐": { "url": "http://music.migu.cn/tag/1000587698/P2Z1Y1L2N1/10/001002A", "en": "Game Music"}
+      },
+      {
+        "动漫音乐": { "url": "http://music.migu.cn/tag/1000587706/P2Z1Y1L2N1/11/001002A", "en": "Anime Music"}
+      },
+      {
+        "综艺歌曲": { "url": "http://music.migu.cn/tag/1001076083/P2Z1Y1L2N1/12/001002A", "en": "Variety Song"}
+      },
+      {
+        "情歌对唱": { "url": "http://music.migu.cn/tag/1000001677/P2Z1Y1L2N1/13/001002A", "en": "Love song Duet"}
+      },
+      {
+        "胎教音乐": { "url": "http://music.migu.cn/tag/1000001828/P2Z1Y1L2N1/14/001002A", "en": "Prenatal Music"}
+      },
+      {
+        "广告歌曲": { "url": "http://music.migu.cn/tag/1000093963/P2Z1Y1L2N1/15/001002A", "en": "Advertising Song"}
+      },
+      {
+        "体育音乐": { "url": "http://music.migu.cn/tag/1000001750/P2Z1Y1L2N1/16/001002A", "en": "Sports Music"}
+      },
+      {
+        "青春校园": { "url": "http://music.migu.cn/tag/1000587712/P2Z1Y1L2N1/17/001002A", "en": "Youth Campus"}
+      },
+      {
+        "原创歌曲": { "url": "http://music.migu.cn/tag/1000001758/P2Z1Y1L2N1/18/001002A", "en": "Original Song"}
+      }
+    ]
+  },
+  "风格": {
+    "en": "Styles",
+    "categories": [
+      {
+        "流行": { "url": "http://music.migu.cn/tag/1000001672/P2Z1Y1L2N1/1/001002A", "en": "Popular"}
+      },
+      {
+        "摇滚": { "url": "http://music.migu.cn/tag/1000001674/P2Z1Y1L2N1/2/001002A", "en": "Rock"}
+      },
+      {
+        "硬摇滚": { "url": "http://music.migu.cn/tag/1001076038/P2Z1Y1L2N1/3/001002A", "en": "Hard Rock"}
+      },
+      {
+        "朋克": { "url": "http://music.migu.cn/tag/1000001685/P2Z1Y1L2N1/4/001002A", "en": "Punk"}
+      },
+      {
+        "重金属": { "url": "http://music.migu.cn/tag/1000001854/P2Z1Y1L2N1/5/001002A", "en": "Heavy Metal"}
+      },
+      {
+        "哥特": { "url": "http://music.migu.cn/tag/1000001649/P2Z1Y1L2N1/6/001002A", "en": "Gothic"}
+      },
+      {
+        "流行摇滚": { "url": "http://music.migu.cn/tag/1001076060/P2Z1Y1L2N1/7/001002A", "en": "Pop Rock"}
+      },
+      {
+        "R&B": { "url": "http://music.migu.cn/tag/1000001808/P2Z1Y1L2N1/8/001002A", "en": "R&B"}
+      },
+      {
+        "灵魂音乐": { "url": "http://music.migu.cn/tag/1000001855/P2Z1Y1L2N1/9/001002A", "en": "Soul Music"}
+      },
+      {
+        "放克": { "url": "http://music.migu.cn/tag/1000001648/P2Z1Y1L2N1/10/001002A", "en": "Funk"}
+      },
+      {
+        "爵士": { "url": "http://music.migu.cn/tag/1000001681/P2Z1Y1L2N1/11/001002A", "en": "Jazz"}
+      },
+      {
+        "嘻哈": { "url": "http://music.migu.cn/tag/1000001809/P2Z1Y1L2N1/12/001002A", "en": "Hip Hop"}
+      },
+      {
+        "电子": { "url": "http://music.migu.cn/tag/1000001682/P2Z1Y1L2N1/13/001002A", "en": "Electronic"}
+      },
+      {
+        "乡村": { "url": "http://music.migu.cn/tag/1000001683/P2Z1Y1L2N1/14/001002A", "en": "Rural"}
+      },
+      {
+        "雷鬼": { "url": "http://music.migu.cn/tag/1000001684/P2Z1Y1L2N1/15/001002A", "en": "Reggae"}
+      },
+      {
+        "拉丁": { "url": "http://music.migu.cn/tag/1000587649/P2Z1Y1L2N1/16/001002A", "en": "Latin"}
+      },
+      {
+        "蓝调": { "url": "http://music.migu.cn/tag/1000001851/P2Z1Y1L2N1/17/001002A", "en": "Blues"}
+      },
+      {
+        "民谣": { "url": "http://music.migu.cn/tag/1000001775/P2Z1Y1L2N1/18/001002A", "en": "Ballad"}
+      },
+      {
+        "古典": { "url": "http://music.migu.cn/tag/1000001783/P2Z1Y1L2N1/19/001002A", "en": "Classical"}
+      },
+      {
+        "轻音乐": { "url": "http://music.migu.cn/tag/1000587650/P2Z1Y1L2N1/20/001002A", "en": "Light Music"}
+      },
+      {
+        "音乐剧": { "url": "http://music.migu.cn/tag/1000001785/P2Z1Y1L2N1/21/001002A", "en": "Musical"}
+      },
+      {
+        "歌剧": { "url": "http://music.migu.cn/tag/1000001838/P2Z1Y1L2N1/22/001002A", "en": "Opera"}
+      },
+      {
+        "日本民族音乐": { "url": "http://music.migu.cn/tag/1001075823/P2Z1Y1L2N1/23/001002A", "en": "Japanese National Music"}
+      },
+      {
+        "阿拉伯音乐": { "url": "http://music.migu.cn/tag/1002241216/P2Z1Y1L2N1/24/001002A", "en": "Arabic Music"}
+      },
+      {
+        "巴西音乐": { "url": "http://music.migu.cn/tag/1002241118/P2Z1Y1L2N1/25/001002A", "en": "Brazilian Music"}
+      },
+      {
+        "佛教音乐": { "url": "http://music.migu.cn/tag/1001075855/P2Z1Y1L2N1/26/001002A", "en": "Buddhist Music"}
+      },
+      {
+        "基督教音乐": { "url": "http://music.migu.cn/tag/1001075862/P2Z1Y1L2N1/27/001002A", "en": "Christian Music"}
+      },
+      {
+        "民族": { "url": "http://music.migu.cn/tag/1000001671/P2Z1Y1L2N1/28/001002A", "en": "National"}
+      },
+      {
+        "军旅": { "url": "http://music.migu.cn/tag/1000001669/P2Z1Y1L2N1/29/001002A", "en": "Military"}
+      },
+      {
+        "红歌": { "url": "http://music.migu.cn/tag/1000001670/P2Z1Y1L2N1/30/001002A", "en": "Red Song"}
+      },
+      {
+        "西藏民歌": { "url": "http://music.migu.cn/tag/1000001845/P2Z1Y1L2N1/31/001002A", "en": "Tibetan Folk Song"}
+      },
+      {
+        "内蒙民歌": { "url": "http://music.migu.cn/tag/1000001842/P2Z1Y1L2N1/32/001002A", "en": "Inner Mongolia Folk Song"}
+      },
+      {
+        "陕北民歌": { "url": "http://music.migu.cn/tag/1000001843/P2Z1Y1L2N1/33/001002A", "en": "Northern Shaanxi Folk Song"}
+      },
+      {
+        "新疆民歌": { "url": "http://music.migu.cn/tag/1000001844/P2Z1Y1L2N1/34/001002A", "en": "Xinjiang Folk Song"}
+      },
+      {
+        "评书": { "url": "http://music.migu.cn/tag/1000001872/P2Z1Y1L2N1/35/001002A", "en": "Storytelling"}
+      },
+      {
+        "相声": { "url": "http://music.migu.cn/tag/1000001871/P2Z1Y1L2N1/36/001002A", "en": "Crosstalk"}
+      },
+      {
+        "京剧": { "url": "http://music.migu.cn/tag/1000001867/P2Z1Y1L2N1/37/001002A", "en": "Peking Opera"}
+      },
+      {
+        "黄梅戏": { "url": "http://music.migu.cn/tag/1000001870/P2Z1Y1L2N1/38/001002A", "en": "Huang Mei Opera"}
+      },
+      {
+        "评剧": { "url": "http://music.migu.cn/tag/1000001651/P2Z1Y1L2N1/39/001002A", "en": "Drama"}
+      },
+      {
+        "豫剧": { "url": "http://music.migu.cn/tag/1000001868/P2Z1Y1L2N1/40/001002A", "en": "Opera"}
+      },
+      {
+        "越剧": { "url": "http://music.migu.cn/tag/1000001869/P2Z1Y1L2N1/41/001002A", "en": "Yue Opera"}
+      },
+      {
+        "粤剧": { "url": "http://music.migu.cn/tag/1000093951/P2Z1Y1L2N1/42/001002A", "en": "Cantonese Opera"}
+      },
+      {
+        "昆曲": { "url": "http://music.migu.cn/tag/1000093945/P2Z1Y1L2N1/43/001002A", "en": "Kunqu Opera"}
+      },
+      {
+        "秦腔": { "url": "http://music.migu.cn/tag/1000093946/P2Z1Y1L2N1/44/001002A", "en": "Shaanxi Cavity"}
+      },
+      {
+        "川剧": { "url": "http://music.migu.cn/tag/1000093949/P2Z1Y1L2N1/45/001002A", "en": "Sichuan Opera"}
+      },
+      {
+        "花鼓戏": { "url": "http://music.migu.cn/tag/1000001652/P2Z1Y1L2N1/46/001002A", "en": "Flower Drum"}
+      },
+      {
+        "晋剧": { "url": "http://music.migu.cn/tag/1000093950/P2Z1Y1L2N1/47/001002A", "en": "Jin Opera"}
+      }
+    ]
+  }
+}
