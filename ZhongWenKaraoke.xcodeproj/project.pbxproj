@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5B7DAE3992A5C72DE2F9CEB9 /* Pods_ZhongWenKaraokeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F014DBCEF2EA2E6BFFFE2B0 /* Pods_ZhongWenKaraokeTests.framework */; };
+		CD0140121F6DCF90009D4AC6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD0D669C1F2DF77300CDBC65 /* Info.plist */; };
+		CD0140141F6E1AC2009D4AC6 /* IndexPath+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0140131F6E1AC2009D4AC6 /* IndexPath+Extensions.swift */; };
 		CD0D66AE1F2DF77300CDBC65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D668E1F2DF77300CDBC65 /* AppDelegate.swift */; };
 		CD0D66B11F2DF77300CDBC65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0D668F1F2DF77300CDBC65 /* Assets.xcassets */; };
 		CD0D66B21F2DF77300CDBC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0D66901F2DF77300CDBC65 /* LaunchScreen.storyboard */; };
@@ -85,6 +87,7 @@
 		7F014DBCEF2EA2E6BFFFE2B0 /* Pods_ZhongWenKaraokeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZhongWenKaraokeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		998C00903F1504ED2600E302 /* Pods-ZhongWenKaraokeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeUITests/Pods-ZhongWenKaraokeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADF1CEE162F68B4AC20A11AC /* Pods-ZhongWenKaraokeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZhongWenKaraokeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZhongWenKaraokeTests/Pods-ZhongWenKaraokeTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD0140131F6E1AC2009D4AC6 /* IndexPath+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+Extensions.swift"; sourceTree = "<group>"; };
 		CD0D668E1F2DF77300CDBC65 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD0D668F1F2DF77300CDBC65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD0D66911F2DF77300CDBC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,10 +110,10 @@
 		CD0D66A81F2DF77300CDBC65 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "../String+Extensions.swift"; sourceTree = "<group>"; };
 		CD0D66A91F2DF77300CDBC65 /* UIImageView+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+extensions.swift"; path = "../UIImageView+extensions.swift"; sourceTree = "<group>"; };
 		CD0D66AC1F2DF77300CDBC65 /* LyricLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricLineCell.swift; sourceTree = "<group>"; };
-		CD0D66AD1F2DF77300CDBC65 /* MiguSongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongCell.swift; sourceTree = "<group>"; };
+		CD0D66AD1F2DF77300CDBC65 /* MiguSongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiguSongCell.swift; path = ../TableCells/MiguSongCell.swift; sourceTree = "<group>"; };
 		CD0D66F51F2DF79E00CDBC65 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0D66F61F2DF79E00CDBC65 /* ZhongWenKaraokeUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhongWenKaraokeUITests.swift; sourceTree = "<group>"; };
-		CD0D66FC1F2DF84100CDBC65 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ZhongWenKaraokeUITests/Podfile; sourceTree = "<group>"; };
+		CD0D66FC1F2DF84100CDBC65 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		CD0D67001F2DF8CC00CDBC65 /* ZhongWenKaraoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhongWenKaraoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0D67011F2DF8CC00CDBC65 /* ZhongWenKaraokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhongWenKaraokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0D67021F2DF8CC00CDBC65 /* ZhongWenKaraokeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZhongWenKaraokeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,7 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				CD0D66AC1F2DF77300CDBC65 /* LyricLineCell.swift */,
-				CD0D66AD1F2DF77300CDBC65 /* MiguSongCell.swift */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -372,6 +374,7 @@
 				CD1E0AD81F6B190300DC2969 /* UILabel+Extension.swift */,
 				CD1E0ADC1F6B254000DC2969 /* UIViewController+Extensions.swift */,
 				CD1E0AE01F6C233600DC2969 /* UIView+Extensions.swift */,
+				CD0140131F6E1AC2009D4AC6 /* IndexPath+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 		CDE02BAD1F312849009A3E8C /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				CD0D66AD1F2DF77300CDBC65 /* MiguSongCell.swift */,
 				CDE02BB01F3128A6009A3E8C /* MiguCategoryCell.swift */,
 			);
 			path = CollectionViewCells;
@@ -531,6 +535,7 @@
 				CD0D66B11F2DF77300CDBC65 /* Assets.xcassets in Resources */,
 				CDDE0E801F2F68F300A97059 /* categories.json in Resources */,
 				CD0D66B21F2DF77300CDBC65 /* LaunchScreen.storyboard in Resources */,
+				CD0140121F6DCF90009D4AC6 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,13 +567,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZhongWenKaraoke-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		19FDA75F601405DBB61ADD7D /* [CP] Check Pods Manifest.lock */ = {
@@ -577,13 +585,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZhongWenKaraokeTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		41E725B2E3B5B078135635D1 /* [CP] Check Pods Manifest.lock */ = {
@@ -592,13 +603,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZhongWenKaraokeUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4223A4D0D2E74B4BE6687EBA /* [CP] Copy Pods Resources */ = {
@@ -622,9 +636,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraoke/Pods-ZhongWenKaraoke-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Jukebox/Jukebox.framework",
+				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Pantry/Pantry.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Jukebox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pantry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -652,9 +685,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZhongWenKaraokeTests/Pods-ZhongWenKaraokeTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -699,6 +741,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD0D66B81F2DF77300CDBC65 /* MiguSongTabBarController.swift in Sources */,
+				CD0140141F6E1AC2009D4AC6 /* IndexPath+Extensions.swift in Sources */,
 				CD0D66C11F2DF77300CDBC65 /* MiguDataService.swift in Sources */,
 				CD0D66B61F2DF77300CDBC65 /* MiguSongDetailsViewController.swift in Sources */,
 				CD1E0AD91F6B190300DC2969 /* UILabel+Extension.swift in Sources */,

@@ -61,13 +61,36 @@ class MiguSongLyricsViewController: UIViewController {
             .map({ $0 == -1 ? 0 : $0 })
             .map({ IndexPath(row: $0, section: 0) })
             .distinctUntilChanged()
-            .drive(onNext: {
-                if $0.row >= 0 { self.currentyPlayingIndex = $0 }
-                if let previous = self.previousIndexPath($0) {
+            .drive(onNext: { indexPath in
+                if indexPath.row >= 0 { self.currentyPlayingIndex = indexPath }
+                if let previous = indexPath.previous() {
                     self.lyricsTable.deselectRow(at: previous, animated: false)
                 }
-//                self.lyricsTable.scrollToRow(at: $0, at: .middle, animated: true)
-                self.lyricsTable.selectRow(at: $0, animated: false, scrollPosition: .middle)
+                
+                let screenMidPoint = (UIScreen.main.bounds.height / 2)
+                
+                let nextIndexPath: IndexPath = {
+                    if self.lyricsTable.cellForRow(at: indexPath.next()) != nil {
+                        return indexPath.next()
+                    }
+
+                    return indexPath
+                }()
+
+                let rowRect = self.lyricsTable.rectForRow(at: nextIndexPath)
+                
+                let distanceToMidScreen = screenMidPoint - rowRect.midY
+                
+                let lyric = self.song.songLyrics!.lyrics[indexPath.next().row]
+                let timestamp = lyric.timestampToSeconds()
+                let playback = JukeboxService.playbackTime.value ?? 1
+                let timeToMidscreen = (Double(timestamp) - playback)
+                
+                UIView.animate(withDuration: timeToMidscreen, delay: 0, options: .allowUserInteraction, animations: {
+                    self.lyricsTable.contentOffset = CGPoint(x: 0, y: -distanceToMidScreen)
+                }, completion: nil)
+
+                self.lyricsTable.selectRow(at: indexPath, animated: false, scrollPosition: .none)
                 self.lyricsTable.reloadData()
             })
             .addDisposableTo(disposeBag)
@@ -149,11 +172,6 @@ extension MiguSongLyricsViewController: UITableViewDataSource {
 
             return cell
         }
-    }
-    
-    func previousIndexPath(_ indexPath: IndexPath) -> IndexPath? {
-        guard indexPath.row > 0 else { return nil }
-        return IndexPath(row: indexPath.row - 1, section: indexPath.section)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
