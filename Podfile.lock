@@ -1,11 +1,11 @@
 PODS:
-  - Alamofire (4.5.0)
+  - Alamofire (4.5.1)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - Jukebox (0.2.1)
   - Kanna (2.2.1)
-  - Kingfisher (3.10.3)
+  - Kingfisher (3.13.1)
   - OHHTTPStubs/Core (6.0.0)
   - OHHTTPStubs/Default (6.0.0):
     - OHHTTPStubs/Core
@@ -20,14 +20,14 @@ PODS:
   - OHHTTPStubs/Swift (6.0.0):
     - OHHTTPStubs/Default
   - Pantry (0.3)
-  - RxBlocking (3.6.0):
+  - RxBlocking (3.6.1):
     - RxSwift (~> 3.6)
-  - RxCocoa (3.6.0):
+  - RxCocoa (3.6.1):
     - RxSwift (~> 3.6)
-  - RxSwift (3.6.0)
-  - RxTest (3.6.0):
+  - RxSwift (3.6.1)
+  - RxTest (3.6.1):
     - RxSwift (~> 3.6)
-  - SideMenu (2.3.3)
+  - SideMenu (3.0.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -53,18 +53,18 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ViccAlexander/Chameleon.git
 
 SPEC CHECKSUMS:
-  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Jukebox: 81db618ccd3a1cc9b154f4ae0f5c4b54638666dd
   Kanna: 182789ab065e8f9a6ccc2a74ce6283d3401c0c4a
-  Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
+  Kingfisher: ed9707a409cc47fddafbcd12a43a9757e3600af5
   OHHTTPStubs: 752f9b11fd810a15162d50f11c06ff94f8e012eb
   Pantry: 98481849be65d2b2cb9658976533e84ebd266192
-  RxBlocking: 4c3893acc11d26965f7532fff1e35626a4db6f6c
-  RxCocoa: cb865569239ebf1b1434056e5c8859d99dff103a
-  RxSwift: a0925c7fb11fbe60055285f6f2062241aa37a175
-  RxTest: 9cf69fa8f33e43cfcb154ad9b78f54afeb877423
-  SideMenu: a447554ae5c982e8077666389e1c8b0c8656e065
+  RxBlocking: 4f4bd5732e8b952e54ae8a57739bcfb645de12bc
+  RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
+  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
+  RxTest: 1d00348a7848c91ab5bf5d197d2378aa6b2bb356
+  SideMenu: f1fe8a4d23c8ae06d5cb18b21be29851d78fd2f2
 
 PODFILE CHECKSUM: fb348a267ec55632c33610fae23c98469c55bbbb
 
