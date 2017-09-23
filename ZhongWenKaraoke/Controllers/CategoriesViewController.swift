@@ -30,7 +30,9 @@ class CategoriesViewController: UIViewController {
         
         categoriesView.backgroundColor = .mainColor
         
-
+        // without setting this to false, the collection view scrolling is choppy
+        categoriesView.isPrefetchingEnabled = false
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,7 +40,8 @@ class CategoriesViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        categoriesView.collectionViewLayout = CategoryLayout()
+        categoriesView.collectionViewLayout = CategoriesLayout()
+        categoriesView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,7 +67,7 @@ class CategoriesViewController: UIViewController {
     }
 }
 
-class CategoryLayout: UICollectionViewFlowLayout {
+class CategoriesLayout: UICollectionViewFlowLayout {
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
     
@@ -98,7 +101,6 @@ extension CategoriesViewController: UICollectionViewDataSource {
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return MiguSongStore.categories.count
     }
     
