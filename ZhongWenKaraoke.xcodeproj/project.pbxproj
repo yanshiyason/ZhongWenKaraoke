@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -505,7 +505,7 @@
 				};
 			};
 			buildConfigurationList = CD0D65F31F2DF59200CDBC65 /* Build configuration list for PBXProject "ZhongWenKaraoke" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -934,6 +934,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2SJ5L2D5W6;
 				INFOPLIST_FILE = ZhongWenKaraoke/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shiyason.ZhongWenKaraoke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -951,6 +952,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2SJ5L2D5W6;
 				INFOPLIST_FILE = ZhongWenKaraoke/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shiyason.ZhongWenKaraoke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
