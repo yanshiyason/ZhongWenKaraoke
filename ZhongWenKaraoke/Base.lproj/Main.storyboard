@@ -40,19 +40,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K32-D6-VSz">
-                                                    <rect key="frame" x="0.0" y="4" width="100" height="100"/>
+                                                    <rect key="frame" x="0.0" y="8" width="100" height="93"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="raA-BS-jzB"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYw-Zv-e07">
-                                                    <rect key="frame" x="118" y="73" width="33" height="16"/>
+                                                    <rect key="frame" x="110" y="80" width="212" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AN-5X-QLW">
-                                                    <rect key="frame" x="116" y="20" width="42" height="21"/>
+                                                    <rect key="frame" x="110" y="13" width="212" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -61,12 +61,14 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="K32-D6-VSz" firstAttribute="leading" secondItem="HeU-vL-Boz" secondAttribute="leading" id="5mv-VS-beV"/>
-                                            <constraint firstItem="8AN-5X-QLW" firstAttribute="top" secondItem="HeU-vL-Boz" secondAttribute="topMargin" constant="12" id="PKg-jU-7g6"/>
-                                            <constraint firstItem="8AN-5X-QLW" firstAttribute="leading" secondItem="K32-D6-VSz" secondAttribute="trailing" constant="16" id="Ut5-1s-9Vm"/>
-                                            <constraint firstItem="gYw-Zv-e07" firstAttribute="top" secondItem="8AN-5X-QLW" secondAttribute="bottom" constant="32" id="jF8-C6-Itt"/>
-                                            <constraint firstItem="gYw-Zv-e07" firstAttribute="leading" secondItem="K32-D6-VSz" secondAttribute="trailing" constant="18" id="nqs-ki-flK"/>
-                                            <constraint firstItem="K32-D6-VSz" firstAttribute="top" secondItem="HeU-vL-Boz" secondAttribute="topMargin" constant="-4" id="wtT-3I-Sl7"/>
-                                            <constraint firstItem="K32-D6-VSz" firstAttribute="centerY" secondItem="HeU-vL-Boz" secondAttribute="centerY" id="wvB-C5-x7C"/>
+                                            <constraint firstItem="K32-D6-VSz" firstAttribute="top" secondItem="HeU-vL-Boz" secondAttribute="topMargin" id="K4g-4M-Xev"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="K32-D6-VSz" secondAttribute="bottom" id="Nhf-gT-B3Q"/>
+                                            <constraint firstItem="8AN-5X-QLW" firstAttribute="top" secondItem="HeU-vL-Boz" secondAttribute="topMargin" constant="5" id="PKg-jU-7g6"/>
+                                            <constraint firstItem="8AN-5X-QLW" firstAttribute="leading" secondItem="K32-D6-VSz" secondAttribute="trailing" constant="10" id="Ut5-1s-9Vm"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="gYw-Zv-e07" secondAttribute="bottom" constant="5" id="fcW-I3-CHq"/>
+                                            <constraint firstItem="gYw-Zv-e07" firstAttribute="leading" secondItem="K32-D6-VSz" secondAttribute="trailing" constant="10" id="nqs-ki-flK"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="gYw-Zv-e07" secondAttribute="trailing" id="oFH-Tk-whV"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="8AN-5X-QLW" secondAttribute="trailing" id="yBR-mA-d7n"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="artistName" destination="gYw-Zv-e07" id="fqs-wd-Uy9"/>
@@ -99,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50" y="597"/>
+            <point key="canvasLocation" x="48.799999999999997" y="596.85157421289364"/>
         </scene>
         <!--Song-->
         <scene sceneID="kVf-va-RWe">
