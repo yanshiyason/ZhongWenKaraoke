@@ -54,6 +54,7 @@
 		CD1E0AE11F6C233600DC2969 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E0AE01F6C233600DC2969 /* UIView+Extensions.swift */; };
 		CDDE0E801F2F68F300A97059 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = CDDE0E7F1F2F68F300A97059 /* categories.json */; };
 		CDDE324B1F77011A00C03B74 /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE324A1F77011A00C03B74 /* CGSize+Extensions.swift */; };
+		CDDE324D1F770EB500C03B74 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE324C1F770EB500C03B74 /* Array+Extension.swift */; };
 		CDE02BAC1F31255F009A3E8C /* MiguSongStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE02BAB1F31255F009A3E8C /* MiguSongStoreTests.swift */; };
 		CDE02BB11F3128A6009A3E8C /* MiguCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE02BB01F3128A6009A3E8C /* MiguCategoryCell.swift */; };
 		CDE02BB31F326B4E009A3E8C /* CategorySectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE02BB21F326B4E009A3E8C /* CategorySectionHeader.swift */; };
@@ -140,6 +141,7 @@
 		CD1E0AE01F6C233600DC2969 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		CDDE0E7F1F2F68F300A97059 /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = categories.json; path = ../categories.json; sourceTree = "<group>"; };
 		CDDE324A1F77011A00C03B74 /* CGSize+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extensions.swift"; sourceTree = "<group>"; };
+		CDDE324C1F770EB500C03B74 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		CDE02BAB1F31255F009A3E8C /* MiguSongStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguSongStoreTests.swift; sourceTree = "<group>"; };
 		CDE02BB01F3128A6009A3E8C /* MiguCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiguCategoryCell.swift; sourceTree = "<group>"; };
 		CDE02BB21F326B4E009A3E8C /* CategorySectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySectionHeader.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 				CD1E0AE01F6C233600DC2969 /* UIView+Extensions.swift */,
 				CD0140131F6E1AC2009D4AC6 /* IndexPath+Extensions.swift */,
 				CDDE324A1F77011A00C03B74 /* CGSize+Extensions.swift */,
+				CDDE324C1F770EB500C03B74 /* Array+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -764,6 +767,7 @@
 				CD0D66B71F2DF77300CDBC65 /* MiguSongLyricsViewController.swift in Sources */,
 				CD0D66B41F2DF77300CDBC65 /* Comparable+Extensions.swift in Sources */,
 				CD0D66C01F2DF77300CDBC65 /* JukeboxService.swift in Sources */,
+				CDDE324D1F770EB500C03B74 /* Array+Extension.swift in Sources */,
 				CD1E0ADB1F6B1F2300DC2969 /* GlobalSettings.swift in Sources */,
 				CDF3E2D11F2F5D84006C65BC /* CategoriesViewController.swift in Sources */,
 				CD0D66B91F2DF77300CDBC65 /* CategoryViewController.swift in Sources */,
