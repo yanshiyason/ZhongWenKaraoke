@@ -63,11 +63,15 @@ class MiguSongLyricsViewController: UIViewController {
             .distinctUntilChanged()
             .drive(onNext: { indexPath in
                 if indexPath.row >= 0 { self.currentyPlayingIndex = indexPath }
+
                 if let previous = indexPath.previous() {
                     self.lyricsTable.deselectRow(at: previous, animated: false)
                 }
                 
-                let screenMidPoint = (UIScreen.main.bounds.height / 2)
+                self.lyricsTable.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+                
+                // TODO: check if this call is necessary..
+                self.lyricsTable.reloadData()
                 
                 let nextIndexPath: IndexPath = {
                     if self.lyricsTable.cellForRow(at: indexPath.next()) != nil {
@@ -77,21 +81,22 @@ class MiguSongLyricsViewController: UIViewController {
                     return indexPath
                 }()
 
-                let rowRect = self.lyricsTable.rectForRow(at: nextIndexPath)
+                guard let nextLyric: LyricLine = self.song.songLyrics!.lyrics[safe: indexPath.next().row] else { return }
                 
-                let distanceToMidScreen = screenMidPoint - rowRect.midY
-                
-                let lyric = self.song.songLyrics!.lyrics[indexPath.next().row]
-                let timestamp = lyric.timestampToSeconds()
+                // Calculate how much time before the next timestamp
+                let timestamp = nextLyric.timestampToSeconds()
                 let playback = JukeboxService.playbackTime.value ?? 1
                 let timeToMidscreen = (Double(timestamp) - playback)
                 
+                // Calculate the distance to the next row
+                let rowRect = self.lyricsTable.rectForRow(at: nextIndexPath)
+                let screenMidPoint = (UIScreen.main.bounds.height / 2)
+                let distanceToMidScreen = screenMidPoint - rowRect.midY
+                
+                // animate the transition of next row from it's current position to the middle of screen
                 UIView.animate(withDuration: timeToMidscreen, delay: 0, options: .allowUserInteraction, animations: {
                     self.lyricsTable.contentOffset = CGPoint(x: 0, y: -distanceToMidScreen)
                 }, completion: nil)
-
-                self.lyricsTable.selectRow(at: indexPath, animated: false, scrollPosition: .none)
-                self.lyricsTable.reloadData()
             })
             .addDisposableTo(disposeBag)
     }

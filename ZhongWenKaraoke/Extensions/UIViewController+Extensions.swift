@@ -46,4 +46,22 @@ extension UIViewController {
         navigationController?.view.backgroundColor = .mainColor
         tabBarController?.view.backgroundColor = .mainColor
     }
+    
+    func spawnActivityIndicator() -> UIActivityIndicatorView {
+        let ai = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        DispatchQueue.main.async {
+            ai.backgroundColor = UIColor(white: 0.2, alpha: 0.6)
+        }
+        ai.layer.frame.size = UIScreen.main.bounds.size
+        ai.layer.cornerRadius = 10
+        ai.frame = ai.frame.insetBy(dx: -10, dy: -10)
+
+        ai.center = {
+            let b = UIScreen.main.bounds
+            return CGPoint(x: b.midX, y: b.midY)
+        }()
+        ai.hidesWhenStopped = true
+        self.view.addSubview(ai)
+        return ai
+    }
 }

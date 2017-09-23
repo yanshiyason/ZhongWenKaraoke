@@ -10,12 +10,37 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+class CategoryLayout: UICollectionViewFlowLayout {
+    let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+    
+    override init() {
+        super.init()
+        let padding = CGFloat(5)
+        sectionInset = UIEdgeInsets(top: 0, left: padding, bottom: 0, right: padding)
+        minimumLineSpacing = padding
+        minimumInteritemSpacing = padding
+        let itemWidth = screenWidth - (padding * 2)
+        let itemHeight = (screenHeight/4) - padding
+        itemSize = CGSize(width: itemWidth, height: itemHeight)
+    }
+    
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+        return true
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+}
+
+
 class CategoryViewController: UIViewController {
     var songs: [MiguSong]?
     var category: MiguCategory!
-    
-    @IBOutlet weak var songsTable: UITableView!
-    
+
+    @IBOutlet weak var songsTable: UICollectionView!
+
     let disposeBag = DisposeBag()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,62 +50,37 @@ class CategoryViewController: UIViewController {
         setNowPlayingLabel()
     }
     
+    override func viewWillLayoutSubviews() {
+        songsTable.collectionViewLayout = CategoryLayout()
+        songsTable.isPrefetchingEnabled = false
+        
+        // this redraws the shadows
+        songsTable.reloadSections(IndexSet(integer: 0))
+    }
+    
+    var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavbarColor()
-        // Do any additional setup after loading the view.
-//        songsTable.delegate = self
-//        songsTable.dataSource = self
-        self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
+        activityIndicator = spawnActivityIndicator()
+
+        songsTable.backgroundColor = .mainColor
+        
+        MiguSongStore.hasOnGoingRequest
+            .asDriver()
+            .drive(self.activityIndicator.rx.isAnimating)
+            .addDisposableTo(disposeBag)
         
         MiguSongStore.songs.asObservable()
+            .map({return $0.filter({return $0.isValid()})})
+            .do(onNext: {self.songs = $0})
             .bind(to: songsTable.rx.items(cellIdentifier: "MiguSongCell", cellType: MiguSongCell.self)) {row, song, cell in
-                if let sd = song.songDetails,
-                    let _ = sd.safeMp3Url {
-                    cell.config(withSong: song)
-                    cell.backgroundColor = colors[row % colors.count]
-                } else {
-//                    cell.delete(nil)
-                    cell.isHidden = true
-                }
+                cell.config(withSong: song)
+                cell.backgroundColor = colors[row % colors.count]
+                cell.cornerRadius = 10.0
+                cell.addShadow()
             }
-            .addDisposableTo(disposeBag)
-        
-        songsTable.rx
-            .setDelegate(self)
-            .addDisposableTo(disposeBag)
-        
-//        songsTable.rx.modelSelected(MiguSong)
-//            .subscribe(onNext: {
-//                print($0)
-//            })
-//            .addDisposableTo(disposeBag)
-        
-//        data.bindTo(tableView.rx_itemsWithCellIdentifier("Cell")) { _, contributor, cell in
-//            cell.textLabel?.text = contributor.name
-//            cell.detailTextLabel?.text = contributor.gitHubID
-//            cell.imageView?.image = contributor.image
-//            }
-//            .addDisposableTo(disposeBag)
-//        
-//        tableView.rx_modelSelected(Contributor)
-//            .subscribeNext {
-//                print("You selected \($0)")
-//            }
-//            .addDisposableTo(disposeBag)
-
-        MiguSongStore.songs//.asDriver()
-            .asObservable()
-            .subscribe(onNext: {
-                print("inside map")
-                print($0.count)
-                self.songs = $0
-                self.songsTable.reloadData()
-            }, onCompleted: {
-                print("Completed")
-            }, onDisposed: {
-                print("Disposed")
-            })
             .addDisposableTo(disposeBag)
         
         MiguSongStore.songsFor(category: category)
@@ -97,7 +97,7 @@ class CategoryViewController: UIViewController {
                 AppState.currentSong = song
                 
                 // Set the color of the following the same as cell
-                AppState.cellBgColor = songsTable.cellForRow(at: songsTable.indexPathForSelectedRow!)?.backgroundColor
+                AppState.cellBgColor = songsTable.cellForItem(at: songsTable.indexPathsForSelectedItems![0])?.backgroundColor
             }
         }
         
@@ -109,38 +109,11 @@ class CategoryViewController: UIViewController {
     }
     
     private func songForSelectedRow() -> MiguSong? {
-        if let row = songsTable.indexPathForSelectedRow?.row {
+        if let row = songsTable.indexPathsForSelectedItems?[0].row {
             return songs?[row]
         } else {
             return nil
         }
     }
     
-}
-
-extension CategoryViewController: UITableViewDelegate {
-}
-
-extension CategoryViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MiguSongCell", for: indexPath) as! MiguSongCell
-        
-        cell.backgroundColor = colors[indexPath.row % colors.count]
-        cell.addShadow()
-        
-        if let song = songs?[indexPath.row] {
-            cell.config(withSong: song)
-            return cell
-        } else {
-            return UITableViewCell()
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songs?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
 }

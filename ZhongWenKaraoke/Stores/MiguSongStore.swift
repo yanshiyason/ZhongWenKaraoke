@@ -14,7 +14,7 @@ class MiguSongStore {
     static var tempSongHolder: [MiguSong]!
     static var _songs = BehaviorSubject<[MiguSong]>(value: [MiguSong]())
     static var songs: Observable<[MiguSong]> = MiguSongStore._songs
-//    static var songs = Variable<[MiguSong]>([MiguSong]())
+    static var hasOnGoingRequest = Variable(false)
     
     static func categorySongsKey(_ category: MiguCategory) -> String {
         return category.english
@@ -24,49 +24,65 @@ class MiguSongStore {
         if let songs: [MiguSong] = Pantry.unpack(self.categorySongsKey(category)) {
             print("about to change value")
             MiguSongStore._songs.onNext(songs)
-//            MiguSongStore.songs.value = songs
         } else {
+            MiguSongStore.hasOnGoingRequest.value = true
             MiguDataService().getSongsFor(category: category) { songs, error in
                 if let songs = songs {
                     MiguSongStore.tempSongHolder = songs
-                    MiguSongStore.fetchSongAssociations()
+                    let totalSongsCount = songs.count
+                    var songsFetchedCounter = 0
+                    MiguSongStore.fetchSongAssociations() { count, group in
+                        
+                        group.notify(queue: .main) {
+                            songsFetchedCounter += 1
+                            print("dispatching valid songs to change value")
+                            MiguSongStore._songs.onNext(MiguSongStore.tempSongHolder.filter{$0.isValid()})
+
+                            print("songsFetchedCounter: \(songsFetchedCounter) | totalSongsCount: \(totalSongsCount)")
+                            
+                            if songsFetchedCounter == totalSongsCount {
+                                MiguSongStore.hasOnGoingRequest.value = false
+                            }
+                        }
+                    }
                     Pantry.pack(songs, key: self.categorySongsKey(category))
                 }
             }
         }
     }
-    
-    static func fetchSongAssociations() {
+
+    static func fetchSongAssociations(_ handler: @escaping (Int, DispatchGroup) -> ()) {
+        print("fetching song lyrics and details in #fetchSongAssociations()")
+        
         for (i, song) in MiguSongStore.tempSongHolder.enumerated() {
+            
+            let group = DispatchGroup()
 
             if (song.songDetails == nil) {
+                group.enter()
                 MiguDataService().getSongDetails(song) { songDetails, error in
-//                    debugPrint("Fetched \(String(describing: songDetails))")
                     if (songDetails != nil) {
                         MiguSongStore.tempSongHolder[i].songDetails = songDetails!
-                        
-                        print("about to change value")
-//                        MiguSongStore.songs.value = MiguSongStore.tempSongHolder
-                        MiguSongStore._songs.onNext(MiguSongStore.tempSongHolder)
                     }
+                    group.leave()
                 }
             }
             
             if (song.songLyrics == nil) {
+                group.enter()
                 MiguDataService().getLyrics(song) {lyrics, error in
-//                    debugPrint("Fetched \(String(describing: lyrics))")
                     if (lyrics != nil) {
                         MiguSongStore.tempSongHolder[i].songLyrics = lyrics!
-                        MiguSongStore._songs.onNext(MiguSongStore.tempSongHolder)
-                        print("about to change value")
-//                        MiguSongStore.songs.value = MiguSongStore.tempSongHolder
+                        
                     }
+                    group.leave()
                 }
             }
+            
+            
+            handler(i, group)
         }
-        print("about to change value")
-        MiguSongStore._songs.onNext(MiguSongStore.tempSongHolder)
-//        MiguSongStore.songs.value = MiguSongStore.tempSongHolder
+        MiguSongStore._songs.onNext(MiguSongStore.tempSongHolder.filter{$0.isValid()})
     }
     
     static let categories = loadCategories()
@@ -85,6 +101,4 @@ class MiguSongStore {
             return MiguParentCategory(chinese:c["category"]! as! String, english: c["en"]! as! String, categories: categories)
         }
     }
-    
-    
 }

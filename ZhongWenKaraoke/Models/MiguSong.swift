@@ -10,6 +10,13 @@ import Foundation
 import Pantry
 
 struct MiguSong {
+
+    func isValid() -> Bool {
+        guard let sd = songDetails else { return false }
+        guard let sl = songLyrics else { return false }
+        return sd.safeMp3Url != nil
+    }
+
     var songDetails: MiguSongDetails? {
         set {
             if let newValue = newValue {

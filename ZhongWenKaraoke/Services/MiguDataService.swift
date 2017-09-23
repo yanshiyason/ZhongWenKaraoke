@@ -34,8 +34,6 @@ class MiguDataService {
             }
         }
     }
-    
-    
 
     func getLyrics(_ miguSong: MiguSong, handler: @escaping (MiguSongLyrics?, Error?) -> Void) {
         get(miguSong.lyricsUrl) {data, error in
