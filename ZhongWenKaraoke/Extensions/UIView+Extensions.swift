@@ -50,4 +50,25 @@ extension UIView {
         layer.masksToBounds = false
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
     }
+    
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
+    }
+    
+    func borderRadius(_ radius: CGFloat = 10.0) {
+        layer.cornerRadius = radius
+        clipsToBounds = true
+    }
+    
+    func borderRadiusLeftSide(_ radius: CGFloat = 10.0) {
+        //        borderRadius(radius)
+        //        if #available(iOS 11.0, *) {
+        //            layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        //        }
+        //        self.roundCorners([.topLeft, .bottomLeft], radius: 10)
+        roundCorners([.topLeft, .bottomLeft], radius: 10)
+    }
 }

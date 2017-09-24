@@ -6,6 +6,8 @@
 //  Copyright © 2017 Yannick Chiasson. All rights reserved.
 //
 
+
+
 import UIKit
 
 @IBDesignable
@@ -24,7 +26,7 @@ class MiguSongCell: UICollectionViewCell {
         self.song = song
         if let poster = song.songDetails?.poster {
             self.posterImg?.setImageFromURl(poster)
-//            self.posterImg?.borderRadius()
+            self.posterImg?.borderRadiusLeftSide()
         }
         
         let songTitle = song.songDetails?.songName?.removingPercentEncoding! ?? ""
@@ -32,6 +34,9 @@ class MiguSongCell: UICollectionViewCell {
         
         self.songTitle.attributedText = UILabel.strokedText(songTitle, font: .systemFont(ofSize: 20))
         self.artistName?.attributedText = UILabel.strokedText(artistName, font: .systemFont(ofSize: 16))
+        
+        // redraws the autoLayout rules with the border radius applied to the posterImg
+        self.layoutIfNeeded()
     }
     
 }

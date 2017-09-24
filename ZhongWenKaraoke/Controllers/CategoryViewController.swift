@@ -16,12 +16,12 @@ class CategoryLayout: UICollectionViewFlowLayout {
     
     override init() {
         super.init()
-        let padding = CGFloat(5)
-        sectionInset = UIEdgeInsets(top: 0, left: padding, bottom: 0, right: padding)
+        let padding = CGFloat(10)
+        sectionInset = UIEdgeInsets(top: padding, left: 0, bottom: padding, right: 0)
         minimumLineSpacing = padding
         minimumInteritemSpacing = padding
         let itemWidth = screenWidth - (padding * 2)
-        let itemHeight = (screenHeight/4) - padding
+        let itemHeight = (screenHeight/5) - padding
         itemSize = CGSize(width: itemWidth, height: itemHeight)
     }
     
@@ -79,6 +79,7 @@ class CategoryViewController: UIViewController {
                 cell.config(withSong: song)
                 cell.backgroundColor = colors[row % colors.count]
                 cell.cornerRadius = 10.0
+                cell.posterImg?.borderRadiusLeftSide(10)
                 cell.addShadow()
             }
             .addDisposableTo(disposeBag)
