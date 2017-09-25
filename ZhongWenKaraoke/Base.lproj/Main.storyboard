@@ -92,7 +92,7 @@
                     <navigationItem key="navigationItem" id="yGO-wX-xjQ">
                         <barButtonItem key="rightBarButtonItem" title="Now Playing" id="kH8-Em-xpr">
                             <connections>
-                                <segue destination="1bP-cQ-iyw" kind="show" id="Uk5-Uf-bq1"/>
+                                <segue destination="1bP-cQ-iyw" kind="show" identifier="ShowNowPlaying" id="Uk5-Uf-bq1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48.799999999999997" y="596.85157421289364"/>
+            <point key="canvasLocation" x="-551" y="855"/>
         </scene>
         <!--Song-->
         <scene sceneID="kVf-va-RWe">
@@ -170,12 +170,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="3S6-ND-YyD" kind="relationship" relationship="rootViewController" id="gbZ-PI-bJq"/>
+                        <segue destination="nx5-qU-jqu" kind="relationship" relationship="rootViewController" id="a5I-1D-ke3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ho-z9-bQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1585" y="228"/>
+            <point key="canvasLocation" x="-3332" y="224"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="hbY-bH-3c8">
@@ -229,27 +229,9 @@
                                                 <constraint firstItem="PtR-IK-ZzD" firstAttribute="leading" secondItem="EnM-GR-NsH" secondAttribute="leading" constant="15" id="lLy-7Y-7ui"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Sjp-3A-8Ik">
-                                        <rect key="frame" x="0.0" y="119" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sjp-3A-8Ik" id="wuF-Uy-cka">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4j-Zx-gzF">
-                                                    <rect key="frame" x="15" y="11.5" width="360" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="K4j-Zx-gzF" firstAttribute="leading" secondItem="wuF-Uy-cka" secondAttribute="leading" constant="15" id="044-lp-KdX"/>
-                                                <constraint firstItem="K4j-Zx-gzF" firstAttribute="centerY" secondItem="wuF-Uy-cka" secondAttribute="centerY" id="LPw-4Z-BC7"/>
-                                                <constraint firstAttribute="trailing" secondItem="K4j-Zx-gzF" secondAttribute="trailing" id="wlu-cA-gV7"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="dUq-FF-21i" kind="showDetail" id="o7r-dh-tqa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -263,12 +245,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0L-IC-cyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-645.60000000000002" y="-1005.2473763118442"/>
+            <point key="canvasLocation" x="-1394" y="-616"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="bUw-hU-9pf">
             <objects>
-                <navigationController navigationBarHidden="YES" id="Ter-Li-FGt" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LeftSideMenu" navigationBarHidden="YES" id="Ter-Li-FGt" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9TM-e5-Qmi">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -281,7 +263,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="399-bN-ZgS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1595" y="-1005"/>
+            <point key="canvasLocation" x="-2185" y="-615"/>
         </scene>
         <!--Categories View Controller-->
         <scene sceneID="fuk-3B-RWq">
@@ -392,14 +374,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CZ8-dh-dKI">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="9n2-75-z3R">
-                            <connections>
-                                <segue destination="Ter-Li-FGt" kind="presentation" id="zPm-k2-sji"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Now Playing" id="Xp8-UK-XdR">
                             <connections>
-                                <segue destination="1bP-cQ-iyw" kind="show" id="oJY-Rt-v3v"/>
+                                <segue destination="1bP-cQ-iyw" kind="show" identifier="ShowNowPlaying" id="oJY-Rt-v3v"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -409,7 +386,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHG-6B-gSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-806" y="227"/>
+            <point key="canvasLocation" x="-1394" y="225"/>
+        </scene>
+        <!--Parent Categories View Controller-->
+        <scene sceneID="BNJ-zD-aJb">
+            <objects>
+                <viewController id="nx5-qU-jqu" customClass="ParentCategoriesViewController" customModule="ZhongWenKaraoke" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fq1-Yf-wqj"/>
+                        <viewControllerLayoutGuide type="bottom" id="yIF-g6-506"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uhp-HK-tMg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L1z-kj-G9B">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y3K-vF-Kal">
+                                    <size key="itemSize" width="74" height="89"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MiguCategoryCell" id="Egy-gP-NyU" customClass="MiguCategoryCell" customModule="ZhongWenKaraoke" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="89"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="74" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bsi-Qa-84n" userLabel="English">
+                                                    <rect key="frame" x="5" y="70" width="67" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国語" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9ev-X0-qj1" userLabel="Chinese">
+                                                    <rect key="frame" x="0.0" y="29.5" width="74" height="30"/>
+                                                    <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="9ev-X0-qj1" secondAttribute="trailing" id="CkG-27-OZU"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="bsi-Qa-84n" secondAttribute="trailing" constant="2" id="F33-WU-PKi"/>
+                                            <constraint firstItem="9ev-X0-qj1" firstAttribute="centerY" secondItem="Egy-gP-NyU" secondAttribute="centerY" id="OZb-0p-DDY"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="bsi-Qa-84n" secondAttribute="bottom" constant="4" id="mSE-hk-BIC"/>
+                                            <constraint firstItem="9ev-X0-qj1" firstAttribute="leading" secondItem="Egy-gP-NyU" secondAttribute="leadingMargin" id="oS6-9z-48Z"/>
+                                            <constraint firstItem="bsi-Qa-84n" firstAttribute="leading" secondItem="Egy-gP-NyU" secondAttribute="leadingMargin" constant="5" id="qSP-0N-Xv6"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="chinese" destination="9ev-X0-qj1" id="8GN-Vk-h0t"/>
+                                            <outlet property="english" destination="bsi-Qa-84n" id="d8o-lU-hV3"/>
+                                            <segue destination="3S6-ND-YyD" kind="show" identifier="SegueToSubcategory" id="Oog-k8-0EP"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fuu-82-kAg">
+                        <barButtonItem key="rightBarButtonItem" title="Now Playing" id="MOq-XP-1bI">
+                            <connections>
+                                <segue destination="1bP-cQ-iyw" kind="show" identifier="ShowNowPlaying" id="bKK-IV-WIL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="parentCategoriesView" destination="L1z-kj-G9B" id="pDD-xF-xMd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="76y-gH-YMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2354.4000000000001" y="223.53823088455775"/>
         </scene>
         <!--Migu Song Tab Bar Controller-->
         <scene sceneID="Khq-wL-Hqa">
@@ -428,7 +483,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJ4-Ic-UiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="227"/>
+            <point key="canvasLocation" x="412" y="205"/>
         </scene>
         <!--Lyrics-->
         <scene sceneID="HgS-K7-lOV">
@@ -619,6 +674,6 @@
         <image name="stopBtn" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AHC-Y1-CgM"/>
+        <segue reference="bKK-IV-WIL"/>
     </inferredMetricsTieBreakers>
 </document>

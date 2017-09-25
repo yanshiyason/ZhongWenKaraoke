@@ -13,9 +13,11 @@ class CategoriesViewController: UIViewController {
 
     @IBOutlet weak var categoriesView: UICollectionView!
     
+    var category: MiguParentCategory!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.title = "Categories"
+        navigationItem.title = "\(category.chinese) / \(category.english)"
         setNowPlayingLabel()
     }
 
@@ -26,7 +28,7 @@ class CategoriesViewController: UIViewController {
         categoriesView.delegate = self
         categoriesView.dataSource = self
 
-        categoriesView.register(UINib(nibName:"CategorySectionHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CategorySectionTitle")
+//        categoriesView.register(UINib(nibName:"CategorySectionHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CategorySectionTitle")
         
         categoriesView.backgroundColor = .mainColor
         
@@ -80,7 +82,7 @@ class CategoriesLayout: UICollectionViewFlowLayout {
         let itemWidth = (screenWidth/3) - (padding * 2)
         let itemHeight = (screenHeight/4) - padding
         itemSize = CGSize(width: itemWidth, height: itemHeight)
-        headerReferenceSize = CGSize(width: screenWidth, height: 50)
+//        headerReferenceSize = CGSize(width: screenWidth, height: 50)
         
     }
     
@@ -93,46 +95,43 @@ extension CategoriesViewController: UICollectionViewDataSource {
     // MARK: UICollectionViewDataSource
     
     func categoryForSelectedItems() -> MiguCategory? {
-        if let indexPath = categoriesView.indexPathsForSelectedItems?.first {
-            return MiguSongStore.categories[indexPath.section].categories[indexPath.row]
-        } else {
-            return nil
-        }
+        guard let indexPath = categoriesView.indexPathsForSelectedItems?.first else { return nil }
+        return category.categories[indexPath.row]
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return MiguSongStore.categories.count
+        return 1
     }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return MiguSongStore.categories[section].categories.count
+        return category.categories.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let parentCategory = MiguSongStore.categories[indexPath.section]
-        
-        switch kind {
-            
-        case UICollectionElementKindSectionHeader:
-            
-            let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CategorySectionTitle", for: indexPath) as! CategorySectionHeader
-            
-            // Set background colors:
-            sectionHeader.backgroundColor = .mainColor
-            for view in sectionHeader.subviews {
-                view.backgroundColor = .mainColor
-            }
-            
-//            sectionHeader.chinese?.attributedText = UILabel.strokedText(parentCategory.chinese, strokeWidth: -3)
-//            sectionHeader.english?.attributedText = UILabel.strokedText(parentCategory.english, strokeWidth: -3)
-            sectionHeader.chinese?.attributedText = UILabel.coloredText(parentCategory.chinese, color: .flatMagenta, font: .boldSystemFont(ofSize: 21))
-            sectionHeader.english?.attributedText = UILabel.coloredText(parentCategory.english, color: .flatSkyBlue, font: .boldSystemFont(ofSize: 16))
-            return sectionHeader
-        default:
-            assert(false, "Section Header of kind: \(kind) not implemented")
-        }
-    }
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        let parentCategory = MiguSongStore.category.categories[indexPath.section]
+//
+//        switch kind {
+//
+//        case UICollectionElementKindSectionHeader:
+//
+//            let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CategorySectionTitle", for: indexPath) as! CategorySectionHeader
+//
+//            // Set background colors:
+//            sectionHeader.backgroundColor = .mainColor
+//            for view in sectionHeader.subviews {
+//                view.backgroundColor = .mainColor
+//            }
+//
+////            sectionHeader.chinese?.attributedText = UILabel.strokedText(parentCategory.chinese, strokeWidth: -3)
+////            sectionHeader.english?.attributedText = UILabel.strokedText(parentCategory.english, strokeWidth: -3)
+//            sectionHeader.chinese?.attributedText = UILabel.coloredText(parentCategory.chinese, color: .flatMagenta, font: .boldSystemFont(ofSize: 21))
+//            sectionHeader.english?.attributedText = UILabel.coloredText(parentCategory.english, color: .flatSkyBlue, font: .boldSystemFont(ofSize: 16))
+//            return sectionHeader
+//        default:
+//            assert(false, "Section Header of kind: \(kind) not implemented")
+//        }
+//    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MiguCategoryCell", for: indexPath) as! MiguCategoryCell
@@ -140,9 +139,10 @@ extension CategoriesViewController: UICollectionViewDataSource {
         cell.backgroundColor = colors[indexPath.row % colors.count]
         
         // Configure the cell
-        let category = MiguSongStore.categories[indexPath.section].categories[indexPath.row]
-        cell.english.attributedText = UILabel.strokedText(category.english, font: .systemFont(ofSize: 12))
-        cell.chinese.attributedText = UILabel.strokedText(category.chinese, font: .boldSystemFont(ofSize: 25))
+//        let category = MiguSongStore.categories[indexPath.section].categories[indexPath.row]
+        let subcategory = category.categories[indexPath.row]
+        cell.english.attributedText = UILabel.strokedText(subcategory.english, font: .systemFont(ofSize: 12))
+        cell.chinese.attributedText = UILabel.strokedText(subcategory.chinese, font: .boldSystemFont(ofSize: 25))
         
         cell.cornerRadius = 10.0
         cell.addShadow()
