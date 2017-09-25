@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SideMenu
 import UIKit
 
 extension UIViewController {
@@ -63,5 +64,12 @@ extension UIViewController {
         ai.hidesWhenStopped = true
         self.view.addSubview(ai)
         return ai
+    }
+    
+    func setupLeftMenu() {
+         let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "LeftSideMenu") as! UISideMenuNavigationController
+        SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
+        SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
     }
 }

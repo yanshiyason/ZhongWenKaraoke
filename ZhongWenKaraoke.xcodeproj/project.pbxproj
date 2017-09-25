@@ -52,6 +52,7 @@
 		CD1E0ADD1F6B254000DC2969 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E0ADC1F6B254000DC2969 /* UIViewController+Extensions.swift */; };
 		CD1E0ADF1F6C094200DC2969 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E0ADE1F6C094200DC2969 /* AppState.swift */; };
 		CD1E0AE11F6C233600DC2969 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1E0AE01F6C233600DC2969 /* UIView+Extensions.swift */; };
+		CD6D560D1F7872B500DF040F /* ParentCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6D560C1F7872B500DF040F /* ParentCategoriesViewController.swift */; };
 		CDDE0E801F2F68F300A97059 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = CDDE0E7F1F2F68F300A97059 /* categories.json */; };
 		CDDE324B1F77011A00C03B74 /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE324A1F77011A00C03B74 /* CGSize+Extensions.swift */; };
 		CDDE324D1F770EB500C03B74 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDE324C1F770EB500C03B74 /* Array+Extension.swift */; };
@@ -139,6 +140,7 @@
 		CD1E0ADC1F6B254000DC2969 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		CD1E0ADE1F6C094200DC2969 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		CD1E0AE01F6C233600DC2969 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		CD6D560C1F7872B500DF040F /* ParentCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCategoriesViewController.swift; sourceTree = "<group>"; };
 		CDDE0E7F1F2F68F300A97059 /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = categories.json; path = ../categories.json; sourceTree = "<group>"; };
 		CDDE324A1F77011A00C03B74 /* CGSize+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extensions.swift"; sourceTree = "<group>"; };
 		CDDE324C1F770EB500C03B74 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				CD0D66991F2DF77300CDBC65 /* MiguSongTabBarController.swift */,
 				CD0D669A1F2DF77300CDBC65 /* CategoryViewController.swift */,
 				CDF3E2D01F2F5D84006C65BC /* CategoriesViewController.swift */,
+				CD6D560C1F7872B500DF040F /* ParentCategoriesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6D560D1F7872B500DF040F /* ParentCategoriesViewController.swift in Sources */,
 				CD0D66B81F2DF77300CDBC65 /* MiguSongTabBarController.swift in Sources */,
 				CD0140141F6E1AC2009D4AC6 /* IndexPath+Extensions.swift in Sources */,
 				CD0D66C11F2DF77300CDBC65 /* MiguDataService.swift in Sources */,
